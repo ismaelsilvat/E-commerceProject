@@ -16,10 +16,12 @@ console.log(window.location);
 let url = new URL(window.location.href)
 let params = new URLSearchParams(url.search);
 
+console.log("url" +url);
 
 let produtoEmJsonCodificado = params.get('produto')
 
-const produtoEmJson = decodeURIComponent(escape(window.atob(produtoEmJsonCodificado)));
+const produtoEmJson = decodeURIComponent(unescape(window.atob(produtoEmJsonCodificado)));
+
 
 console.log("PROFUTO EM JSON decodificado", produtoEmJson);
 

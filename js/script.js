@@ -23,7 +23,7 @@ fetch("../test.json")
 
             let produtoTransformadoJson = JSON.stringify(produto);
 
-            const produtoTransformadoJsonCodificado = btoa(unescape(encodeURIComponent(produtoTransformadoJson))); 
+            const produtoTransformadoJsonCodificado = btoa(escape(encodeURIComponent(produtoTransformadoJson))); 
             
             // encode a string
 
@@ -62,8 +62,6 @@ fetch("../test.json")
                     <a href="projeto.html?produto=${produtoTransformadoJsonCodificado}" class="btn">Ver produto</a>
                     <button class="btn-cart" onclick="addCart()"><i class="fas fa-cart-plus"></i></button>
                 </div>`
-
-
 
             containerProdutos.innerHTML = containerProdutos.innerHTML + modeloDeProduto;
 
