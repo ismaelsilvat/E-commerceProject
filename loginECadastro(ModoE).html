@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/loginECadastro(ModoE).css">
+    <script src="https://kit.fontawesome.com/5d160a706f.js" crossorigin="anonymous"></script>
+    <title>Página de login/cadastro</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="conteudo conteudo-1">
+
+            <div class="col-1">
+                <h2 class="titulo titulo-bem-vindo">Seja bem-vindo</h2>
+                <div class="descricao-geral">
+                    <p class="descricao descricao-1">Se você já tem uma conta</p>
+                    <p class="descricao descricao-1">clique no botão a baixo</p>
+                </div>
+                <button class="btn btn-primario" id="Logar">Logar</button>
+            </div>
+
+            <div class="col-2">
+                <h2 class="titulo titulo-volta">Cadastrar-se</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a href="#" class="link-social-media">
+                            <li class="item-social-media"><i class="fab fa-facebook"></i></li>
+                        </a>
+                        <a href="#" class="link-social-media">
+                            <li class="item-social-media"><i class="fab fa-google"></i></li>
+                        </a>
+                        <a href="#" class="link-social-media">
+                            <li class="item-social-media"><i class="fab fa-linkedin"></i></li>
+                        </a>
+                    </ul>
+                </div>
+                <p class="descricao descricao-2">ou utilize o login abaixo</p>
+                <form class="form">
+
+                    <label class="label-informacao">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="usuarioCad" class="input-conta" placeholder="Usuário">
+                    </label>    
+                    <label class="label-informacao">    
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="emailCad" class="input-conta" placeholder="E-mail">
+                    </label>
+                    <label class="label-informacao">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="senhaCad" class="input-conta" placeholder="Senha">
+                    </label>
+
+                    <button class="btn btn-secundario" onclick="Cadastrar()" target="_blank" >Cadastrar</button>
+                </form>
+            </div>
+        </div>  
+
+<!-- segundo conteudo -->
+        
+        <div class="conteudo conteudo-2">
+            <div class="col-1">
+                <h2 class="titulo titulo-bem-vindo">Bem-Vindo de volta</h2>
+                <p class="descricao descricao-1">Entre com seus dados pessoais</p>
+                <p class="descricao descricao-1">e venha comprar conosco</p>
+                <button class="btn btn-primario" id="Cadastrar">Cadastrar</button>
+            </div>
+
+            <div class="col-2">
+                <h2 class="titulo titulo-volta">Logar</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a href="#" class="link-social-media">
+                            <li class="item-social-media"><i class="fab fa-facebook"></i></li>
+                        </a>
+                        <a href="#" class="link-social-media">
+                            <li class="item-social-media"><i class="fab fa-google"></i></li>
+                        </a>
+                        <a href="#" class="link-social-media">
+                            <li class="item-social-media"><i class="fab fa-linkedin"></i></li>
+                        </a>
+                    </ul>
+                </div>
+                <p class="descricao descricao-2">ou utilize os campos abaixo</p>
+                <form class="form">
+
+                    <label class="label-informacao">    
+                        <i class="fas fa-envelope"></i>
+                        <input type="email"  id="emailLog" class="input-conta" placeholder="E-mail">
+                    </label>
+                    <label class="label-informacao">
+                        <i class="fas fa-lock"></i>
+                        <input type="password"  id="senhaLog" class="input-conta" placeholder="Senha">
+                    </label>
+
+                    <a href="#" class="password">Esqueceu sua senha?</a>
+                    <button class="btn btn-secundario" id="login" onclick="Logar()" target="_blank" >Logar</button>
+                </form>
+            </div>
+<!-- segundo conteudo -->
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="./js/loginECadastro(ModoE).js"></script>
+</body>
+</html>

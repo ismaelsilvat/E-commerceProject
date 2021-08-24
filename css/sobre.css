@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('../4.7.0/css/font-awesome.min.css');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+}
+
+.container{
+    color: rgb(179, 179, 179);
+    background-color: #181818;
+    margin: auto;
+    margin-top: 4%;
+    padding: 1.5%;
+    width: 80%;
+    height: auto;
+    font-family: 'Righteous', cursive;
+    border: 2px solid rgb(139, 0, 139);
+    border-radius: 15px;
+}
+
+.titulo h2{
+    color: rgb(139, 0, 139);
+    font-family: 'Righteous', cursive;
+    font-size: 200%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.titulo-pagina h2{
+    background-color: #292929;
+    color: rgb(139, 0, 139);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 1.5%;    
+}
+
+
+/* Parte Moska Shoes */
+
+.conteudo #titulo h2{
+    color: rgb(139, 0, 139);
+    font-family: 'Righteous', cursive;
+    font-size: 200%;
+}
+
+.historia-empresa{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.historia-empresa img{
+    width: 25%;
+}
+
+.historia-empresa p{
+    width: 55%;
+    height: auto;
+    margin-top: 4%;
+    margin-right: 7%;
+    text-align: justify;
+}
+
+/* Parte Moska Shoes */
+
+/* Por que MoskaShoes */
+
+.historia-marca{
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.col-hmarcaIMG{
+    width: 100%;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+}
+
+.col-hmarcaIMG img{
+    width: 35%;
+    height: auto;
+}
+
+.col-hmarca h2{
+    color: rgb(139, 0, 139);
+    font-family: 'Righteous', cursive;
+    font-size: 200%;
+}   
+
+.col-hmarca P{
+    width: 100%;
+    height: auto;
+    margin-top: 4%;
+    margin-right: 7%;
+    text-align: justify;
+    padding: 1% 5%;
+}
+
+/* Por que MoskaShoes */
+
+/* Valores da empresa */
+
+.valores{
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin: 10px 15px;
+}
+
+
+.visao{
+    background-color: #121212;
+    border: 1px solid #c700ce5e;
+    padding: 5% 10%;
+    width: 280px;
+    height: 200px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.missao{
+    background-color: #121212;
+    border: 1px solid #c700ce5e;
+    padding: 5% 10%;
+    width: 280px;
+    height: 200px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.valor{
+    background-color: #121212;
+    border: 1px solid #c700ce5e;
+    padding: 5% 10%;
+    width: 280px;
+    height: 200px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.visao:hover, .missao:hover, .valor:hover{
+    background-color: #0a0a0a;
+    color: #c700ce5e;
+    box-shadow: 0px 0px 10px #c700ce5e;
+
+}
+
+#cols-valores{
+    margin: 0 8% 5%;
+    max-width: 160px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+/* Valores da empresa */
+
+/* Grupo participantes */
+
+.grupo img{
+    width: 50%;
+    height: auto;
+    box-shadow: 0px 0px 10px #c700ce5e;
+    border: 2px solid #c700ce5e;
+    border-radius: 50%;
+}
+
+.grupo{
+    justify-content: center;
+    align-items: center;
+    display:grid;
+    letter-spacing: 2px;
+}
+
+.grupo h2{
+    color: #c700ce5e;
+}
+
+.participantes{
+    color: #c700ce5e;
+}
+
+.grupo h3 i:hover{
+    font-size: 130%;
+    cursor: unset;
+}
+
+.grupo p i{
+    font-size: 140%;
+}
+
+.david i, .ismael i, .guilherme i, .victor i{
+    margin-top: 1.5%;
+    font-size: 130%;
+}
+
+.david i:not(:first-child), .ismael i:not(:first-child), .guilherme i:not(:first-child), .victor i:not(:first-child){
+    margin-left: 2%;
+}
+
+.david i:hover, .ismael i:hover, .guilherme i:hover, .victor i:hover{
+    color: #c700ce5e;
+    font-size: 150%;
+    cursor: pointer;
+}
+
+.david, .ismael, .guilherme, .victor{   
+    text-align: center;
+    margin-top: 5%;
+}
+
+.ismael img{
+    width: 51%;
+}
+
+.victor img{
+    width: 60%;
+}
+
+
+
+.col-1-participantes{
+    display: flex;
+    justify-content: center;
+}
+
+.col-2-participantes{
+    display: flex;
+    justify-content: center;
+}
+
+/* Grupo participantes */

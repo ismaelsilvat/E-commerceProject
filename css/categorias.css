@@ -1,0 +1,32 @@
+header{
+    height: 20vh;
+}
+
+.imagem-secao{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 0;
+}
+
+.imagem-secao h1{
+    width: 75%;
+    margin: auto;
+    color: #9e5ed6;
+    font-size: 75px;
+    font-family: 'Roboto', sans-serif;
+    font-style: oblique;
+    padding-bottom: 25px;
+    margin-bottom: 55px;
+    text-align: center;
+    border-bottom: 7px solid #8948fa;
+}
+
+.imagem-secao img{
+    width: 97%;
+    height: 97vh;
+    opacity: 1;
+    filter: contrast(100%);
+}
