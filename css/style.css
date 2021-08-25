@@ -272,6 +272,37 @@ header{
 .navbar nav ul li a:hover::after {
     width: 100%;
 }
+
+.dropdown{
+    width: 35px;
+    height: 35px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown input{
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.dropdown i{
+    width: 100%;
+    height: 100%;
+    background-color: #8948fa;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+
 /* /PESQUISA */
 
 .barra{
@@ -1669,6 +1700,13 @@ footer{
         display: flex;
         align-items: flex-start;
     }
+    .navbar nav ul{
+        display: none;
+    }
+    #drop:checked .navbar nav ul{
+        display: flex;
+    }
+
 
 }
 
