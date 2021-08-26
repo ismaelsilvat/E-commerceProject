@@ -115,14 +115,72 @@ header{
 
 /* END-LOGO */
 
+#checkbox-menu{
+    position: absolute;
+    opacity: 0;
+  }
+  
+  label{
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+  }
+  
+  label span{
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #f16234;
+    transition: 0.25s ease-in-out;
+  }
+  
+  label span:nth-child(1){
+    top: 0;
+  }
+  
+  label span:nth-child(2){
+    top: 8px;
+  }
+  
+  label span:nth-child(3){
+    top: 16px;
+  }
+  
+  #checkbox-menu:checked + label span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 8px;
+  }
+  
+  #checkbox-menu:checked + label span:nth-child(2){
+    opacity: 0;
+  }
+  
+  #checkbox-menu:checked + label span:nth-child(3){
+    transform: rotate(45deg);
+    top:8px;
+  }
+
 /* NAVBAR */
 
 .navbar{
     width: 60%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar nav{
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -169,7 +227,8 @@ header{
     transition: all 300ms ease;
 }
 .ul-border{
-    border-top: 5px solid #8948fa;
+    margin-top: 15px;
+    border-top: 2px solid #8948fa;
 }
 
 .navbar nav ul .li-dropdown ul li{
@@ -211,11 +270,6 @@ header{
     height: 90px;
     background-color: rgba(0, 0, 0, 0.219);
 }
-
-.li-1{
-    border-left: 3px solid #8948fa;
-}
-
 .navbar nav ul .li-dropdown ul li ul li a{
     height: 100%;
     color: #fff;
@@ -1700,11 +1754,145 @@ footer{
         display: flex;
         align-items: flex-start;
     }
-    .navbar nav ul{
+    
+    .navbar{
         display: none;
     }
-    #drop:checked .navbar nav ul{
+
+    .navbar2{
+        position: absolute;
+        top: 100%;
+        left: -200%;
+        width: 100%;
+        height: 78vh;
         display: flex;
+        transition: all 300ms ease;
+        z-index: 999;
+    }
+    
+    .navbar2 nav{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .navbar2 nav ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #151515;
+    }
+
+    .navbar2 nav ul li{
+        width: 100%;
+        min-height: 70px;
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1;
+        transition: all 300ms ease;
+
+    }
+
+    .navbar2 nav ul li a{
+        font-size: 1.3rem;
+        font-weight: bold;
+        font-style: oblique;
+    }
+
+    .li-dropdown a{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+    .navbar2 nav ul li .ul-border{
+        width: 100%;
+        height: auto;
+        display: none;
+        z-index: 1;
+        background-color: #8A48FA;
+        transition: all 300ms ease;
+    }
+
+    .ul-border li{
+        width: 100%;
+        height: 75px !important;
+        border-bottom: 2px solid #151515;
+    }
+
+    .infantildois{
+        height: 75px;
+        display: flex;
+    }
+
+    .infantildois a{
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .infantil-c2{
+        height: 100px;
+        z-index: 1;
+        display: none !important;
+        border-top: 2px solid black;
+    }
+
+    .infantil-c2 li{
+        height: 50px !important;
+        background-color: #9e5ed6;
+    }
+
+    .infantil-c{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        z-index: 1;
+    }
+
+    .ul-border li{
+        width: 100%;
+        height: auto;
+     }
+ 
+    .ul-border li a{ 
+        color: black; 
+        font-size: 1rem;
+        font-weight: bold;  
+        font-style: oblique;
+    }
+
+    .navbar2 nav ul li a{
+        width: 100%;
+        text-align: center;
+    }
+
+
+    #checkbox-menu:checked ~ .navbar2{
+        left: 0%;
+    }
+
+    .li-dropdown:hover{
+        height: auto !important;
+    }
+
+    .li-dropdown:hover .ul-border{
+        display: flex;
+    }
+
+    .infantildois:hover{
+        height: auto !important;
+    }
+
+    .infantildois:hover > .infantil-c2{
+        display: flex !important;
     }
 
 
