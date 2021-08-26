@@ -123,9 +123,7 @@ header{
   label{
     cursor: pointer;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     height: 30px;
@@ -134,29 +132,32 @@ header{
   
   label span{
     position: absolute;
-    display: block;
+    display: flex;
     height: 5px;
     width: 100%;
     border-radius: 30px;
-    background: #f16234;
+    background: #8948fa;
     transition: 0.25s ease-in-out;
   }
   
   label span:nth-child(1){
-    top: 0;
+    height: 15%;
+    top: 15%;
   }
   
   label span:nth-child(2){
-    top: 8px;
+    height: 15%;
+    top: 45%;
   }
   
   label span:nth-child(3){
-    top: 16px;
+    height: 15%;
+    top: 80%;
   }
   
   #checkbox-menu:checked + label span:nth-child(1){
     transform: rotate(-45deg);
-    top: 8px;
+    top: 50%;
   }
   
   #checkbox-menu:checked + label span:nth-child(2){
@@ -165,7 +166,7 @@ header{
   
   #checkbox-menu:checked + label span:nth-child(3){
     transform: rotate(45deg);
-    top:8px;
+    top: 50%;
   }
 
 /* NAVBAR */
@@ -1736,6 +1737,17 @@ footer{
 }
 
 
+.navbar2{
+    position: absolute;
+    top: 100%;
+    left: -200%;
+    width: 100%;
+    height: 78vh;
+    display: none;
+    transition: all 300ms ease;
+    z-index: 999;
+}
+
 @media screen and (max-width: 992px) {
     .container-footer > .footer-top{
         flex: 1 0 50%;
@@ -1759,15 +1771,12 @@ footer{
         display: none;
     }
 
-    .navbar2{
-        position: absolute;
-        top: 100%;
-        left: -200%;
-        width: 100%;
-        height: 78vh;
+    label{
         display: flex;
-        transition: all 300ms ease;
-        z-index: 999;
+    }
+
+    .navbar2{
+        display: flex;
     }
     
     .navbar2 nav{
