@@ -1742,7 +1742,6 @@ footer{
     top: 100%;
     left: -200%;
     width: 100%;
-    height: 78vh;
     display: none;
     transition: all 300ms ease;
     z-index: 999;
@@ -1810,10 +1809,11 @@ footer{
         font-size: 1.3rem;
         font-weight: bold;
         font-style: oblique;
+        color: #8A48FA;
     }
 
     .li-dropdown a{
-        height: 50px;
+        height: 70px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1823,16 +1823,33 @@ footer{
     .navbar2 nav ul li .ul-border{
         width: 100%;
         height: auto;
-        display: none;
+        display: none !important;
         z-index: 1;
         background-color: #8A48FA;
         transition: all 300ms ease;
     }
-
+    
     .ul-border li{
         width: 100%;
         height: 75px !important;
         border-bottom: 2px solid #151515;
+    }
+    
+    .ul-border li a{
+        color: black !important;
+
+    }
+
+    .ul-border li:hover{
+        background: black;
+    }
+
+    .ul-border li:hover a{
+        color: #8A48FA !important;
+    } 
+
+    .catcat{
+        color: black !important;
     }
 
     .infantildois{
@@ -1845,18 +1862,31 @@ footer{
         display: flex;
         align-items: center;
         justify-content: center;
+        color: black !important;
     }
 
     .infantil-c2{
         height: 100px;
         z-index: 1;
         display: none !important;
+        flex-direction: column;
         border-top: 2px solid black;
+        background-color: #9e5ed6;
     }
 
     .infantil-c2 li{
         height: 50px !important;
         background-color: #9e5ed6;
+        color: black !important;
+    }
+
+    .infantil-c2 li a{
+        color: black !important;
+        
+    }
+
+    .li-1:hover a{
+        color: black !important;
     }
 
     .infantil-c{
@@ -1893,11 +1923,23 @@ footer{
     }
 
     .li-dropdown:hover .ul-border{
-        display: flex;
+        display: flex !important;
     }
 
     .infantildois:hover{
         height: auto !important;
+    }
+
+    .infantildois:hover .infa{
+        color: #8A48FA !important;
+    }
+
+    .infantil-c2 li a{
+        color: black !important;
+    }
+
+    .infantil-c2 li:hover .catcat {
+        color: #9e5ed6 !important;
     }
 
     .infantildois:hover > .infantil-c2{
