@@ -356,6 +356,199 @@ header{
     z-index: 1;
 }
 
+.navbar2{
+    position: absolute;
+    top: 100%;
+    left: -200%;
+    width: 100%;
+    display: none;
+    transition: all 300ms ease;
+    z-index: 999;
+}
+
+.navbar2 nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.navbar2 nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #151515;
+}
+
+.navbar2 nav ul li{
+    width: 100%;
+    min-height: 70px;
+    height: auto ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 999;
+    transition: all 300ms ease;
+    background-color: #151515;
+}
+
+.navbar2 nav ul li a{
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-style: oblique;
+    color: #8A48FA;
+}
+
+.li-dropdown a{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.navbar2 nav ul li .ul-border{
+    width: 100%;
+    height: auto;
+    display: none;
+    z-index: 1;
+    background-color: #8A48FA;
+    transition: all 300ms ease;
+}
+
+.ul-border li{
+    width: 100%;
+    height: 75px;
+    border-bottom: 2px solid #151515;
+    background-color: #9e5ed6 !important;
+}
+
+.ul-border li a{
+    color: black !important;
+
+}
+
+.ul-border li:hover{
+    background-color: #151515;
+}
+
+.ul-border li:hover a{
+    color: #8A48FA !important;
+} 
+
+.ul-border li:hover .catcat{
+    color: black !important;
+}
+
+.infantildois{
+    height: 75px;
+    display: flex;
+}
+
+.infantildois a{
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black ;
+}
+
+.infantil-c2{
+    height: 100px;
+    z-index: 1;
+    display: none !important;
+    flex-direction: column;
+    border-top: 2px solid black;
+    background-color: #9e5ed6;
+    animation: infantil-c2 800ms ease;
+}
+
+.infantil-c2 li{
+    min-height: 50px;
+    height: auto !important;
+    background-color: #9e5ed6;
+    color: black ;
+    z-index: 0;
+}
+
+.infantil-c2 li a{
+    color: black ;
+    
+}
+
+.li-1:hover a{
+    color: black ;
+}
+
+.ul-border li{
+    width: 100%;
+    height: auto;
+ }
+
+.ul-border li a{ 
+    color: black; 
+    font-size: 1rem;
+    font-weight: bold;  
+    font-style: oblique;
+}
+
+.navbar2 nav ul li a{
+    width: 100%;
+    text-align: center;
+}
+
+
+#checkbox-menu:checked ~ .navbar2{
+    left: 0%;
+}
+
+.li-dropdown:hover{
+    height: auto ;
+}
+
+.li-dropdown:hover .ul-border{
+    display: flex ;
+}
+
+.infantildois:hover{
+    height: auto ;
+}
+
+.infantildois:hover .infa{
+    color: #8A48FA ;
+}
+
+.infantil-c2 li a{
+    color: black;
+}
+
+.infantil-c2 li:hover{
+    background-color: #151515 !important;
+}
+
+.infantil-c2 li:hover .catcat{
+    color: #9e5ed6 !important;
+}
+
+
+.infantildois:hover > .infantil-c2{
+    display: flex !important;
+}
+
+@keyframes infantil-c2{
+    0%{
+        height: 0px;
+    }
+    50%{
+       height: 75px;
+
+    }
+    100%{
+        height: 150px;
+    }
+}
+
 
 
 /* /PESQUISA */
@@ -1737,15 +1930,7 @@ footer{
 }
 
 
-.navbar2{
-    position: absolute;
-    top: 100%;
-    left: -200%;
-    width: 100%;
-    display: none;
-    transition: all 300ms ease;
-    z-index: 999;
-}
+
 
 @media screen and (max-width: 992px) {
     .container-footer > .footer-top{
@@ -1777,176 +1962,6 @@ footer{
     .navbar2{
         display: flex;
     }
-    
-    .navbar2 nav{
-        width: 100%;
-        height: 100%;
-        display: flex;
-    }
-
-    .navbar2 nav ul{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #151515;
-    }
-
-    .navbar2 nav ul li{
-        width: 100%;
-        min-height: 70px;
-        height: auto !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        z-index: 1;
-        transition: all 300ms ease;
-
-    }
-
-    .navbar2 nav ul li a{
-        font-size: 1.3rem;
-        font-weight: bold;
-        font-style: oblique;
-        color: #8A48FA;
-    }
-
-    .li-dropdown a{
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-
-    .navbar2 nav ul li .ul-border{
-        width: 100%;
-        height: auto;
-        display: none !important;
-        z-index: 1;
-        background-color: #8A48FA;
-        transition: all 300ms ease;
-    }
-    
-    .ul-border li{
-        width: 100%;
-        height: 75px !important;
-        border-bottom: 2px solid #151515;
-    }
-    
-    .ul-border li a{
-        color: black !important;
-
-    }
-
-    .ul-border li:hover{
-        background: black;
-    }
-
-    .ul-border li:hover a{
-        color: #8A48FA !important;
-    } 
-
-    .catcat{
-        color: black !important;
-    }
-
-    .infantildois{
-        height: 75px;
-        display: flex;
-    }
-
-    .infantildois a{
-        height: 75px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: black !important;
-    }
-
-    .infantil-c2{
-        height: 100px;
-        z-index: 1;
-        display: none !important;
-        flex-direction: column;
-        border-top: 2px solid black;
-        background-color: #9e5ed6;
-    }
-
-    .infantil-c2 li{
-        height: 50px !important;
-        background-color: #9e5ed6;
-        color: black !important;
-    }
-
-    .infantil-c2 li a{
-        color: black !important;
-        
-    }
-
-    .li-1:hover a{
-        color: black !important;
-    }
-
-    .infantil-c{
-        width: 100%;
-        height: 100px;
-        display: flex;
-        z-index: 1;
-    }
-
-    .ul-border li{
-        width: 100%;
-        height: auto;
-     }
- 
-    .ul-border li a{ 
-        color: black; 
-        font-size: 1rem;
-        font-weight: bold;  
-        font-style: oblique;
-    }
-
-    .navbar2 nav ul li a{
-        width: 100%;
-        text-align: center;
-    }
-
-
-    #checkbox-menu:checked ~ .navbar2{
-        left: 0%;
-    }
-
-    .li-dropdown:hover{
-        height: auto !important;
-    }
-
-    .li-dropdown:hover .ul-border{
-        display: flex !important;
-    }
-
-    .infantildois:hover{
-        height: auto !important;
-    }
-
-    .infantildois:hover .infa{
-        color: #8A48FA !important;
-    }
-
-    .infantil-c2 li a{
-        color: black !important;
-    }
-
-    .infantil-c2 li:hover .catcat {
-        color: #9e5ed6 !important;
-    }
-
-    .infantildois:hover > .infantil-c2{
-        display: flex !important;
-    }
-
-
 }
 
 @media screen and (max-width: 656px){
