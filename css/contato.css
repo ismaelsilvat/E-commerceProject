@@ -1,0 +1,244 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contato{
+    position: relative;
+    min-height: 100vh;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #151515;
+    background-size: cover;
+}
+.contato .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contato .content h2{
+    font-size: 250%;
+    font-weight: 500;
+    color: #8a4bfa;
+}
+.contato .content p{
+    margin-top: 8%;
+    font-weight: 300;
+    color: #fff;
+}
+.container{
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    margin-top: 5%;
+}
+
+.container .contatoInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contatoInfo .box{
+    position: relative;
+    padding: 8% 2%;
+    display: flex;
+}
+.container .contatoInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container .contatoInfo .box .texto{
+    display: flex;
+    margin-left: 5%;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contatoInfo .box .texto h3{
+    font-weight: 500;
+    color: #8a4bfa;
+}
+.contatoForm{
+    width: 40%;
+    padding: 5%;
+    background: #181818;
+
+}
+
+.contatoForm h2{
+    font-size: 30px;
+    color: #8a4bfa;
+    font-weight: 500;
+    margin-bottom: 5%;
+}
+.contatoForm  .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 2%;
+
+}
+.contatoForm  .inputBox input,
+.contatoForm  .inputBox textarea
+{
+    width: 100%;
+    padding: 2% 0;
+    font-size: 16px;
+    margin: 4% 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+    background: none;
+    color: white;
+}
+.contatoForm  .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 2% 0;
+    font-size: 16px;
+    margin: 4% 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contatoForm  .inputBox input:focus ~ span,
+.contatoForm  .inputBox input:valid ~ span,
+.contatoForm  .inputBox textarea:focus ~ span,
+.contatoForm  .inputBox textarea:valid ~ span
+{
+    color: #8a4bfa;
+    font-size: 15px;
+    transform: translateY(-20px);
+}
+.contatoForm  .inputBox input[type="submit"]{
+    width: 25%;
+    background: #8a4bfa;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 3.5%;
+    font-size: 18px;
+}
+
+
+/* Responsividade */
+
+@media screen and (min-width:280px){
+
+
+    .contato{
+        padding: 8% 0; 
+        width: 100%;
+    }
+
+    .container{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contatoInfo .box p{
+        width: 140%;
+        font-size: 90%;
+    }
+
+    .contatoInfo .box{
+        width: 150%;
+        align-items: center;
+        margin-left: -40%;
+    }
+
+    .contatoForm{
+        width: 100%
+    }
+
+    .contatoForm .inputBox input[type="submit"]{
+        width: 30%;
+    }
+
+    
+}
+
+@media screen and (min-width:750px){
+
+    .contatoInfo .box h3{
+        font-size: 180%;
+    }
+    
+    .contatoInfo .box p{
+        font-size: 95%;
+    }
+
+    .contatoForm h2{
+        font-size: 220%;
+    }
+
+    .contatoForm .inputBox input, .contatoForm .inputBox textarea{
+        padding: 1.5%;
+    }
+}
+
+@media screen and (max-width:999px){
+    .contatoForm{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width:1000px){
+
+    .container{
+        flex-direction: row;
+    }
+
+    .contatoInfo .box{
+        margin-left: 6%;
+    }
+
+    .contatoForm{
+        width: 60%;
+        margin-right: 5%;
+    }
+
+
+}
+
+@media screen and (min-width:1400px){
+    
+    body{
+        font-size: 130%;
+    }
+
+    .contatoInfo .box{
+        width: auto;
+    }
+
+    .contatoInfo .box h3{
+        font-size: 240%;
+    }
+
+    .contatoInfo .box p{
+        font-size: 130%;
+    }
+
+    .contatoForm form .inputBox input{
+        font-size: 125%;
+    }
+
+    .contatoForm .inputBox input:focus ~ span, .contatoForm .inputBox input:valid ~ span, .contatoForm .inputBox textarea:focus ~ span, .contatoForm .inputBox textarea:valid ~ span{
+        font-size: 110%;
+        margin: 2% 0;
+    }
+
+}
