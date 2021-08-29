@@ -117,6 +117,7 @@ body{
     display: flex;
     justify-content: center;
     margin: 10px 15px;
+    line-height: 155%;
 }
 
 
@@ -124,8 +125,8 @@ body{
     background-color: #121212;
     border: 1px solid #c700ce5e;
     padding: 5% 10%;
-    width: 280px;
-    height: 200px;
+    width: 170%;
+    height: 170px;
     border-radius: 12px;
     text-align: center;
 }
@@ -134,8 +135,8 @@ body{
     background-color: #121212;
     border: 1px solid #c700ce5e;
     padding: 5% 10%;
-    width: 280px;
-    height: 200px;
+    width: 170%;
+    height: 170px;
     border-radius: 12px;
     text-align: center;
 }
@@ -144,8 +145,8 @@ body{
     background-color: #121212;
     border: 1px solid #c700ce5e;
     padding: 5% 10%;
-    width: 280px;
-    height: 200px;
+    width: 170%;
+    height: 170px;
     border-radius: 12px;
     text-align: center;
 }
@@ -245,3 +246,250 @@ body{
 }
 
 /* Grupo participantes */
+
+/* Responsividade */
+
+@media screen and (min-width:280px){
+
+    .container{
+        width: 90%;
+        font-size: 60%;
+    }
+
+    .historia-empresa{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .historia-empresa p{
+        width: 85%;
+        margin: 5% 0;
+        font-size: 140%;
+    }
+
+    .historia-empresa img{
+        width: 70%;
+    }
+
+    .col-hmarcaIMG{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-hmarcaIMG img{
+        width: 70%;
+    }
+
+    .col-hmarcaIMG p{
+        margin: 5% 0;
+        font-size: 150%;
+    }
+
+    .valores{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .visao, .missao, .valor{
+        width: 120%;
+        font-size: 140%;
+    }
+    
+    .col-1-participantes, .col-2-participantes{
+        margin-top: 5%;
+    } 
+
+    .col-1-participantes{
+        flex-direction: column;
+    }
+
+    .col-2-participantes{
+        flex-direction: column;
+    }
+
+
+
+}
+
+@media screen and (min-width:550px){
+    
+    .historia-empresa{
+        flex-direction: row;
+        margin: 2%;
+    }
+
+    .historia-empresa img{
+        width: 40%;
+        padding: 4%;
+    }
+
+    .col-hmarcaIMG{
+        flex-direction: row;
+    }
+
+    .col-hmarcaIMG img{
+        width: 45%;
+    }
+
+    .col-hmarcaIMG p{
+        padding: 0 1% 0 3%;
+    }
+
+    .col-1-participantes{
+        flex-direction: row;
+    }
+
+    .col-2-participantes{
+        flex-direction: row;
+    }
+
+}
+
+@media screen and (min-width:730px){
+    
+    .col-hmarca h2{
+        font-size: 300%;
+    }
+
+    .titulo h2{
+        font-size: 300%;
+    }
+
+    .valores{
+        flex-direction: row;
+    }
+
+    .visao{
+        width: 160%;
+        font-size: 120%;
+    }
+    
+    .missao{
+        width: 120%;
+        font-size: 120%;
+    }
+
+    .valor{
+        width: 200%;
+        font-size: 120%;
+    }
+
+    .visao h2, .missao h2, .valor h2{
+        font-size: 160%;
+    }
+
+
+}
+
+@media screen and (min-width:1000px){
+
+    .container{
+        font-size: 80%;
+    }
+
+    .visao{
+        width: 160%;
+        font-size: 120%;
+    }
+    
+    .missao{
+        width: 160%;
+        font-size: 120%;
+    }
+
+    .valor{
+        width: 200%;
+        font-size: 120%;
+    }
+
+    .grupo{
+        font-size: 140%;
+    }
+}
+
+@media screen and (min-width:1500px){
+    
+    .container{
+        font-size: 130%;
+    }
+
+    .valores{
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .visao{
+        width: 220%;
+        height: 330px;
+        font-size: 120%;
+    }
+    
+    .missao{
+        width: 220%;
+        height: 330px;
+        font-size: 120%;
+    }
+
+    .valor{
+        width: 220%;
+        height: 330px;
+        font-size: 120%;
+    }
+
+
+}
+
+@media screen and (min-width:2000px){
+    
+    .container{
+        font-size: 160%;
+    }
+
+    .valores{
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .visao{
+        width: 300%;
+        height: 330px;
+        font-size: 120%;
+    }
+    
+    .missao{
+        width: 300%;
+        height: 330px;
+        font-size: 120%;
+    }
+
+    .valor{
+        width: 300%;
+        height: 330px;
+        font-size: 120%;
+    }
+
+    .grupo img{
+        width: 70%;
+        justify-content: space-around;
+    }
+
+    .david, .ismael, .guilherme, .victor{
+        margin: 2%;
+    }
+
+    .ismael h3{
+        margin-top: 1%;
+    }
+
+    .victor h3{
+        margin-top: 7%;
+    }
+
+
+
+
+}
+
+/* Responsividade */
