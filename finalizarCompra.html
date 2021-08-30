@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo pequeninha 2.0.png">
+    <title>Finalizar Compra</title>
+    <link rel="stylesheet" href="./css/gerais.css">
+    <link rel="stylesheet" href="./bootstrap-5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/navBars.css">
+    <link rel="stylesheet" href="./css/finalizarCompra.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+</head>
+
+<body onload="verificar_login_index()">
+    <div class="conteudo">
+        <div class="container-1 vigaRegular">
+            <div class="container-l">
+                <div class="container-l-top">
+                    <label for="">Dados do titular do cartão</label>
+                </div>
+                <div class="container-l-mid">
+                    <div class="top-l">
+                        <div class="input-grande">
+                            <label for="">Número do cartão</label>
+                            <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX">
+                        </div>
+                        <div class="inputs-pequeno">
+                            <div class="input-pequeno">
+                                <label for="">Validade</label>
+                                <input placeholder="MM/AA" type="text" id="inputData">
+                            </div>
+                            <div class="input-pequeno input1-pequeno">
+                                <label for="">Cód. Segurança</label>
+                                <input type="text" maxlength="3" placeholder="CVV">
+                            </div>
+                        </div>
+                        <div class="input-grande">
+                            <label for="">Nome completo do titular</label>
+                            <input type="text" placeholder="Insira seu nome completo" >
+                        </div>
+                        <div class="inputs-pequeno">
+                            <div class="input-pequeno">
+                                <label for="">CPF</label>
+                                <input placeholder="Insira seu CPF" type="text" id="cpf1">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="container-r vigaRegular">
+                <div class="container-top">
+                    <label>Resumo do Pedido</label>
+                </div>
+                <div class="container-mid">
+                    <div class="mid-top">
+                        <div class="mid-top-top">
+                            <label for="">Itens do pedido:</label>
+                            <h4 class="itemDeCompra">Item(s) de compra</h4>
+                        </div>
+                        <div class="mid-top-bot">
+                            <label for="">Preço:</label>
+                            <label for="">R$ 29,90</label>
+                        </div>
+                    </div>
+                    <div class="mid-bot">
+                        <div class="mid-bot-top">
+                            <label for="">Forma de pagamento</label>
+                            <div class="pagamentos">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="0">Cartão de Crédito</option>
+                                    <option value="1">Boleto Bancário</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mid-bot-bot">
+                            <label for="">Tempo de processamento</label>
+                            <h4 class="tempoParaEntrega">Até 1 dia útil</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-bot">
+                    <button onclick="validacao()">Total a pagar: R$29,90</button>
+                    <a href="">Adicionar mais itens</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/sweetalert2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <script src="./js/teste_car.js"></script>
+    <script src="./js/finalizarCompra.js"></script>
+    <script src="./js/conferencia.js"></script>
+    <script src="https://kit.fontawesome.com/101f22a807.js" crossorigin="anonymous"></script>
+    <script src="./bootstrap-5.0.2/css/bootstrap-grid.css"></script>
+    <script src="./js/validacao.js"></script>
+</body>
+</html>
