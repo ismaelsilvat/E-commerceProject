@@ -149,7 +149,7 @@ header{
     width: 25%;
     height: auto;
 }
-.options{
+#options{
     padding:3px;
     border: none;
     border-top:1px solid #000;
@@ -162,21 +162,21 @@ header{
     background:#fff;
 }
 
-.options.active{
+#options.active{
     background-color: var(--dark);
     color: #fff;
 }
 
-.options:hover{
+#options:hover{
     background-color: var(--dark);
     color:#fff;
 }
-.options img{
+#options img{
     width:30px;
     padding:5px;
 }
 
-.options .radio{
+#options .radio{
     display:none;
 }
 

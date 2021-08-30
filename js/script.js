@@ -6,6 +6,8 @@ fetch("../test.json")
 
         const containerProdutos = document.getElementById('container-produtos');
 
+        const containerProds = document.getElementById('container-prodsss');
+
         const exampleProductSimple = document.getElementById('example-products-1');
 
         const exampleProductColors = document.getElementById('example-products-2');
@@ -20,8 +22,8 @@ fetch("../test.json")
 
             const produto = produtos[index];
 
-
             let produtoTransformadoJson = JSON.stringify(produto);
+
 
             const produtoTransformadoJsonCodificado = btoa(escape(encodeURIComponent(produtoTransformadoJson))); 
             
@@ -60,7 +62,7 @@ fetch("../test.json")
                     <span class="preço">${produto.valor}</span>
                     <span class="juros">${produto.juros}</span>
                     <a href="projeto.html?produto=${produtoTransformadoJsonCodificado}" class="btn">Ver produto</a>
-                    <button class="btn-cart" onclick="addCart()"><i class="fas fa-cart-plus"></i></button>
+                    <a class="btn-cart" id="btn-cart${index + 1}" style="cursor: pointer"><i class="fas fa-cart-plus"></i></button>
                 </div>`
 
             containerProdutos.innerHTML = containerProdutos.innerHTML + modeloDeProduto;
@@ -116,60 +118,123 @@ fetch("../test.json")
                 </div>`
             
                 exampleProductsThematics.innerHTML = exampleProductsThematics.innerHTML + exampleProductInfos;            
-        }
+            }
 
-        if(produto.nome == "Vans Era X Os Simpsons"){
-            const exampleProductInfos = `
-            <div class="product${+2}">
-                    <div class="name-product">
-                        <span id="name-product">${produto.nome}</span>
-                    </div>
-                    <div class="img-product">
-                        <img id="image-example-product" src="${"./img/simponsvsThesimpsons.jpg"}" alt="">
-                    </div>
-                    <div class="button-product">
-                        <a class="btn-example-product" href="projeto.html?produto=${produtoTransformadoJsonCodificado}">Ver produto</a>
-                    </div>
-                </div>`
+            if(produto.nome == "Vans Era X Os Simpsons"){
+                const exampleProductInfos = `
+                <div class="product${+2}">
+                        <div class="name-product">
+                            <span id="name-product">${produto.nome}</span>
+                        </div>
+                        <div class="img-product">
+                            <img id="image-example-product" src="${"./img/simponsvsThesimpsons.jpg"}" alt="">
+                        </div>
+                        <div class="button-product">
+                            <a class="btn-example-product" href="projeto.html?produto=${produtoTransformadoJsonCodificado}">Ver produto</a>
+                        </div>
+                    </div>`
+                
+                    exampleProductsThematics.innerHTML = exampleProductsThematics.innerHTML + exampleProductInfos;   
+            }
+
             
-                exampleProductsThematics.innerHTML = exampleProductsThematics.innerHTML + exampleProductInfos;   
-        }
+            if(produto.nome == "Nike SB Dunk Low TRD"){ 
+                const exampleProductInfos = `
+                <div class="product${+1}">
+                        <div class="name-product">
+                            <span id="name-product">${produto.nome}</span>
+                        </div>
+                        <div class="img-product">
+                            <img id="image-example-product" src="${"./img/lowtrd.jpg"}" alt="">
+                        </div>
+                        <div class="button-product">
+                            <a class="btn-example-product" href="projeto.html?produto=${produtoTransformadoJsonCodificado}">Ver produto</a>
+                        </div>
+                    </div>`
+                
+                    exampleProductSimple.innerHTML = exampleProductSimple.innerHTML + exampleProductInfos;            
+            }
+            if(produto.nome == "Tênis Nike Air Force 1 Infantil"){
+                const exampleProductInfos = `
+                <div class="product${+2}">
+                        <div class="name-product">
+                            <span id="name-product">${produto.nome}</span>
+                        </div>
+                        <div class="img-product">
+                            <img id="image-example-product" src="${"./img/tenis-nike-air-force-1-infantil-314192-117-7.png"}" alt="">
+                        </div>
+                        <div class="button-product">
+                            <a class="btn-example-product" href="projeto.html?produto=${produtoTransformadoJsonCodificado}">Ver produto</a>
+                        </div>
+                    </div>`
+                
+                    exampleProductSimple.innerHTML = exampleProductSimple.innerHTML + exampleProductInfos;   
+            }
+    }
+
+    
+    
+    for(let index = 0; index < produtos.length; index++){
+        
+        const produto = produtos[index]
+        
+        let button = document.getElementById('btn-cart' + (index + 1))
 
         
-        if(produto.nome == "Nike SB Dunk Low TRD"){ 
-            const exampleProductInfos = `
-            <div class="product${+1}">
-                    <div class="name-product">
-                        <span id="name-product">${produto.nome}</span>
-                    </div>
-                    <div class="img-product">
-                        <img id="image-example-product" src="${"./img/lowtrd.jpg"}" alt="">
-                    </div>
-                    <div class="button-product">
-                        <a class="btn-example-product" href="projeto.html?produto=${produtoTransformadoJsonCodificado}">Ver produto</a>
-                    </div>
-                </div>`
+        var contador = 0
+        button.addEventListener("click", function(){
+            contador += 1
+            console.log(contador);
+            prod();
             
-                exampleProductSimple.innerHTML = exampleProductSimple.innerHTML + exampleProductInfos;            
-        }
-        if(produto.nome == "Tênis Nike Air Force 1 Infantil"){
-            const exampleProductInfos = `
-            <div class="product${+2}">
-                    <div class="name-product">
-                        <span id="name-product">${produto.nome}</span>
-                    </div>
-                    <div class="img-product">
-                        <img id="image-example-product" src="${"./img/tenis-nike-air-force-1-infantil-314192-117-7.png"}" alt="">
-                    </div>
-                    <div class="button-product">
-                        <a class="btn-example-product" href="projeto.html?produto=${produtoTransformadoJsonCodificado}">Ver produto</a>
-                    </div>
-                </div>`
-            
-                exampleProductSimple.innerHTML = exampleProductSimple.innerHTML + exampleProductInfos;   
-        }
+        });
+        
+        let dados = []
+        
+        localStorage.setItem("Produto", JSON.stringify(dados))
+        
+        function prod(){
 
+            dados = JSON.parse(localStorage.getItem("Produto"))
+
+            const linhaProd = 
+            `<div class="row align-items-center" style="height: 200px; background-color: rgba(255, 255, 255, 0.048);">
+            <img class="w-25 h-75" src="${produto.imagens[0]}" alt="">
+            <h2 class="w-25 text-center text-white fs-4 fw-normal">${produto.nome}</h2>
+            <div class="col w-25 d-flex justify-content-center">
+                <div class="select-cont" id="select-cont${contador}">
+                    <div class="select" id="select">
+                        <p class="sel-txt" id="valor${contador}"></p>
+                        <div class="icon">
+                            <img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/caret-down-512.png" alt="" class="caret">
+                        </div>
+                    </div>
+        
+                    <div class="options-cont${contador}" id="options-cont">
+                        <button class="options1 active" id="options" value="1">
+                            1
+                        </button>
+                        <button class="options2" id="options" value="2">
+                            2
+                        </button>
+                        <button class="options3" id="options" value="3">
+                            3
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <span class="w-25 text-center text-white" id="valor-total-prod ${contador}">R$ ${produto.valor}</span>
+        </div>`
+     
+         dados.push(linhaProd)
+         console.log('Array' + dados);
+        localStorage.setItem("Produto", JSON.stringify(dados))
+
+        }
     }
+    
+
+        
 
         let indexteste = 0
         for(let indexxx = 1; indexxx <= produtos.length; indexxx++){

@@ -21,46 +21,43 @@ for (let index = 0; index < produtos.length; index++) {
         return console.log(n)
     }
         
-    const select = document.getElementById("select" +(index + 1));
+    const select = document.getElementById("select-cont" +(index + 1));
     const optioncont = document.querySelector(".options-cont" +(index + 1))
     const valor = document.getElementById('valor' + (index + 1))
     const valortotalprod = document.getElementById('valor-total-prod ' +(index + 1));
 
     console.log(optioncont);
 
-    optioncont.addEventListener("click", function(){
-        active();
-    });
-
-    function active(){
+    $(document).on('click', select , function(){
         if($(optioncont).hasClass('active')){
             $(optioncont).removeClass('active');
         }
         else{
             $(optioncont).addClass('active')
         }
-    }
+    });
     
     for (let i = 0; i < optioncont.children.length; i++) {
+
         
-        const option = document.getElementById('options' + (i + 1))
+        const option = document.querySelector('.options' + (i + 1))
         
         // REALIZA FUNÇÃO AO CARREGAR A PÁGINA
-        jQuery(function($){
-                if($(option).hasClass('active')){    
-                    const num = $(option).val();
-                    $(valor).html(num)
-                }
-        });
-        
-        
-        // FUNÇÃO PARA ALTERAR A CLASS ACTIVE CONFORME O CLICK
-        $(document).on('click', option , function() {
-            $(option).addClass('active').siblings().removeClass('active');
+       
             if($(option).hasClass('active')){    
                 const num = $(option).val();
                 $(valor).html(num)
             }
+      
+        
+        
+        // FUNÇÃO PARA ALTERAR A CLASS ACTIVE CONFORME O CLICK
+        $(document).on('click', option , function() {
+            $(option).addClass('active').siblings('active').removeClass('active');
+            if($(option).hasClass('active')){    
+                const num = $(option).val();
+                $(valor).html(num)
+            }   
         });
     }
 }
