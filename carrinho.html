@@ -4,34 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap-5.1.0-dist/css/bootstrap.min.css ">
+    <link rel="stylesheet" href="./bootstrap-5.1.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/carrinho.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-light bg-dark bg-gradient">
-            <div class="container-fluid justify-content-space-between">
-                <a class="navbar-brand w-25 d-flex justify-content-center" href="#" >
+        <nav class="navbar navbar-light bg-dark d-flex align-items-center h-100 p-0">
+            <div class="container-fluid justify-content-space-between h-100">
+                <a class="navbar-brand w-25 d-flex justify-content-center h-100" href="index.html" >
                     <img src="./img/a.png" alt="">
                 </a>
-                <div class="dropdown w-25 d-flex justify-content-center">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown button
+                <div class="dropdown w-25 h-100 d-flex align-items-center
+                justify-content-center">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-dark d-flex justify-content-center f" aria-labelledby="dropdownMenuButton2">
-                      <li><a class="dropdown-item active" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <ul class="dropdown-menu dropdown-menu-dark m-0 top-99" aria-labelledby="dropdownMenuButton2">
+                      <li><a class="dropdown-item" href="index.html">Voltar à Principal</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Separated link</a></li>
+                      <li><a class="dropdown-item" href="produtos.html">Produtos</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="destaques.html">Destaques</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="sobre.html">Sobre</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="contato.html">Contato</a></li>
+                      <li><hr class="dropdown-divider"></li>  
                     </ul>
                   </div>
             </div>
         </nav>
-        
     </header>
 
+    <div class="container-fluid mx-0 m-4" style="height: 5vh;">
+        <div class="row">
+          <div class="col">
+            <h1 class="title">Carrinho</h1>
+          </div>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex justify-content-center" style="min-height: 77.9vh;">
+        <div class="row" style="width: 95%;">
+            <div class="col-8 d-flex flex-column bg-dark border-5 border-end">
+                <div class="row" style="padding-right: var(--bs-gutter-x,.75rem); padding-left: var(--bs-gutter-x,.75rem);">
+                    <h1 class="title text-white mb-4">Produtos no carrinho</h1>
+                    <div class="col-3"><h2 class="categorias text-center text-white">Imagem</h2></div>
+                    <div class="col-3"><h2 class="categorias text-center text-white">Nome</h2></div>
+                    <div class="col-3"><h2 class="categorias text-center text-white">Quantidade</h2></div>
+                    <div class="col-3"><h2 class="categorias text-center text-white">Valor total</h2></div>
+                </div>
+                
+                <div class="container-fluid" id="container-prodsss">
+                </div>
+            </div>
+            <div class="col-4 d-flex flex-column justify-content-center bg-dark h-75">
+                <h1 class="title text-white mb-4 p-2 h-25">Pagamento</h1>
+                <div class="row justify-content-center h-50">
+                    <div class="row"><h2 class="categorias text-center text-white f2-3">Preço total</h2>
+                        <span class="text-white text-center fs-4">R$ 1000</span>
+                        <span class="fs-5 d-flex text-white text-center justify-content-center align-items-center w-100">Ou à vista por  <p class="p-1 mt-auto mb-auto">R$ 900</p></span>
+                    </div>
+                    <div class="row align-items-end"><button type="button" class="btn btn-secondary w-100 h-50 fs-3 fw-bold">Finalizar compra</button></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/carrinho.js"></script>
     <script src="./bootstrap-5.1.0-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
