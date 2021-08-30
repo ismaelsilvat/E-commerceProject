@@ -1,0 +1,207 @@
+header{
+    height: 12vh !important;
+}
+
+.dropdown-menu[data-bs-popper]{
+    top: 100%;
+    left: auto !important;
+}
+
+.dropdown-toggle:after{
+    display: none;
+}
+
+
+.dropdown{
+    position: relative;
+}
+
+.btn{
+    width: 35px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.btn span{
+    position: absolute;
+    display: flex;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #8948fa;
+    transition: 0.25s ease-in-out;
+}
+  
+.btn span:nth-child(1){
+    height: 15%;
+    top: 15%;
+}
+  
+.btn span:nth-child(2){
+    height: 15%;
+    top: 47%;
+}
+  
+.btn span:nth-child(3){
+    height: 15%;
+    top: 80%;
+}
+
+.dropdown-menu{
+    border-radius: 0;
+    -webkit-border-bottom-left-radius: 25px;
+    -webkit-border-bottom-right-radius: 25px;
+}
+
+.dropdown-item{
+    text-align: center;
+}
+
+.title{
+    font-size: 3.1rem;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-style: oblique;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1;
+}
+
+.top-99{
+    top: 99% !important;
+}
+
+.select-cont{
+    width: 100%;
+    height:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.select{
+    width: 50%;
+    height: 35px;
+    color:#fff;
+    border-radius: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 3px #000;
+    cursor: pointer;
+}
+
+.sel-txt{
+    width: 70%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.select .caret{
+    width: 25px;
+    height: 25px;
+}
+
+#options-cont{
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+    width: 0%;
+    overflow-x: hidden;
+    height:0px;
+    border-radius: 10px;
+    font-family: "Faret Code";
+    transition: all .1s ease;
+}
+
+#options-cont::-webkit-scrollbar{
+    width:5px;
+    background:#777;
+}
+#options-cont::-webkit-scrollbar-thumb{
+    background:#000;
+    border-radius: 30px;
+}
+#options-cont.active{
+    transition: all .1s ease;
+    width: 25%;
+    height: auto;
+}
+.options{
+    padding:3px;
+    border: none;
+    border-top:1px solid #000;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    background:#fff;
+}
+
+.options.active{
+    background-color: var(--dark);
+    color: #fff;
+}
+
+.options:hover{
+    background-color: var(--dark);
+    color:#fff;
+}
+.options img{
+    width:30px;
+    padding:5px;
+}
+
+.options .radio{
+    display:none;
+}
+
+
+
+/* When the select div is clicked, 
+    add an active class to the caret image
+*/
+
+.select .caret.active{
+    transform: rotateX(-180deg);
+}
+
+
+.loader-cont{
+    width:100%;
+    height:100vh;
+    position:fixed;
+    top:0px;
+    left:0px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:#fff;
+    display: none;
+}
+
