@@ -209,7 +209,7 @@ fetch("../test.json")
                             <img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/caret-down-512.png" alt="" class="caret">
                         </div>
                     </div>
-        
+
                     <div class="options-cont${contador}" id="options-cont">
                         <button class="options1 active" id="options" value="1">
                             1
