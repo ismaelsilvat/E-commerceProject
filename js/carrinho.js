@@ -2,51 +2,29 @@ const containerprod = document.getElementById('container-prodsss')
 
 const produtos = JSON.parse(localStorage.getItem("Produto")) 
 
-console.log(produtos.length);
+console.log("qtde: " + produtos.length);
 
 const selects = [];
 
+const optionscont = [];
+
 for (let index = 0; index < produtos.length; index++) {
 
+
     containerprod.innerHTML += produtos[index]
-
     
-    let select = document.querySelector(".select-cont.select-cont" + (index + 1));
-
+    let select = document.querySelector(".select-cont" + (index + 1));
+    
     selects[index] = select
 
+    var optioncont = document.querySelector(".options-cont" + (index + 1))
 
-    const optioncont = document.querySelector(".options-cont" + (index + 1))
+    optionscont[index] = optioncont
 
     const valor = document.getElementById('valor' + (index + 1))
 
     const valortotalprod = document.getElementById('valor-total-prod ');
 
-    for (let teste = 0; teste < selects.length; teste++) {
-        
-        $(selects[teste]).on('click', function(){
-    
-                if($(optioncont).hasClass('active')){
-    
-                    $(optioncont).removeClass('active')
-    
-                }
-    
-                else{
-    
-                $(optioncont).addClass('active')
-    
-                }
-        
-            //console.log($(optioncont).attr('class'));
-    
-        });
-        
-    }
-
-  
-
-        
     let option = document.querySelector('.options-cont' + (index + 1)).children
     
     // REALIZA FUNÇÃO AO CARREGAR A PÁGINA
@@ -60,10 +38,8 @@ for (let index = 0; index < produtos.length; index++) {
             $(valor).html(num)
 
         }
-        
     
         // FUNÇÃO PARA ALTERAR A CLASS ACTIVE CONFORME O CLICK
-
         $(option[index]).on('click', function() {
 
             $(this).addClass('active').siblings().removeClass('active');
@@ -80,8 +56,32 @@ for (let index = 0; index < produtos.length; index++) {
         
     }
        
+}
+
+for (var indexxxx = 0; indexxxx < selects.length; indexxxx++) {
+    console.log(indexxxx);
+    console.log((selects[indexxxx]));
+    $((selects[indexxxx])).click(function() {
+        // alert('quem sou eu?')
+    
+            if($(optionscont).hasClass('active')){
+    
+                $(optionscont).removeClass('active')
+    
+            }
+    
+            else{
+    
+            $(optionscont).addClass('active')
+    
+            }
+    
+    });
+    
+    console.log($(selects[indexxxx]).attr('class'))
 
 }
+    
 
 // for (let i = 0; i < optioncont.children.length; i++) {
 

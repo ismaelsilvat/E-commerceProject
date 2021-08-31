@@ -181,11 +181,11 @@ fetch("../test.json")
         let button = document.getElementById('btn-cart' + (index + 1))
 
         
-        var contador = 0
+        var contador = 1
         button.addEventListener("click", function(){
-            contador += 1
             console.log(contador);
             prod();
+            contador += 1
             
         });
         
@@ -209,7 +209,7 @@ fetch("../test.json")
                             <img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/caret-down-512.png" alt="" class="caret">
                         </div>
                     </div>
-
+                    
                     <div class="options-cont options-cont${contador}">
                         <button class="options active" value="1">
                             1
@@ -227,7 +227,7 @@ fetch("../test.json")
         </div>`
      
          dados.push(linhaProd)
-         console.log('Array' + dados);
+         console.log(dados);
         localStorage.setItem("Produto", JSON.stringify(dados))
 
         }
