@@ -1,63 +1,94 @@
-// fetch("../test.json")
-//     .then(response => response.json()).then(produtos => {
-//         console.log(produtos)
-
-    
-
-// });
-
-
-
-
 const containerprod = document.getElementById('container-prodsss')
 
 const produtos = JSON.parse(localStorage.getItem("Produto")) 
 
+console.log(produtos.length);
+
+const selects = [];
+
 for (let index = 0; index < produtos.length; index++) {
-    
+
     containerprod.innerHTML += produtos[index]
-        
-    const select = document.getElementById("select-cont" + (index + 1));
-    const optioncont = document.querySelector(".options-cont" + (index + 1))
-    const valor = document.getElementById('valor' + (index + 1))
-    const valortotalprod = document.getElementById('valor-total-prod ' + (index + 1));
 
     
+    let select = document.querySelector(".select-cont.select-cont" + (index + 1));
 
-    $(document).on('click', select , function(){
-         if($(optioncont).hasClass('active')){
-             $(optioncont).removeClass('active').siblings().addClass('active');
-         }
-
-        //console.log($(optioncont).attr('class'));
-    });
+    selects[index] = select
 
 
-    for (let i = 0; i < optioncont.children.length; i++) {
+    const optioncont = document.querySelector(".options-cont" + (index + 1))
 
+    const valor = document.getElementById('valor' + (index + 1))
+
+    const valortotalprod = document.getElementById('valor-total-prod ');
+
+    for (let teste = 0; teste < selects.length; teste++) {
         
-        const option = document.querySelector('.options' + (i + 1))
+        $(selects[teste]).on('click', function(){
+    
+                if($(optioncont).hasClass('active')){
+    
+                    $(optioncont).removeClass('active')
+    
+                }
+    
+                else{
+    
+                $(optioncont).addClass('active')
+    
+                }
         
-        
-        // REALIZA FUNÇÃO AO CARREGAR A PÁGINA
-       
-            if($(option).hasClass('active')){    
-                const num = $(option).val();
-                $(valor).html(num)
-            }
-      
-        
-        
-        // FUNÇÃO PARA ALTERAR A CLASS ACTIVE CONFORME O CLICK
-        $(document).on('click', option , function() {
-            $(option).addClass('active').siblings('active').removeClass('active');
-            if($(option).hasClass('active')){    
-                const num = $(option).val();
-                $(valor).html(num)
-            }   
+            //console.log($(optioncont).attr('class'));
+    
         });
+        
     }
+
+  
+
+        
+    let option = document.querySelector('.options-cont' + (index + 1)).children
+    
+    // REALIZA FUNÇÃO AO CARREGAR A PÁGINA
+
+    for (let index = 0; index < option.length; index++) {
+        
+        if($(option[index]).hasClass('active')){  
+
+            const num = $(option[index]).val();
+
+            $(valor).html(num)
+
+        }
+        
+    
+        // FUNÇÃO PARA ALTERAR A CLASS ACTIVE CONFORME O CLICK
+
+        $(option[index]).on('click', function() {
+
+            $(this).addClass('active').siblings().removeClass('active');
+
+            if($(this).hasClass('active')){    
+
+                const num = $(this).val();
+
+                $(valor).html(num)
+
+            }   
+
+        });
+        
+    }
+       
+
 }
+
+// for (let i = 0; i < optioncont.children.length; i++) {
+
+
+// for (let index = 0; index < produtos.length; index++) {
+    
+// }
 
 
 // function active(){

@@ -118,7 +118,7 @@ header{
     height: 25px;
 }
 
-#options-cont{
+.options-cont{
     position:absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -136,20 +136,20 @@ header{
     transition: all .1s ease;
 }
 
-#options-cont::-webkit-scrollbar{
+.options-cont::-webkit-scrollbar{
     width:5px;
     background:#777;
 }
-#options-cont::-webkit-scrollbar-thumb{
+.options-cont::-webkit-scrollbar-thumb{
     background:#000;
     border-radius: 30px;
 }
-#options-cont.active{
+.options-cont.active{
     transition: all .1s ease;
     width: 25%;
     height: auto;
 }
-#options{
+.options{
     padding:3px;
     border: none;
     border-top:1px solid #000;
@@ -162,21 +162,21 @@ header{
     background:#fff;
 }
 
-#options.active{
+.options.active{
     background-color: var(--dark);
     color: #fff;
 }
 
-#options:hover{
+.options:hover{
     background-color: var(--dark);
     color:#fff;
 }
-#options img{
+.options img{
     width:30px;
     padding:5px;
 }
 
-#options .radio{
+.options .radio{
     display:none;
 }
 

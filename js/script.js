@@ -202,22 +202,22 @@ fetch("../test.json")
             <img class="w-25 h-75" src="${produto.imagens[0]}" alt="">
             <h2 class="w-25 text-center text-white fs-4 fw-normal">${produto.nome}</h2>
             <div class="col w-25 d-flex justify-content-center">
-                <div class="select-cont" id="select-cont${contador}">
-                    <div class="select" id="select">
+                <div class="select-cont select-cont${contador}">
+                    <div class="select">
                         <p class="sel-txt" id="valor${contador}"></p>
                         <div class="icon">
                             <img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/caret-down-512.png" alt="" class="caret">
                         </div>
                     </div>
 
-                    <div class="options-cont${contador}" id="options-cont">
-                        <button class="options1 active" id="options" value="1">
+                    <div class="options-cont options-cont${contador}">
+                        <button class="options active" value="1">
                             1
                         </button>
-                        <button class="options2" id="options" value="2">
+                        <button class="options" value="2">
                             2
                         </button>
-                        <button class="options3" id="options" value="3">
+                        <button class="options" value="3">
                             3
                         </button>
                     </div>
