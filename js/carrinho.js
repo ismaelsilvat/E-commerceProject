@@ -10,7 +10,6 @@ const optionscont = [];
 
 for (let index = 0; index < produtos.length; index++) {
 
-
     containerprod.innerHTML += produtos[index]
     
     let select = document.querySelector(".select-cont" + (index + 1));
@@ -32,8 +31,6 @@ for (let index = 0; index < produtos.length; index++) {
     for (let index = 0; index < option.length; index++) {
         
         if($(option[index]).hasClass('active')){  
-            
-
 
             const num = $(option[index]).val();
 
