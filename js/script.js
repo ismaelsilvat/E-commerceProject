@@ -202,7 +202,7 @@ fetch("../test.json")
             <img class="w-25 h-75" src="${produto.imagens[0]}" alt="">
             <h2 class="w-25 text-center text-white fs-4 fw-normal">${produto.nome}</h2>
             <div class="col w-25 d-flex justify-content-center">
-                <div class="select-cont select-cont${contador}">
+                <div class="select-cont${contador} select-cont">
                     <div class="select">
                         <p class="sel-txt" id="valor${contador}"></p>
                         <div class="icon">

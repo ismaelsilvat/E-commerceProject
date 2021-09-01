@@ -32,6 +32,8 @@ for (let index = 0; index < produtos.length; index++) {
     for (let index = 0; index < option.length; index++) {
         
         if($(option[index]).hasClass('active')){  
+            
+
 
             const num = $(option[index]).val();
 
@@ -59,25 +61,33 @@ for (let index = 0; index < produtos.length; index++) {
 }
 
 for (var indexxxx = 0; indexxxx < selects.length; indexxxx++) {
+
     console.log(indexxxx);
+
     console.log((selects[indexxxx]));
-    $((selects[indexxxx])).click(function() {
-        // alert('quem sou eu?')
+
+    console.log(produtos[indexxxx]);
+
+
+
+        $((produtos[indexxxx])).on('click', '.select-cont', function() {
     
-            if($(optionscont).hasClass('active')){
+            // alert('quem sou eu?')
     
-                $(optionscont).removeClass('active')
+                if($(optionscont[indexxxx]).hasClass('active')){
+        
+                    $(optionscont[indexxxx]).removeClass('active')
+        
+                }
+        
+                else{
     
-            }
-    
-            else{
-    
-            $(optionscont).addClass('active')
-    
-            }
-    
-    });
-    
+                $(optionscont[indexxxx]).addClass('active')
+        
+                }
+        
+        });
+
     console.log($(selects[indexxxx]).attr('class'))
 
 }
