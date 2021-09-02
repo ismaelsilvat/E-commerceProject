@@ -12,7 +12,7 @@
     <input type="checkbox" id="nav-toggle">
     <div class="sidebar">
         <div class="sidebar-brand">
-        <h2><span class="las la-home">Configurações</span></h2>
+            <h2><span class="las la-home">Configurações</span></h2>
         </div>
      <!-- seleções do dashboard -->
     <div class="sidebar-menu">
@@ -23,12 +23,12 @@
             </li>
             <li>
                 <a href="./editarproduto.html"><span class="las la-gift"></span>
-                    <span>Editar Produto</span></a>
-                </li>
-                <li>
-                    <a href="./excluirProd.html"><span class="las la-gift"></span>
-                    <span>Remover Produto</span></a>
-                </li>
+                <span>Editar Produto</span></a>
+            </li>
+            <li>
+                <a href="./excluirProd.html"><span class="las la-gift"></span>
+                <span>Remover Produto</span></a>
+            </li>
             <li>
                 <a href="excluirusuario.html" class="active"><span class="las la-user"></span>
                 <span>Excluir Usuario</span></a>
@@ -42,7 +42,7 @@
         <header>
             <h2>
                 <label for="nav-toggle">
-                <span class="las la-bars"></span>
+                    <span class="las la-bars"></span>
                 </label>
             </h2>
 
@@ -65,33 +65,33 @@
                 <div class="card-localizar-usuario">
                     <h2>Localizar Usuario</h2>
                     <form>
-                    <div class="search-user">
+                        <div class="search-user">
                             <input type="text" placeholder="Pesquise o nome ou código do Usuario" required="required">
                             <li></li>
                             <div class="button-romove">
-                            <button onclick="localizarPessoas()">Localizar Usuario</button>
+                                <button onclick="localizarPessoas()">Localizar Usuario</button>
                             </div>
                         </div>
                     </form>
-                    </div>
-                    <div class="card-remover-usuario">
-                        <h2>Remover o Usuario</h2>
+                </div>
+                <div class="card-remover-usuario">
+                    <h2>Remover o Usuario</h2>
                     <form>
-                    <div class="user-info">
-                        <p>Nome do Usuario</p>
-                        <input type="text" placeholder="insira o nome do usuario" required="required">
-                    </div>
-
-                    <div class="user-info">
-                        <p>Email do Usuario</p>
-                        <input type="text" placeholder="insira o código do usuario" required="required">
-                    </div>
+                        <div class="user-info">
+                            <p>Nome do Usuario</p>
+                            <input type="text" placeholder="insira o nome do usuario" required="required">
+                        </div>
 
                         <div class="user-info">
-                        <button id="remover" onclick="removerPessoas()">Remover Usuario</button>
+                            <p>Email do Usuario</p>
+                            <input type="text" placeholder="insira o código do usuario" required="required">
+                        </div>
+
+                        <div class="user-info">
+                            <button id="remover" onclick="removerPessoas()">Remover Usuario</button>
                         </div>
                     </form>
-                   </div>
-                
-
+                </div>
             </div>
+        </main>
+            <script src="./js/excluirUser.js"></script>
