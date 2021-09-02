@@ -14,8 +14,6 @@ foto[0].addEventListener('change', function () {
     reader.addEventListener('load', () => {
 
         photo = reader.result
-
-
     })
 
     reader.readAsDataURL(this.files[0]);
