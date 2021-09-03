@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/addProd.css">
+    <title></title>
+</head>
+<body>
+    <div class="containerteste2">
+
+        <div class="midson-l">
+            <div class="localizar-itens">
+                <div class="localizar-produto">
+
+                    <label>Localize o produto</label>
+
+                </div>
+
+                <div class="localizar-input">
+                    <div class="input-btn">
+                        <input class="oi" type="text" placeholder="Pesquise o produto pelo nome ou código">
+                        <button onclick="localizarProdutos()" type="submit">PESQUISAR</button>
+
+                    </div>
+                   
+                        <li class="li1"></li>
+                 
+                  
+
+                </div>
+            </div>
+            <div class="mid-left-input">
+                <div class="mid-l-inputs">
+                    <label>Nome</label>
+                    <input class="oi" type="text" readonly placeholder="Confirme o produto desejado">
+                </div>
+
+                <div class="mid-l-inputs">
+                    <label for="">Código</label>
+                    <input class="oi" type="text" readonly placeholder="Confirme o código do produto">
+
+                </div>
+
+                <div class="mid-l-inputs">
+                    <label for="">Preço</label>
+                    <input class="oi" type="number" readonly placeholder="Confime o preço do produto">
+
+                </div>
+
+                <div class="mid-l-inputs">
+                    <label for="">Descrição do produto</label>
+                    <textarea name="" id="" cols="5" readonly></textarea>
+
+                </div>
+            </div>
+            <div class="mid-left-bot">
+                <div class="imagem-produto">
+
+                    <label>Imagem</label>
+
+                </div>
+
+                <div class="img-produto" id="testeimg">
+
+                 
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="midson-r">
+            <div class="editar-produto">
+
+                <label>Edite o produto</label>
+
+            </div>
+            <div class="mid-right-input">
+                <div class="mid-r-inputs">
+                    <label>Nome</label>
+                    <input class="oi2" type="text" placeholder="Edite o produto desejado">
+                    <li class="li2"></li>
+                </div>
+
+                <div class="mid-r-inputs">
+                    <label for="">Código</label>
+                    <input class="oi2" type="text" placeholder="Edite o código do produto">
+                    <li class="li2"></li>
+                </div>
+
+                <div class="mid-r-inputs">
+                    <label for="">Preço</label>
+                    <input class="oi2" type="number" placeholder="Edite o preço do produto">
+                    <li class="li2"></li>
+                </div>
+
+                <div class="mid-r-inputs">
+                    <label for="">Descrição do produto</label>
+                    <textarea name="" id="" cols="5"></textarea>
+
+                </div>
+            </div>
+            <div class="mid-file">
+
+                <label>Selecione uma imagem</label>
+                <input type="file" id="foto">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container-bottomson">
+
+
+        <button onclick="editarProdutos()">Editar produto</button>
+
+
+    </div>
+    <script src="./js/editProd.js"></script>
+</body>
+</html>

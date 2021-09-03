@@ -57,7 +57,7 @@ fetch("../test.json")
                     <span class="preço">${produto.valor}</span>
                     <span class="juros">${produto.juros}</span>
                     <a href="projeto.html?produto=${produtoTransformadoJsonCodificado}" class="btn">Ver produto</a>
-                    <a class="btn-cart" id=" " style="cursor: pointer"><i class="fas fa-cart-plus"></i></button>
+                    <a class="btn-cart" id="btn-cart${index + 1}" style="cursor: pointer"><i class="fas fa-cart-plus"></i></button>
                 </div>`
 
             containerProdutos.innerHTML = containerProdutos.innerHTML + modeloDeProduto;

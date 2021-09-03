@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+}
+.containerteste{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    position: absolute;
+}
+
+.containerteste input{
+    margin: 15px;
+    height: 50px;
+    text-align: center;
+}
+
+.containerteste2{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.containerteste2 input{
+    width: 100%;
+    height: 75px;
+}
