@@ -88,6 +88,10 @@ for (var indexxxx = 0; indexxxx < selects.length; indexxxx++) {
     console.log($(selects[indexxxx]).attr('class'))
 
 }
+
+function testeLog(){
+    
+}
     
 
 // for (let i = 0; i < optioncont.children.length; i++) {

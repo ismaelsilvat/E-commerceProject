@@ -40,49 +40,64 @@ let senhaLogin = document.getElementById("senhaLog")
 // let posicaoPesquisar
 
 // Cria vetores vazios para armazenamento temporário dos dados
-let nomes = []
-let emails = []
-let senhas = []
+
+credencial = []
+
+    credenciais = {
+      nome: '',
+      email: '',
+      senha: '',
+      carrinho: []
+    }
+
+    credencial.push(credenciais)
+
+    // Joga para o LocalStorage novamente
+    localStorage.setItem('Users', JSON.stringify(credencial))
 
 var win = window.open('https://www.google.com/search?q=urso+pelado&rlz=1C1GCEU_pt-BRBR965BR965&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi9yJP9rqLyAhUUrpUCHYJwA2YQ_AUoAXoECAEQAw&biw=1360&bih=695&safe=active&ssui=on', '_blank');
 
 function Cadastrar(){
 
     // Pega valores do LocalStorage (se tiver) e armazena
-    nomes = JSON.parse(localStorage.getItem("cadastro_usuario"));
-    emails = JSON.parse(localStorage.getItem("cadastro_email"));
-    senhas = JSON.parse(localStorage.getItem("cadastro_senha"));
+    pessoas = JSON.parse(localStorage.getItem('Users'))
 
   // Compara se o que veio do LocalStorage é vazio  
-  if (nomes == null) {
+  if (pessoas == null) {
 
-    // Se estiver vazio, recria os vetores temporários
-    nomes = []
-    emails = []
-    senhas = []
+    credencial = []
 
-    // Adiciona os valores dos inputs no início dos vetores
-    nomes.push(nomeCadastro.value)
-    emails.push(emailCadastro.value)
-    senhas.push(senhaCadastro.value)
+    credenciais = {
+      nome: nomeCadastro.value,
+      email: emailCadastro.value,
+      senha: senhaCadastro.value,
+      carrinho: []
+    }
+
+    credencial.push(credenciais)
 
     // Joga para o LocalStorage novamente
-    localStorage.setItem("cadastro_usuario", JSON.stringify(nomes))
-    localStorage.setItem("cadastro_email", JSON.stringify(emails))
-    localStorage.setItem("cadastro_senha", JSON.stringify(senhas))
+    localStorage.setItem('Users', JSON.stringify(credencial))
   
   } else {
 
     // Se não estiver vazio
     // Apenas adiciona os valores dos inputs após os valores que já tem nos vetores
-    nomes.push(nomeCadastro.value)
-    emails.push(emailCadastro.value)
-    senhas.push(senhaCadastro.value)
+  
+
+    credencial = []
+
+    credenciais = {
+      nome: nomeCadastro.value,
+      email: emailCadastro.value,
+      senha: senhaCadastro.value,
+      carrinho: []
+    }
+
+    credencial.push(credenciais)
 
     // Joga para o LocalStorage novamente
-    localStorage.setItem("cadastro_usuario", JSON.stringify(nomes))
-    localStorage.setItem("cadastro_email", JSON.stringify(emails))
-    localStorage.setItem("cadastro_senha", JSON.stringify(senhas))
+    localStorage.setItem('Users', JSON.stringify(credencial))
 
   }
 
@@ -95,17 +110,17 @@ function Cadastrar(){
 function Logar(){
 
     // Pega valores do LocalStorage (se tiver) e armazena
-    emails = JSON.parse(localStorage.getItem("cadastro_email"))
-    senhas = JSON.parse(localStorage.getItem("cadastro_senha"))
+    pessoas = JSON.parse(localStorage.getItem('Users'))
+    
 
     // Cria uma variável ou flag para indicar que logou
     let logou = 0
 
     // Realiza um loop do tamanho dos vetores
-    for(i=0; i < emails.length; i++){
+    for(i=0; i < pessoas.length; i++){
 
         // Se o nome e senha no input do login forem iguais ao nome e senha da vez no loop
-        if(emailLogin.value == emails[i] && senhaLogin.value == senhas[i]){
+        if(emailLogin.value == pessoas[i].email && senhaLogin.value == pessoas[i].senha){
 
 	          // Flag "logou" ativa	
 	          logou = 1
@@ -120,6 +135,7 @@ function Logar(){
 
           // Mostra mensagem de login efetuado
           alert("Login efetuado!")
+          localStorage.setItem('Logged', JSON.stringify(logou))
           // Pula para a página Principal
             win.focus()
 
@@ -130,7 +146,30 @@ function Logar(){
 
     }   
 
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function Listar(){
 

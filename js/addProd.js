@@ -1,43 +1,44 @@
-    
-const input = document.querySelector('.allIts')
-const ips = input.querySelectorAll('input')
-let img = document.querySelector('.mid-file');
-let imgOF = img.querySelectorAll('input')
+const inputs = document.querySelectorAll('.container-inputs input')
+const file = document.querySelectorAll('.mid-file input');
 const textArea = document.querySelectorAll('textarea');
 const li = document.querySelectorAll('li');
+const teste = document.querySelector('.container-pos-add')
+let testeIPT = document.querySelectorAll('.container-pos-add input')
+const container = document.querySelector('.container-inputs')
+let img = document.getElementById('imgimg')
 let send = true;
 let photo = null;
 
-const teste = document.getElementById('imgteste')
+console.log(testeIPT);
 
-imgOF[0].addEventListener('change', function () {
+
+file[0].addEventListener('change', function () {
 
     const reader = new FileReader();
 
     reader.addEventListener('load', () => {
-
         photo = reader.result
     })
 
     reader.readAsDataURL(this.files[0]);
-
 })
 
 function addProd() {
     
     clear();
 
-    for (let i = 0; i < input.length; i++) {
+    for (let i = 0; i < inputs.length; i++) {
 
-        if (ips[i].value == '') {
+        if (inputs[i].value == '') {
 
-            ips[i].style.border = 'red solid 2px'
+            inputs[i].style.border = 'red solid 2px'
             li[i].innerHTML = 'Preencha todos os campos!'
 
             send = false;
         }
 
     }
+
     for (let i = 0; i < textArea.length; i++) {
         if (textArea[i].value == '') {
 
@@ -54,17 +55,17 @@ function addProd() {
     if (produtoCadastro !== null) {
 
         for (let i = 0; i < produtoCadastro.length; i++) {
-            if (produtoCadastro[i].nome == ips[0].value) {
+            if (produtoCadastro[i].nome == inputs[0].value) {
 
                 li[0].innerHTML = 'Esse produto ja foi cadastrado!'
-                ips[0].style.border = 'red solid 2px'
+                inputs[0].style.border = 'red solid 2px'
                 send = false;
             }
 
-            if (produtoCadastro[i].codigo == ips[1].value) {
+            if (produtoCadastro[i].codigo == inputs[1].value) {
 
                 li[1].innerHTML = 'Esse código ja foi cadastrado!'
-                ips[1].style.border = 'red solid 2px'
+                inputs[1].style.border = 'red solid 2px'
                 send = false;
             }
         }
@@ -76,9 +77,9 @@ function addProd() {
 
     //FUNCÕES
     function clear() {
-        for (let i = 0; i < ips.length; i++) {       //FUNCÃO LIMPAR OS ERROS DOS inputs
+        for (let i = 0; i < inputs.length; i++) {       //FUNCÃO LIMPAR OS ERROS DOS inputss
             li[i].innerHTML = '';
-            ips[i].style = '';
+            inputs[i].style = '';
 
 
 
@@ -92,23 +93,23 @@ function addProd() {
     }
 
     function clean() {
-        for (let i = 0; i < ips.length; i++) {     //LIMPA OS ips E TEXTAREA DEPOIS DO CADASTRO SER EFETUADO
-            ips[i].value = '';
+        for (let i = 0; i < inputs.length; i++) {     //LIMPA OS inputs E TEXTAREA DEPOIS DO CADASTRO SER EFETUADO
+            inputs[i].value = '';
         }
 
         for (let i = 0; i < textArea.length; i++) {
             textArea[i].value = '';
         }
 
-        imgOF[0].value = '';
+        file[0].value = '';
     }
 
 
 
     let produto = {
-        nome: ips[0].value,
-        codigo: ips[1].value,
-        preco: ips[2].value,
+        nome: inputs[0].value,
+        codigo: inputs[1].value,
+        preco: inputs[2].value,
         descricao: textArea[0].value,
         imgOF: photo
     }
@@ -143,10 +144,22 @@ function addProd() {
 
     }
 
+    container.classList.add('adeus')
+
+    teste.classList.remove('adeus')
+
     let prodtest = JSON.parse(localStorage.getItem('Produto'))
 
-    let imggg = `<img src="${prodtest[0].imgOF}" alt="">`
+    let prodprod = prodtest[prodtest.length -1]
+    console.log(prodprod);
 
-    teste.innerHTML = imggg
+    testeIPT[0].value = prodprod.nome
+    testeIPT[1].value = prodprod.codigo
+    testeIPT[2].value = prodprod.preco
+    
+    const imgg = `<img src="${prodprod.imgOF}" alt="">`
+
+    img.innerHTML = imgg
+
     
 };

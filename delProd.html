@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/addProd.css">
+    <title>Remover prod</title>
+</head>
+<body>
+    <div class="container-r">
+
+        <div class="container-meio">
+            <div class="container-top-1">
+                <label>Remover Produtos</label>
+            </div>
+
+            <div class="container-top-2">
+                <div class="top">
+                    <label>Localize o produto desejado</label>
+                </div>
+
+                <div class="mid">
+                    <input placeholder="Pesquise pelo nome ou código" type="text">
+                    <li></li>
+                </div>
+
+                <div class="bot">
+                    <button onclick="localizarProduto()">Localizar produto</button>
+                </div>
+
+            </div>
+
+            <div class="container-mid">
+
+
+                <div class="mid-inputs">
+                    <label for="">Nome</label>
+                    <input type="text" placeholder="Insira o nome do produto">
+
+                </div>
+
+                <div class="mid-inputs">
+                    <label for="">Código</label>
+                    <input type="text" placeholder="Insira o código do produto">
+
+                </div>
+
+                <div class="mid-inputs">
+                    <label for="">Preço</label>
+                    <input type="text" placeholder="Insira o preço do produto">
+
+                </div>
+
+                <div id="img">
+                </div>
+
+
+            </div>
+            
+            <div class="container-bottom">
+
+                
+                <button onclick="removerProduto()">Remover produto</button>
+            
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./js/delProd.js"></script>
+</body>
+</html>

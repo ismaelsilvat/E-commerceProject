@@ -186,11 +186,11 @@ fetch("../test.json")
         
         let dados = []
         
-        localStorage.setItem("Produto", JSON.stringify(dados))
+     
         
         function prod(){
 
-            dados = JSON.parse(localStorage.getItem("Produto"))
+            dados = JSON.parse(localStorage.getItem("Users"))
 
             const linhaProd = 
             `<div class="row align-items-center" style="height: 200px; background-color: rgba(255, 255, 255, 0.048);">
@@ -221,7 +221,8 @@ fetch("../test.json")
             <span class="w-25 text-center text-white" id="valor-total-prod ${contador}">R$ ${produto.valor}</span>
         </div>`
      
-         dados.push(linhaProd)
+        let carrinho = dados[0].carrinho
+         (dados[0].carrinho).push(linhaProd)
          console.log(dados);
         localStorage.setItem("Produto", JSON.stringify(dados))
 

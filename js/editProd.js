@@ -1,19 +1,21 @@
-let input1 = document.querySelectorAll('.oi')
-let input2 = document.querySelectorAll('.oi2')
+const ipt1 = document.querySelectorAll('.midson-l input')
+const ipt2 = document.querySelectorAll('.midson-r input')
 
-console.log(input2);
+
+console.log(ipt2);
 
 
 
 let textArea = document.querySelectorAll('textarea')
 let li1 = document.querySelectorAll('.li1')
 let li2 = document.querySelectorAll('.li2')
-let img = document.querySelectorAll('.img')
+const imgtest = document.getElementById('img')
+const imgtest2 = document.getElementById('imgimg')
 const produtoCadastro = JSON.parse(localStorage.getItem('Produto'))
 
 let photo = null
 
-input2[3].addEventListener('change', function () {
+ipt2[3].addEventListener('change', function () {
 
     const reader = new FileReader();
 
@@ -32,13 +34,12 @@ function localizarProdutos() {
     let send = true;
     let send1 = true;
 
-    if (input1[0].value == '') {
+    if (ipt1[0].value == '') {
 
         li1[0].innerHTML = 'Preencha o campo!'
-        input1[0].style.border = 'red solid 2px'
+        ipt1[0].style.border = 'red solid 2px'
         limparValores()
         clear()
-        img[0].style = 'display: none;'
 
         send = false
     } else {
@@ -51,7 +52,7 @@ function localizarProdutos() {
 
     for (let i = 0; i < produtoCadastro.length; i++) {
 
-        if (produtoCadastro[i].nome == input1[0].value || produtoCadastro[i].codigo == input1[0].value) {
+        if (produtoCadastro[i].nome == ipt1[0].value || produtoCadastro[i].codigo == ipt1[0].value) {
             
             send1 = false;
         } 
@@ -60,10 +61,9 @@ function localizarProdutos() {
     }
     if (send1 == true) {
         li1[0].innerHTML = 'Esse produto não existe!'
-        input1[0].style.border = 'red solid 2px'
+        ipt1[0].style.border = 'red solid 2px'
         limparValores()
         clear()
-        img[0].style = 'display: none;'
         
 
         send = false;
@@ -75,35 +75,37 @@ function localizarProdutos() {
 
     for (let i = 0; i < produtoCadastro.length; i++) {
 
-        if (produtoCadastro[i].nome == input1[0].value || produtoCadastro[i].codigo == input1[0].value) {
+        if (produtoCadastro[i].nome == ipt1[0].value || produtoCadastro[i].codigo == ipt1[0].value) {
 
 
-            input1[0].value = ''
-            input1[1].value = produtoCadastro[i].nome
-            input1[2].value = produtoCadastro[i].codigo
-            input1[3].value = produtoCadastro[i].preco
+            ipt1[0].value = ''
+            ipt1[1].value = produtoCadastro[i].nome
+            ipt1[2].value = produtoCadastro[i].codigo
+            ipt1[3].value = produtoCadastro[i].preco
             textArea[0].value = produtoCadastro[i].descricao
-            input2[1].value = produtoCadastro[i].codigo
-
-            img[0].style = 'display: flex;'
-            img[0].src = produtoCadastro[i].imgOF
-
+            ipt2[1].value = produtoCadastro[i].codigo
+            
+            imgtest.innerHTML = `<img src="${produtoCadastro[0].imgOF}" alt="">`
+            
         }
-
-
+        
+        
     }
 }
+
+imgimg.innerHTML = ipt2[3].photo
+
 
 function editarProdutos() {
     let send = true;
 
     clear()
 
-    for (let i = 0; i < input2.length; i++) {
+    for (let i = 0; i < ipt2.length; i++) {
 
-        if (input2[i].value == '') {
+        if (ipt2[i].value == '') {
 
-            input2[i].style.border = 'red solid 2px'
+            ipt2[i].style.border = 'red solid 2px'
             li2[i].innerHTML = 'Preencha todos os campos!'
 
             send = false;
@@ -127,13 +129,14 @@ function editarProdutos() {
     for (let i = 0; i < produtoCadastro.length; i++) {
 
 
-        if (produtoCadastro[i].nome == input1[1].value && produtoCadastro[i].codigo == input1[2].value) {
+        if (produtoCadastro[i].nome == ipt1[1].value && produtoCadastro[i].codigo == ipt1[2].value) {
 
 
-            produtoCadastro[i].nome = input2[0].value
-            produtoCadastro[i].preco = input2[2].value
+            produtoCadastro[i].nome = ipt2[0].value
+            produtoCadastro[i].codigo = ipt2[1].value
+            produtoCadastro[i].preco = ipt2[2].value
             produtoCadastro[i].descricao = textArea[1].value
-            produtoCadastro[i].foto = photo
+            produtoCadastro[i].imgOF = photo
 
             localStorage.setItem('Produto', JSON.stringify(produtoCadastro))
 
@@ -142,7 +145,6 @@ function editarProdutos() {
             //     title: 'Produto Editado!'
             // })
 
-            img[0].style = 'display: none;'
             limparValores()
 
 
@@ -153,9 +155,9 @@ function editarProdutos() {
 }
 
 function clear() {
-    for (let i = 0; i < input2.length; i++) {       //FUNCÃO LIMPAR OS ERROS DOS INPUTS
+    for (let i = 0; i < ipt2.length; i++) {       //FUNCÃO LIMPAR OS ERROS DOS INPUTS
         li2[i].innerHTML = '';
-        input2[i].style = '';
+        ipt2[i].style = '';
 
 
 
@@ -169,21 +171,22 @@ function clear() {
 }
 
 function clean() {
-    for (let i = 0; i < input1.length; i++) {
-        input1[0].style = '';
+    for (let i = 0; i < ipt1.length; i++) {
+        ipt1[0].style = '';
         li1[0].innerHTML = '';
     }
 }
 
 function limparValores() {
-    input1[0].value = ''
-    input1[1].value = ''
-    input1[2].value = ''
-    input1[3].value = ''
+    ipt1[0].value = ''
+    ipt1[1].value = ''
+    ipt1[2].value = ''
+    ipt1[3].value = ''
     textArea[0].value = ''
     textArea[1].value = ''
-    input2[0].value = ''
-    input2[1].value = ''
-    input2[2].value = ''
-    input2[3].value = ''
+    ipt2[0].value = ''
+    ipt2[1].value = ''
+    ipt2[2].value = ''
+    ipt2[3].value = ''
+    imgtest.innerHTML = ''
 }
