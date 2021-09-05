@@ -115,7 +115,7 @@ function Logar(){
 
   else{
 
-    if(userS.length !== null){
+    if(userS !== null){
 
       for(i=0; i < userS.length; i++){
     
