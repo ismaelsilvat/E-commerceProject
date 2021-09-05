@@ -189,7 +189,7 @@ fetch("../test.json")
         function prod(){
             
 
-            if(dados === null ||  dados.length == '0' ){
+            if(dados === null ||  dados.length == null){
                 alert('Você tem que estar logado para onseguir adicionar um produto no carrinho')
                 window.open('loginECadastro(ModoE).html', '_self')
             }
