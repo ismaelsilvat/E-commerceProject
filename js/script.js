@@ -188,14 +188,14 @@ fetch("../test.json")
         
         function prod(){
             
-
-            if(dados === null){
+            let position = JSON.parse(localStorage.getItem('infoLog'))
+            
+            if(position === null){
                 alert('Você tem que estar logado para onseguir adicionar um produto no carrinho')
                 window.open('loginECadastro(ModoE).html', '_self')
             }
             else{
-
-                let position = JSON.parse(localStorage.getItem('infoLog'))
+                
                 let num = position.position
                 console.log(num);
 
