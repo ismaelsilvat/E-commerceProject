@@ -115,18 +115,36 @@ function Logar(){
 
   else{
 
-    for(i=0; i < userS.length; i++){
-  
-      // Se o nome e senha no input do login forem iguais ao nome e senha da vez no loop
-      if(credencial.value == userS[i].email || credencial.value == userS[i].nome && senhaLogin.value == userS[i].senha){
-  
-          // Flag "logou" ativa	
-          logou = 1
-          
-        infos.position = i
-      } 
-  
+    if(userS.length !== null){
+
+      for(i=0; i < userS.length; i++){
+    
+        // Se o nome e senha no input do login forem iguais ao nome e senha da vez no loop
+        if(credencial.value == userS[i].email || credencial.value == userS[i].nome && senhaLogin.value == userS[i].senha){
+    
+            // Flag "logou" ativa	
+            logou = 1
+            
+          infos.position = i
+        } 
+    
+      }
     }
+    else{
+      for(i=0; i < 1; i++){
+    
+        // Se o nome e senha no input do login forem iguais ao nome e senha da vez no loop
+        if(credencial.value == userS[i].email || credencial.value == userS[i].nome && senhaLogin.value == userS[i].senha){
+    
+            // Flag "logou" ativa	
+            logou = 1
+            
+          infos.position = i
+        } 
+    
+      }
+    }
+
   
     if (logou == 1){
   
