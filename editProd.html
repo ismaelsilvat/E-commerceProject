@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/addProd.css">
-    <title></title>
+    <link rel="stylesheet" href="./css/editProd.css">
+    <title>Editar Produtos - Área do admin</title>
+    
 </head>
 <body>
     <div class="container-barraLateral">
@@ -16,69 +19,72 @@
             <div class="addProd" id="cardLateral">
                 <a href="./addProd.html">Adicionar produto</a>
             </div>
-                
+            
             <div class="editProd" id="cardLateral">
                 <a href="./editProd.html">Editar produto</a>
             </div>
-        
+            
             <div class="delProd" id="cardLateral">
                 <a href="./delProd.html">Excluir produto</a>
             </div>
-
+            
             <div class="delUser" id="cardLateral">
                 <a href="./delUser.html">Excluir usuário</a>
             </div>
         </div>
     </div>
     
-    <div class="containerEDIT">
+    <div class="containerR containerEDIT">
 
-        <div class="midson-l">
-            <div class="localizar-itens">
-                <div class="localizar-produto">
-
-                    <label>Localize o produto</label>
-
+        <img class="imgbg" src="./img/manos-gkikas-L0tsGE7634E-unsplash.jpg" alt="">
+        <div class="containerADD midson-l">
+            <div class="localizar-itens container-inputs">
+                <div class="tituloCard">
+                    <h2>Editar produto</h2>
                 </div>
 
-                <div class="localizar-input">
-                    <div class="input-btn">
-                        <input type="text" placeholder="Pesquise o produto pelo nome ou código">
-                        <button onclick="localizarProdutos()" type="submit">PESQUISAR</button>
+                <div class="localizar-produto titulo titulo-localizar">
+                    <h2>Localize o produto</h2>
+                </div>
 
+                <div class="localizar-input localizar">
+                    <div class="inp-localizar">
+                        <input type="text" placeholder="Pesquise o produto pelo nome ou código">
+                        <li></li>
+                    </div>
+
+                    <div class="input-btn btn-localizar">
+                        <button onclick="localizarProdutos()" type="submit">Localizar produto</button>
                     </div>
                    
-                        <li class="li1"></li>
-                 
-                  
 
                 </div>
             </div>
-            <div class="mid-left-input">
-                <div class="mid-l-inputs">
+            <div class="container-inputs mid-left-input">
+                <div class="mid-l-inputs iptInfo">
                     <label>Nome</label>
                     <input type="text" readonly placeholder="Confirme o produto desejado">
                 </div>
 
-                <div class="mid-l-inputs">
+                <div class="mid-l-inputs iptInfo">
                     <label for="">Código</label>
                     <input type="text" readonly placeholder="Confirme o código do produto">
 
                 </div>
 
-                <div class="mid-l-inputs">
+                <div class="mid-l-inputs iptInfo">
                     <label for="">Preço</label>
                     <input type="number" readonly placeholder="Confime o preço do produto">
 
                 </div>
 
-                <div class="mid-l-inputs">
+                <div class="mid-l-inputs iptInfo">
                     <label for="">Descrição do produto</label>
-                    <textarea name="" id="" cols="5" readonly></textarea>
+                    <textarea name="" id="" cols="5" readonly placeholder="Descrição do protudo"></textarea>
 
                 </div>
             </div>
-            <div class="mid-left-bot">
+            <div class="mid-left-bota imgAddProd">
                 <div class="imagem-produto">
 
                     <label>Imagem</label>
@@ -96,30 +102,30 @@
         <div class="midson-r">
             <div class="editar-produto">
 
-                <label>Edite o produto</label>
+                <h2>Edite o produto</h2>
 
             </div>
             <div class="mid-right-input">
                 <div class="mid-r-inputs">
-                    <label>Nome</label>
+                    <h2>Nome</h2>
                     <input class="oi2" type="text" placeholder="Edite o produto desejado">
                     <li class="li2"></li>
                 </div>
 
                 <div class="mid-r-inputs">
-                    <label for="">Código</label>
+                    <h2 for="">Código</h2>
                     <input class="oi2" type="text" placeholder="Edite o código do produto">
                     <li class="li2"></li>
                 </div>
 
                 <div class="mid-r-inputs">
-                    <label for="">Preço</label>
+                    <h2 for="">Preço</h2>
                     <input class="oi2" type="number" placeholder="Edite o preço do produto">
                     <li class="li2"></li>
                 </div>
 
                 <div class="mid-r-inputs">
-                    <label for="">Descrição do produto</label>
+                    <h2 for="">Descrição do produto</h2>
                     <textarea name="" id="" cols="5"></textarea>
                 </div>
 
@@ -128,7 +134,7 @@
             </div>
             <div class="mid-file">
 
-                <label>Selecione uma imagem</label>
+                <h2>Selecione uma imagem</h2>
                 <input class="oi2" type="file" id="foto">
                 <li class="li2"></li>
             </div>
@@ -139,9 +145,7 @@
 
     <div class="container-bottomson">
 
-
-        <button onclick="editarProdutos()">Editar produto</button>
-
+        <button class="btn-addProd" onclick="editarProdutos()">Editar produto</button>
 
     </div>
     <script src="./js/editProd.js"></script>

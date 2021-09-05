@@ -3,6 +3,16 @@ let select = containerR.querySelector('select');
 let containerLmid = document.querySelector('.container-l-mid');
 let containerLtop = document.querySelector('.container-l-top');
 
+var preco = []
+let precoStorage = JSON.parse(localStorage.getItem('acumulador'))
+
+for(let i = 0; i < 2; i++){
+    var precoo = document.getElementById('preco' + (i + 1))
+    preco.push(precoo)
+    preco[i].innerHTML = 'R$ ' + precoStorage
+}
+
+
 
 
 function validacao() {

@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./css/carrinho.css">
+    <link rel="stylesheet" href="./bootstrap-5.1.0-dist/css/bootstrap.min.css">
     <title>Document</title>
 </head>
-<body onload="testeLog()">
+<body onload="valor2()">
     <header>
         <nav class="navbar navbar-light bg-dark d-flex align-items-center h-100 p-0">
             <div class="container-fluid justify-content-space-between h-100">
@@ -58,15 +59,14 @@
                     <div class="col-3"><h2 class="categorias text-center text-white">Valor total</h2></div>
                 </div>
                 
-                <div class="container-fluid" id="container-prodsss">
-                </div>
+                <div class="container-fluid" id="container-prodsss"></div>
             </div>
             <div class="col-4 d-flex flex-column justify-content-center bg-dark h-75">
                 <h1 class="title text-white mb-4 p-2 h-25">Pagamento</h1>
                 <div class="row justify-content-center h-50">
                     <div class="row"><h2 class="categorias text-center text-white f2-3">Preço total</h2>
-                        <span class="text-white text-center fs-4">R$ 1000</span>
-                        <span class="fs-5 d-flex text-white text-center justify-content-center align-items-center w-100">Ou à vista por  <p class="p-1 mt-auto mb-auto">R$ 900</p></span>
+                        <span class="text-white text-center fs-4" id="precoTotal"></span>
+                        <span class="fs-5 d-flex text-white text-center justify-content-center align-items-center w-100">Ou à vista por  <p class="p-1 mt-auto mb-auto" id="aVista"></p></span>
                     </div>
                     <div class="row align-items-end"><button type="button" class="btn btn-secondary w-100 h-50 fs-3 fw-bold">Finalizar compra</button></div>
                 </div>

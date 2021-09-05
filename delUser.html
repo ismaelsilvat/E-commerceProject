@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/logo pequeninha 2.0.png">
-    <title>Gerenciar Contas -Área do admin</title>
-    <link rel="stylesheet" href="./css/addProd.css">
+    <title>Gerenciar Contas - Área do admin</title>
+    <link rel="stylesheet" href="./css/delUser.css">
 </head>
 
 <body>
@@ -34,42 +34,42 @@
         </div>
     </div>
 
-    <div class="container-main vigaRegular">
+    <div class="containerR container-main vigaRegular">
+        <img class="imgbg" src="./img/manos-gkikas-L0tsGE7634E-unsplash.jpg" alt="">
 
-        <div class="container-r">
+        <div class="container-delUser containerADD">
 
-            <div class="container-meio">
+            <div class="container-meio container-inputs">
                 <div class="container-top-1">
-                    <label>Gerenciar contas</label>
+                    <h2>Gerenciar contas</h2>
                 </div>
 
-                <div class="container-top-2">
-                    <div class="top">
-                        <label>Localize a conta</label>
+                <div class="container-top-2 localizar">
+                    <div class="top titulo titulo-localizar">
+                        <h2>Localize a conta</h2>
                     </div>
 
-                    <div class="mid">
+                    <div class="mid inp-localizar">
                         <input placeholder="Pesquise pelo nome ou e-mail" type="text">
                         <li></li>
                     </div>
 
-                    <div class="bot">
+                    <div class="bot btn-localizar">
                         <button onclick="localizarPessoas()">Localizar conta</button>
                     </div>
-
                 </div>
 
-                <div class="container-mid">
 
+                <div class="container-mid container-inputs">
 
-                    <div class="mid-inputs">
-                        <label for="">Nome</label>
+                    <div class="mid-inputs iptInfo delUser">
+                        <h4 for="">Nome</h4>
                         <input type="text" placeholder="Insira o nome da conta">
 
                     </div>
 
-                    <div class="mid-inputs">
-                        <label for="">E-mail</label>
+                    <div class="mid-inputs iptInfo delUser">
+                        <h4 for="">E-mail</h4>
                         <input type="text" placeholder="Insira o email da conta">
 
                     </div>
@@ -80,7 +80,7 @@
                 <div class="container-bottom">
 
                     
-                    <button onclick="removerPessoas()">Remover conta</button>
+                    <button class="btn-addProd btn-remove btn-delProd" onclick="removerPessoas()">Remover conta</button>
                 
                 </div>
 

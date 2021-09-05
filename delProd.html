@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/addProd.css">
+    <link rel="stylesheet" href="./css/delProd.css">
     <title>Remover prod</title>
 </head>
 <body>
@@ -31,48 +31,50 @@
         </div>
     </div>
     
-    <div class="container-r">
 
-        <div class="container-meio">
-            <div class="container-top-1">
-                <label>Remover Produtos</label>
+
+
+
+
+
+    <div class="containerR">
+        <img class="imgbg" src="./img/manos-gkikas-L0tsGE7634E-unsplash.jpg" alt="">
+        <div class="containerADD containerDEL">
+            <div class="tituloCard">
+                <h2>Excluir produto</h2>
             </div>
 
-            <div class="container-top-2">
-                <div class="top">
-                    <label>Localize o produto desejado</label>
+            <div class="container-top-2 localizar">
+                <div class="titulo titulo-localizar">
+                    <h2>Localize o produto desejado</h2>
                 </div>
 
-                <div class="mid">
+                <div class="inp-localizar">
                     <input placeholder="Pesquise pelo nome ou código" type="text">
                     <li></li>
                 </div>
 
-                <div class="bot">
+                <div class="btn-localizar">
                     <button onclick="localizarProduto()">Localizar produto</button>
                 </div>
-
             </div>
 
-            <div class="container-mid">
+            <div class="container-inputs">
 
-
-                <div class="mid-inputs">
-                    <label for="">Nome</label>
-                    <input type="text" placeholder="Insira o nome do produto">
-
+                <div class="iptInfo">
+                    <h4>Nome do produto</h4>
+                    <input type="text" placeholder="Nome do produto">
+                    <li></li>
                 </div>
-
-                <div class="mid-inputs">
-                    <label for="">Código</label>
-                    <input type="text" placeholder="Insira o código do produto">
-
+                <div class="iptInfo">
+                    <h4>Código do produto</h4>
+                    <input type="number" placeholder="Código do produto">
+                    <li></li>
                 </div>
-
-                <div class="mid-inputs">
-                    <label for="">Preço</label>
-                    <input type="text" placeholder="Insira o preço do produto">
-
+                <div class="iptInfo">
+                    <h4>Valor do produto</h4>
+                    <input type="number" placeholder="Valor do produto">
+                    <li></li>
                 </div>
 
                 <div id="img">
@@ -84,7 +86,7 @@
             <div class="container-bottom">
 
                 
-                <button onclick="removerProduto()">Remover produto</button>
+                <button class="btn-addProd btn-remove" onclick="removerProduto()">Remover produto</button>
             
             </div>
 

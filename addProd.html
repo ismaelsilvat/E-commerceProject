@@ -9,6 +9,8 @@
 </head>
 <body>
     
+
+
     <div class="container-barraLateral">
         <div class="logoMoska">
             <img src="./img/a.png" alt="">
@@ -17,45 +19,48 @@
             <div class="addProd" id="cardLateral">
                 <a href="./addProd.html">Adicionar produto</a>
             </div>
-                
+            
             <div class="editProd" id="cardLateral">
                 <a href="./editProd.html">Editar produto</a>
             </div>
-        
+            
             <div class="delProd" id="cardLateral">
                 <a href="./delProd.html">Excluir produto</a>
             </div>
-
+            
             <div class="delUser" id="cardLateral">
                 <a href="./delUser.html">Excluir usuário</a>
             </div>
         </div>
     </div>
-
+    
     <div class="containerR">
-
         <img class="imgbg" src="./img/manos-gkikas-L0tsGE7634E-unsplash.jpg" alt="">
+        
         <div class="containerADD">
             <div class="container-inputs">
-    
+                
+                <div class="tituloCard">
+                    <h2>Adicionar produto</h2>
+                </div>
                 <div class="iptInfo">
                     <h4>Adicione o nome do produto</h4>
-                    <input type="text">
+                    <input type="text" placeholder="Nome do produto">
                     <li></li>
                 </div>
                 <div class="iptInfo">
                     <h4>Adicione o codigo do produto</h4>
-                    <input type="number">
+                    <input type="number" placeholder="Código do produto">
                     <li></li>
                 </div>
                 <div class="iptInfo">
                     <h4>Adicione o valor do produto</h4>
-                    <input type="number">
+                    <input type="number" placeholder="Valor do produto">
                     <li></li>
                 </div>
                 <div class="iptInfo">
                     <h4>Adicione a descrição do produto</h4>
-                    <textarea class="descText" cols="30" rows="10">Descrição do produto</textarea>
+                    <textarea class="descText" cols="30" rows="10" placeholder="Descrição do produto"></textarea>
                     <li></li>
                 </div>
     
@@ -83,17 +88,17 @@
                 </div>
     
                 <div class="iptInfo">
-                    <textarea class="descText" cols="30" rows="10">DESCRICAO DO PRODUTO</textarea>
+                    <textarea class="descText" cols="30" rows="10" placeholder="Descrição do produto"></textarea>
                     <li></li>
                 </div>
     
-                <div clas="imgAddProd" id="imgimg">
+                <div class="imgAddProd" id="imgimg">
                     <img src="./img/background bom.jpg" alt="">
                 </div>            
             </div>
     
     
-            <button onclick="addProd()">EU AQUI</button>
+            <button class="btn-addProd" onclick="addProd()">Adicionar produto</button>
         </div>
     </div>
 

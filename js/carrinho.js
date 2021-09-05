@@ -3,6 +3,9 @@ const containerprod = document.getElementById('container-prodsss')
 const produtos = JSON.parse(localStorage.getItem("Users")) 
 let position = JSON.parse(localStorage.getItem('infoLog'))
 let num = position.position
+let precoTotal = document.getElementById('precoTotal')
+let PrecoAvista = document.getElementById('aVista')
+
 
 console.log("qtde: " + produtos[num].carrinho.length);
 
@@ -12,52 +15,22 @@ const optionscont = [];
 
 for (let index = 0; index < produtos[num].carrinho.length; index++) {
 
-    containerprod.innerHTML += produtos[num].carrinho[index]
+    containerprod.innerHTML += produtos[num].carrinho[index].estrutura
     
     let select = document.querySelector(".select-cont" + (index + 1));
     
     selects[index] = select
 
-    var optioncont = document.querySelector(".options-cont" + (index + 1))
 
-    optionscont[index] = optioncont
 
     const valor = document.getElementById('valor' + (index + 1))
 
     const valortotalprod = document.getElementById('valor-total-prod ');
-
-    let option = document.querySelector('.options-cont' + (index + 1)).children
     
     // REALIZA FUNÇÃO AO CARREGAR A PÁGINA
-
-    for (let index = 0; index < option.length; index++) {
-        
-        if($(option[index]).hasClass('active')){  
-
-            const num = $(option[index]).val();
-
-            $(valor).html(num)
-
-        }
-    
-        // FUNÇÃO PARA ALTERAR A CLASS ACTIVE CONFORME O CLICK
-        $(option[index]).on('click', function() {
-
-            $(this).addClass('active').siblings().removeClass('active');
-
-            if($(this).hasClass('active')){    
-
-                const num = $(this).val();
-
-                $(valor).html(num)
-
-            }   
-
-        });
-        
+  
     }
        
-}
 
 for (var indexxxx = 0; indexxxx < selects.length; indexxxx++) {
 
@@ -94,12 +67,161 @@ for (var indexxxx = 0; indexxxx < selects.length; indexxxx++) {
 function testeLog(){
     
 }
+
+var field = []
+var valorAll = []
+
+for(let i = 0; i < produtos[num].carrinho.length; i++){
+    let elements = document.getElementById('field' + (i + 1))
+    field.push(elements)
+    let valorTotal = document.getElementById('valor-total-prod' + (i + 1))
+    valorAll.push(valorTotal)
+}
+
+// $(document).ready(function() {
+//     $(field).keyup(function() {
+//         $(field).val(this.value.match(/[0-9]*/));
+//     });
+//   });
+
+  console.log(field);
+  console.log(valorAll);
+
+function validar(field) {
+    str = field.value;
+    if (str.length > 2) {
+      field.value = str.substring(0, str.length - 1);
+    }
+  }
+  
+  function numerico(evt) {
+    var key_code = evt.keyCode ? evt.keyCode : evt.charCode ? evt.charCode : evt.which ? evt.which : void 0;
+    if (key_code == 8 || key_code == 9 || key_code == 13 || key_code == 27 || key_code == 46) {
+      return true;
+    } else if ((key_code >= 35) && (key_code <= 40)) {
+      return true
+    } else if ((key_code >= 48) && (key_code <= 57)) {
+      return true
+    }
+    return false;
+  }
+
+  let acumuladorr = 0
+
+  localStorage.setItem('acumulador', JSON.stringify(acumuladorr))
+
+  
+
+function valor2(){
+    let acumulador = JSON.parse(localStorage.getItem('acumulador'))
+    acumulador = 0
+    for (let i=0; i < produtos[num].carrinho.length; i++){
+        let slaoq = produtos[num].carrinho[i].quantidade
+        field[i].value = slaoq
+        let slaoq2 = (field[i].value) * parseFloat(produtos[num].carrinho[i].valor)
+        valorAll[i].innerHTML = 'R$ ' + slaoq2
+        acumulador += slaoq2
+        let avista = Math.floor(Math.random() * (50 - 10))
+        precoTotal.innerHTML = 'R$ ' + acumulador
+        let acumulador2 = acumulador - avista
+        PrecoAvista.innerHTML = 'R$ ' + acumulador2
+    }
+    localStorage.setItem('acumulador', JSON.stringify(acumulador))
+}
+
+  function min(id){
+      minn(id);
+  }
+
+  function max(id){
+      maxx(id)
+      valor2()
+  }
+
+
+  function minn(id){
+
+      for (let i=0; i < produtos[num].carrinho.length; i++){
+
+          
+          if(produtos[num].carrinho[i].id == id && produtos[num].carrinho[i].quantidade == 1){
+              alert('A quantidade mínima de produtos a ser selecionada é de 1')
+            }
+            
+            else{
+                if (produtos[num].carrinho[i].id == id) {
+                    
+                    produtos[num].carrinho[i].quantidade--
+                    localStorage.setItem('Users', JSON.stringify(produtos))
+                    let acumulador = JSON.parse(localStorage.getItem('acumulador'))
+
+
+                    acumulador = 0
+                    
+                    for (let i=0; i < produtos[num].carrinho.length; i++){
+                        let slaoq = produtos[num].carrinho[i].quantidade
+                        field[i].value = slaoq
+                        let slaoq2 = (field[i].value) * parseFloat(produtos[num].carrinho[i].valor)
+                        valorAll[i].innerHTML = 'R$ ' + slaoq2
+                        acumulador += slaoq2
+                        let avista = Math.floor(Math.random() * (50 - 10))
+                        precoTotal.innerHTML = 'R$ ' + acumulador
+                        let acumulador2 = acumulador - avista
+                        PrecoAvista.innerHTML = 'R$ ' + acumulador2
+                    }
+                    localStorage.setItem('acumulador', JSON.stringify(acumulador))
+                    
+                }
+            }
+        }
+    }
+
+
+function maxx(id) {
+    
+    if (produtos[num].carrinho.length < 1) {
+
+        let cartProd = {
+            id: id,
+            quantidade: 1
+        }
+
+        produtos[num].carrinho.push(cartProd)
+        localStorage.setItem('Users', JSON.stringify(produtos))
+    }
+    
+
+    let prodOnCar = 0
+
+    for (let i=0; i<produtos[num].carrinho.length; i++) {
+
+        if (produtos[num].carrinho[i].id == id) {
+
+            produtos[num].carrinho[i].quantidade++
+            localStorage.setItem('Users', JSON.stringify(produtos))
+            prodOnCar = 1
+        }
+    }
+    
+    if (prodOnCar == 0) {
+
+        let cartProd= {
+            id: id,
+            quantidade:1
+        }
+    
+        produtos[num].carrinho.push(cartProd)
+        localStorage.setItem('Users', JSON.stringify(produtos))
+    }
+
+}
+
     
 
 // for (let i = 0; i < optioncont.children.length; i++) {
-
-
-// for (let index = 0; index < produtos.length; index++) {
+    
+    
+    // for (let index = 0; index < produtos.length; index++) {
     
 // }
 
@@ -171,4 +293,3 @@ function testeLog(){
 //     `
 
 // containerProds.innerHTML = containerProds.innerHTML + linhaProd
-    
