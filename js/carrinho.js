@@ -1,16 +1,18 @@
 const containerprod = document.getElementById('container-prodsss')
 
-const produtos = JSON.parse(localStorage.getItem("Produto")) 
+const produtos = JSON.parse(localStorage.getItem("Users")) 
+let position = JSON.parse(localStorage.getItem('infoLog'))
+let num = position.position
 
-console.log("qtde: " + produtos.length);
+console.log("qtde: " + produtos[num].carrinho.length);
 
 const selects = [];
 
 const optionscont = [];
 
-for (let index = 0; index < produtos.length; index++) {
+for (let index = 0; index < produtos[num].carrinho.length; index++) {
 
-    containerprod.innerHTML += produtos[index]
+    containerprod.innerHTML += produtos[num].carrinho[index]
     
     let select = document.querySelector(".select-cont" + (index + 1));
     

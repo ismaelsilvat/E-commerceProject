@@ -1,25 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
+    background-color: #181818;
+    display: flex;
+}
+
+.logoMoska{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px groove #8a48fa;
+
+}
+
+.container-barraLateral{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 20%;
+    height: 100vh;
+}
+
+.allCards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 55%;
+}
+
+#cardLateral{
+    margin-top: 10%;
+    height: 13%;
+}
+
+#cardLateral a{
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 200ms linear;
+    border-bottom: 2px solid #8a48fa;
+    padding-bottom: 2%;
+}
+
+#cardLateral a:hover{
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    transform: translateY(-12%);
+    padding-bottom: 5%;
+    color: #8a48fa;
+}
+
+.containerR{
+    width: 80%;
+    height: 100vh;
+    position: relative;
     background-color: black;
 }
-.containerteste{
+
+.imgbg{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.8;
+}
+
+.containerADD{
+    background-color: black;
+
+    color: #9e5ed6;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    position: absolute;
+    width: 60%;
+    height: 70%;
     margin: auto;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(  -50%, -50%);
     top: 50%;
-    position: absolute;
+    border: 0.5px solid #8a48fa;
+    box-shadow: 0 0 40px #000;
+    border-radius: 15px;
+    padding: 2%;
 }
 
-.containerteste input{
+.iptInfo{
+    margin-top: 2%;
+}
+
+.iptInfo input{
     margin: 15px;
     height: 50px;
     text-align: center;
 }
 
-.containerteste2{
+.iptInfo li{
+    display: flex;
+    justify-content: flex;
+    margin-right: 5%;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    color: red;
+    font-size: 12px;
+    font-family: arial;
+    font-weight: bold;
+}
+
+
+.containerEDIT{
     width: 80%;
     display: flex;
     justify-content: space-between;
@@ -29,11 +130,16 @@ body{
     transform: translate(-50%, -50%);
 }
 
-.containerteste2 input{
+.containerEDIT input{
     width: 100%;
     height: 75px;
 }
 
-.adeus{
+.imgAddProd{
+    width: 20%;
+    height: auto;
+}
+
+.mudar{
     display: none;
 }

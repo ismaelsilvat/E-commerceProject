@@ -144,9 +144,9 @@ function addProd() {
 
     }
 
-    container.classList.add('adeus')
+    container.classList.add('mudar')
 
-    teste.classList.remove('adeus')
+    teste.classList.remove('mudar')
 
     let prodtest = JSON.parse(localStorage.getItem('Produto'))
 

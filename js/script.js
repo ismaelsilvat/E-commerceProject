@@ -184,47 +184,57 @@ fetch("../test.json")
             
         });
         
-        let dados = []
-        
-     
+        let dados = JSON.parse(localStorage.getItem("Users"))
         
         function prod(){
+            
 
-            dados = JSON.parse(localStorage.getItem("Users"))
+            if(dados === null){
+                alert('Você tem que estar logado para onseguir adicionar um produto no carrinho')
+                window.open('loginECadastro(ModoE).html', '_self')
+            }
+            else{
 
-            const linhaProd = 
-            `<div class="row align-items-center" style="height: 200px; background-color: rgba(255, 255, 255, 0.048);">
-            <img class="w-25 h-75" src="${produto.imagens[0]}" alt="">
-            <h2 class="w-25 text-center text-white fs-4 fw-normal">${produto.nome}</h2>
-            <div class="col w-25 d-flex justify-content-center">
-                <div class="select-cont${contador} select-cont">
-                    <div class="select">
-                        <p class="sel-txt" id="valor${contador}"></p>
-                        <div class="icon">
-                            <img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/caret-down-512.png" alt="" class="caret">
+                let position = JSON.parse(localStorage.getItem('infoLog'))
+                let num = position.position
+                console.log(num);
+
+                const linhaProd = 
+                `<div class="row align-items-center" style="height: 200px; background-color: rgba(255, 255, 255, 0.048);">
+                <img class="w-25 h-75" src="${produto.imagens[0]}" alt="">
+                <h2 class="w-25 text-center text-white fs-4 fw-normal">${produto.nome}</h2>
+                <div class="col w-25 d-flex justify-content-center">
+                    <div class="select-cont${contador} select-cont">
+                        <div class="select">
+                            <p class="sel-txt" id="valor${contador}"></p>
+                            <div class="icon">
+                                <img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/caret-down-512.png" alt="" class="caret">
+                            </div>
+                        </div>
+                        
+                        <div class="options-cont options-cont${contador}">
+                            <button class="options active" value="1">
+                                1
+                            </button>
+                            <button class="options" value="2">
+                                2
+                            </button>
+                            <button class="options" value="3">
+                                3
+                            </button>
                         </div>
                     </div>
-                    
-                    <div class="options-cont options-cont${contador}">
-                        <button class="options active" value="1">
-                            1
-                        </button>
-                        <button class="options" value="2">
-                            2
-                        </button>
-                        <button class="options" value="3">
-                            3
-                        </button>
-                    </div>
                 </div>
-            </div>
-            <span class="w-25 text-center text-white" id="valor-total-prod ${contador}">R$ ${produto.valor}</span>
-        </div>`
-     
-        let carrinho = dados[0].carrinho
-         (dados[0].carrinho).push(linhaProd)
-         console.log(dados);
-        localStorage.setItem("Produto", JSON.stringify(dados))
+                <span class="w-25 text-center text-white" id="valor-total-prod ${contador}">R$ ${produto.valor}</span>
+            </div>`
+         
+            
+            dados[num].carrinho.push(linhaProd) 
+            console.log(dados);
+            localStorage.setItem("Users", JSON.stringify(dados))
+            window.location.reload()
+            }
+
 
         }
     }

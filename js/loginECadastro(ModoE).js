@@ -12,22 +12,19 @@ btnSignUp.addEventListener("click", function(){
     body.className = "cadastrar";
 });
 
+
 // Animação JS //
-
-
-
-
-
-
-
 // Armazena os valores dos inputs da tela de Cadastro
 let nomeCadastro = document.getElementById("usuarioCad")
 let emailCadastro = document.getElementById("emailCad")
 let senhaCadastro = document.getElementById("senhaCad")
 
 // Armazena os valores dos inputs da tela de Login
-let emailLogin = document.getElementById("emailLog")
+let credencial = document.getElementById("CredencialLogin")
 let senhaLogin = document.getElementById("senhaLog")
+
+let cadastrar = document.getElementById("cadastrar")
+let login = document.getElementById("login")
 
 // // Armazena o nome do input de pesquisa
 // let nomePesquisar = document.getElementById("userPesquisa")
@@ -41,110 +38,115 @@ let senhaLogin = document.getElementById("senhaLog")
 
 // Cria vetores vazios para armazenamento temporário dos dados
 
-credencial = []
+// Joga para o LocalStorage novamente
 
-    credenciais = {
-      nome: '',
-      email: '',
-      senha: '',
-      carrinho: []
-    }
+cadastrar.addEventListener('click', function(){
+  cadastro();  
+})
 
-    credencial.push(credenciais)
+var userS = JSON.parse(localStorage.getItem("Users"))
 
-    // Joga para o LocalStorage novamente
-    localStorage.setItem('Users', JSON.stringify(credencial))
 
-var win = window.open('https://www.google.com/search?q=urso+pelado&rlz=1C1GCEU_pt-BRBR965BR965&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi9yJP9rqLyAhUUrpUCHYJwA2YQ_AUoAXoECAEQAw&biw=1360&bih=695&safe=active&ssui=on', '_blank');
-
-function Cadastrar(){
+  function cadastro(){
 
     // Pega valores do LocalStorage (se tiver) e armazena
-    pessoas = JSON.parse(localStorage.getItem('Users'))
-
-  // Compara se o que veio do LocalStorage é vazio  
-  if (pessoas == null) {
-
+    
+    // Compara se o que veio do LocalStorage é vazio  
+    if (userS == null) {
+      
     credencial = []
-
+    
     credenciais = {
-      nome: nomeCadastro.value,
-      email: emailCadastro.value,
-      senha: senhaCadastro.value,
-      carrinho: []
+       nome: nomeCadastro.value,
+       email: emailCadastro.value,
+       senha: senhaCadastro.value,
+       carrinho: [],
+     }
+    
+     credencial.push(credenciais)
+     console.log(credencial);
+    
+     // Joga para o LocalStorage novamente
+     localStorage.setItem("Users", JSON.stringify(credencial))
+    
+    } else {
+    
+     // Se não estiver vazio
+     // Apenas adiciona os valores dos inputs após os valores que já tem nos vetores
+    
+     credenciais = {
+       nome: nomeCadastro.value,
+       email: emailCadastro.value,
+       senha: senhaCadastro.value,
+       carrinho: [],
+     }
+
+     userS.push(credenciais)
+
+     // Joga para o LocalStorage novamente
+     localStorage.setItem("Users", JSON.stringify(userS))
+    
     }
-
-    credencial.push(credenciais)
-
-    // Joga para o LocalStorage novamente
-    localStorage.setItem('Users', JSON.stringify(credencial))
-  
-  } else {
-
-    // Se não estiver vazio
-    // Apenas adiciona os valores dos inputs após os valores que já tem nos vetores
-  
-
-    credencial = []
-
-    credenciais = {
-      nome: nomeCadastro.value,
-      email: emailCadastro.value,
-      senha: senhaCadastro.value,
-      carrinho: []
-    }
-
-    credencial.push(credenciais)
-
-    // Joga para o LocalStorage novamente
-    localStorage.setItem('Users', JSON.stringify(credencial))
+    
+     // Mostra mensagem cadastro efetuado e carrega a página de login
+     alert("Seu cadastro foi efetuado com sucesso!");
+     // Pula para a página de Login
+    
 
   }
 
-    // Mostra mensagem cadastro efetuado e carrega a página de login
-    alert("Seu cadastro foi efetuado com sucesso!");
-    // Pula para a página de Login
-    win.focus()
-}
-
+  login.addEventListener('click', function(){
+    Logar();
+  })
+   
 function Logar(){
 
-    // Pega valores do LocalStorage (se tiver) e armazena
-    pessoas = JSON.parse(localStorage.getItem('Users'))
-    
+  let infos = {
+    position: 0,
+    login: 0,
+    id: 0,
+  }
+  
+  if( 'admin' == credencial.value  || 'ADMIN' == credencial.value || 'Admin' == credencial.value && 'admin' == senhaLogin.value || 'ADMIN' == senhaLogin.value || 'Admin' == senhaLogin.value){
+    window.open('addProd.html', '_self')
+      infos.login = 1
+      
+  }
 
-    // Cria uma variável ou flag para indicar que logou
-    let logou = 0
+  else{
 
-    // Realiza um loop do tamanho dos vetores
-    for(i=0; i < pessoas.length; i++){
-
-        // Se o nome e senha no input do login forem iguais ao nome e senha da vez no loop
-        if(emailLogin.value == pessoas[i].email && senhaLogin.value == pessoas[i].senha){
-
-	          // Flag "logou" ativa	
-	          logou = 1
-	
-	      }
-
+    for(i=0; i < userS.length; i++){
+  
+      // Se o nome e senha no input do login forem iguais ao nome e senha da vez no loop
+      if(credencial.value == userS[i].email || credencial.value == userS[i].nome && senhaLogin.value == userS[i].senha){
+  
+          // Flag "logou" ativa	
+          logou = 1
+          
+        infos.position = i
+      } 
+  
     }
-
-    window.open('index.html')
-
+  
     if (logou == 1){
-
+  
           // Mostra mensagem de login efetuado
           alert("Login efetuado!")
-          localStorage.setItem('Logged', JSON.stringify(logou))
+          localStorage.setItem('infoLog', JSON.stringify(infos))
+          window.open('index.html', '_self')
           // Pula para a página Principal
-            win.focus()
-
+       
+  
     }else{
-
+  
           // Senão, mostra mensagem de login falhou
           alert("Login falhou!")
-
+  
     }   
+  }
+    // Cria uma variável ou flag para indicar que logou
+
+    // Realiza um loop do tamanho dos vetores
 
 
 }
