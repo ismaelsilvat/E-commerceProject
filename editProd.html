@@ -10,7 +10,8 @@
     <title>Editar Produtos - Área do admin</title>
     
 </head>
-<body>
+<body >
+    <img class="imgbg" src="./img/manos-gkikas-L0tsGE7634E-unsplash.jpg">
     <div class="container-barraLateral">
         <div class="logoMoska">
             <img src="./img/a.png" alt="">
@@ -35,12 +36,10 @@
     </div>
     
     <div class="containerR containerEDIT">
-
-        <img class="imgbg" src="./img/manos-gkikas-L0tsGE7634E-unsplash.jpg" alt="">
-        <div class="containerADD midson-l">
-            <div class="localizar-itens container-inputs">
+        <div class="containerADD container-inputs-col1 midson-l">
+            <div class="localizar-itens container-inputs container-inputs-col1-5">
                 <div class="tituloCard">
-                    <h2>Editar produto</h2>
+                    <h1>Editar produto</h1>
                 </div>
 
                 <div class="localizar-produto titulo titulo-localizar">
@@ -56,98 +55,95 @@
                     <div class="input-btn btn-localizar">
                         <button onclick="localizarProdutos()" type="submit">Localizar produto</button>
                     </div>
-                   
-
                 </div>
             </div>
+
+
             <div class="container-inputs mid-left-input">
                 <div class="mid-l-inputs iptInfo">
-                    <label>Nome</label>
+                    <h4>Nome</h4>
                     <input type="text" readonly placeholder="Confirme o produto desejado">
                 </div>
 
                 <div class="mid-l-inputs iptInfo">
-                    <label for="">Código</label>
+                    <h4 for="">Código</h4>
                     <input type="text" readonly placeholder="Confirme o código do produto">
 
                 </div>
 
                 <div class="mid-l-inputs iptInfo">
-                    <label for="">Preço</label>
+                    <h4 for="">Preço</h4>
                     <input type="number" readonly placeholder="Confime o preço do produto">
 
                 </div>
 
                 <div class="mid-l-inputs iptInfo">
-                    <label for="">Descrição do produto</label>
+                    <h4 for="">Descrição do produto</h4>
                     <textarea name="" id="" cols="5" readonly placeholder="Descrição do protudo"></textarea>
 
                 </div>
             </div>
+
             <div class="mid-left-bota imgAddProd">
                 <div class="imagem-produto">
 
                     <label>Imagem</label>
 
                 </div>
-
                 <div id="img">
                 </div>
             </div>
-
         </div>
 
 
-
-        <div class="midson-r">
-            <div class="editar-produto">
+        <div class="midson-r container-inputs-col2">
+            <div class="editar-produto ">
 
                 <h2>Edite o produto</h2>
 
             </div>
             <div class="mid-right-input">
-                <div class="mid-r-inputs">
+                <div class="mid-r-inputs iptInfo">
                     <h2>Nome</h2>
                     <input class="oi2" type="text" placeholder="Edite o produto desejado">
                     <li class="li2"></li>
                 </div>
 
-                <div class="mid-r-inputs">
+                <div class="mid-r-inputs iptInfo">
                     <h2 for="">Código</h2>
                     <input class="oi2" type="text" placeholder="Edite o código do produto">
                     <li class="li2"></li>
                 </div>
 
-                <div class="mid-r-inputs">
+                <div class="mid-r-inputs iptInfo">
                     <h2 for="">Preço</h2>
                     <input class="oi2" type="number" placeholder="Edite o preço do produto">
                     <li class="li2"></li>
                 </div>
 
-                <div class="mid-r-inputs">
+                <div class="mid-r-inputs iptInfo">
                     <h2 for="">Descrição do produto</h2>
-                    <textarea name="" id="" cols="5"></textarea>
+                    <textarea name="" id="" cols="5" placeholder="Edite a descrição do produto"></textarea>
                 </div>
 
                 <div id="imgimg"></div>
                 
             </div>
-            <div class="mid-file">
+            <div class="mid-file imgAddProd">
 
                 <h2>Selecione uma imagem</h2>
                 <input class="oi2" type="file" id="foto">
                 <li class="li2"></li>
             </div>
 
+            <div class="container-bottomson">
+        
+                <button class="btn-addProd" onclick="editarProdutos()">Editar produto</button>
+        
+            </div>
         </div>
-
     </div>
 
-    <div class="container-bottomson">
-
-        <button class="btn-addProd" onclick="editarProdutos()">Editar produto</button>
-
-    </div>
     <script src="./js/editProd.js"></script>
 </body>
 </html>

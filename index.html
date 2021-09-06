@@ -9,82 +9,102 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>SA</title>
 </head>
 <body>
     <header>
-        <!-- <img class="bg-image" src="./img/fachry-zella-devandra-lXuyEh7DeC8-unsplash.jpg" alt=""> -->
-
-        <video class="video-back-2" src="Nike-Joyride-_-Behind-the-Design-_-Nike.mp4" autoplay loop muted poster="./img/fachry-zella-devandra-lXuyEh7DeC8-unsplash.jpg">
-        </video>
+        <!-- <img class="video-back-2" src="./img/fachry-zella-devandra-lXuyEh7DeC8-unsplash.jpg" alt=""> -->
         <div class="container-header">
-            <div class="row-header">
-                <div class="logo">
-                    <div class="a-logo">
-                        <a href="http://">
-                            <img src="./img/a.png" class="img-logo-header" alt="">
-                        </a>
+            <div class="items">
+                <div class="container-items">
+                    <div class="contact">
+                        <i class="fas fa-phone-alt"></i><a href="contato.html">Contato</a>
                     </div>
-                </div>
-                <div class="navbar">
-                    <nav>
-                        <ul>
-                            <li><a href="index.html">Principal</a></li>
-                            <li class="li-dropdown"><a class="dropdrop" href="">Produtos<i class="flechinha fas fa-chevron-down"></i></a>
-                                <ul class="ul-border">
-                                    <li><a href="masculino.html">Masculino</a></li>
-                                    <li><a href="feminino.html">Feminino</a></li>
-                                    <li class="infantil"><a href="infantil.html">Infantil</a>
-                                        <ul class="infantil-c">
-                                            <li class="li-1"><a href="infantil-masc.html">Masculino</a></li>
-                                            <li><a href="infantil-fem.html">Feminino</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="centro"><a href="sobre.html">Especiais</a></li>
-                            <li class="centro-2"><a href="sobre.html">Sobre</a></li>
-                            <li><a href="sobre.html">Contato</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="importantes">
                     <div class="login">
-                        <a class="botao-login" href="loginECadastro(ModoE).html"><i class="fas fa-user fa-header-color-white">Login</i></a>
-                        <a class="botao-login-cart" href="carrinho.html"><i class="fas fa-shopping-cart fa-header-color-roxo-escuro"></i></a>
+                        <i class="fas fa-user"></i><a href="loginECadastro(ModoE).html">Login</a>
                     </div>
                 </div>
-                <input type="checkbox" id="checkbox-menu">
-                <label for="checkbox-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>        
-                <div class="navbar2">
-                    <nav>
-                        <ul>
-                            <li><a href="index.html">Principal</a></li>
-                            <li class="li-dropdown"><a class="dropdrop" href="">Produtos<i class="flechinha fas fa-chevron-down"></i></a>
-                                <ul class="ul-border">
-                                    <li><a href="masculino.html">Masculino</a></li>
-                                    <li><a href="feminino.html">Feminino</a></li>
-                                    <li class="infantildois"><a class="infa" href="infantil.html">Infantil</a>
-                                        <ul class="infantil-c2">
-                                            <li class="animat"><a class="catcat" href="infantil-masc.html">Masculino</a></li>
-                                            <li class="animat"><a class="catcat" href="infantil-fem.html">Feminino</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="centro"><a href="sobre.html">Especiais</a></li>
-                            <li class="centro-2"><a href="sobre.html">Sobre</a></li>
-                            <li><a href="sobre.html">Contato</a></li>
-                        </ul>
-                    </nav>
+
+            </div>
+            <div class="row-header">
+                <div class="container-row">
+                    <div class="logo">
+                        <div class="a-logo">
+                            <a href="index.html">
+                                <img src="./img/logo.png" class="image-logo-header" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="search-bar">
+                        <input class="input-search" type="text" id="search" autocomplete="off">
+                        <label class="label-search" for="search">Buscar</label>
+                        <a class="button-search" href=""><i class="fas fa-search"></i></a>           
+                    </div> 
+                    <div class="cart">
+                        <div class="cart-items">
+                            <a href="carrinho.html">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Seu carrinho</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="navbar">
+                <nav class="nav">
+                    <ul class="ul">
+                        <li class="li"><a href="index.html" class="a active">Principal</a></li>
+                        <li class="li li-dropdown"><a class="a dropdrop" href="">Produtos<i class="flechinha fas fa-chevron-down"></i></a>
+                            <ul class="ul-border">
+                                <li class="li-ul-border"><a class="a-ul-border" href="masculino.html">Masculino</a></li>
+                                <li class="li-ul-border"><a class="a-ul-border" href="feminino.html">Feminino</a></li>
+                                <li class="infantil li-ul-border"><a class="a-ul-border" href="infantil.html">Infantil</a>
+                                    <ul class="infantil-c">
+                                        <li class="li-infantil-c"><a class="a-infantil-c" href="infantil-masc.html">Masculino</a></li>
+                                        <li class="li-infantil-c"><a class="a-infantil-c" href="infantil-fem.html">Feminino</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="li centro"><a class="a" href="sobre.html">Especiais</a></li>
+                        <li class="li centro-2"><a class="a" href="sobre.html">Sobre</a></li>
+                        <li class="li"><a class="a" href="sobre.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <input type="checkbox" id="checkbox-menu">
+            <label for="checkbox-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>        
+            <div class="navbar2">
+                <nav class="nav2">
+                    <ul class="ul2">
+                        <li class="li2"><a class="a2 active" href="index.html">Principal</a></li>
+                        <li class="li2 li-dropdown2"><a class="a2 dropdrop2" href="contato.html">Produtos</a><i class="flechinha dois fas fa-chevron-down"></i>
+                            <ul class="ul-border2">
+                                <li class="li-ul-border2"><a class="a-ul-border2 um" href="masculino.html">Masculino</a></li>
+                                <li  class="li-ul-border2"><a class="a-ul-border2 dois" href="feminino.html">Feminino</a></li>
+                                <li class="li-ul-border2 infantildois"><a class="a-ul-border2 tres dropdrop2" href="infantil.html">Infantil</a><i class="flechinha tres fas fa-chevron-down"></i>
+                                    <ul class="infantil-c2">
+                                        <li class="li-infantil-c2"><a class="a-infantil-c2" href="infantil-masc.html">Masculino</a></li>
+                                        <li class="li-infantil-c2"><a class="a-infantil-c2" href="infantil-fem.html">Feminino</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="li2 centro"><a class="a2" href="sobre.html">Especiais</a></li>
+                        <li class="li2 centro-2"><a class="a2" href="sobre.html">Sobre</a></li>
+                        <li class="li2"><a class="a2" href="sobre.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <section class="header-carousel">
+        <!-- <section class="header-carousel">
             <div class="slider-header">
                 <div class="slideh active">
                     <img class="logoheader" src="./img/a.png" alt="">
@@ -106,15 +126,7 @@
                 </div>
                 <div id="indicator" class="indicator-header"></div>
             </div>
-        </section>
-        <div class="barra">
-            <div class="pesquisa">
-                <input class="barra-de-pesquisa" type="text" id="search" autocomplete="off">
-                <label class="label-search" for="search">Buscar</label>
-                <a class="lupa" href=""><i class="fas fa-search fa-header-color-white"></i></a>
-            </div>
-        </div>
-        </div>
+        </section> -->
     </header>
 
     <div class="contentt">
@@ -136,7 +148,7 @@
         <div class="categorias">
             <div class="card-categoria">
                 <div class="caixa-img-cat">
-                    <img src="./img/modelo-masc.png" alt="">
+                    <img src="./img/modelo-masc.png" loading="lazy" alt="">
                 </div>
                 <div class="conteudo-categorias">
                     <div class="descricao-categoria">
@@ -147,7 +159,7 @@
             </div>
             <div class="card-categoria">
                 <div class="caixa-img-cat">
-                    <img src="./img/modelo-feminino.png" alt="">
+                    <img src="./img/modelo-feminino.png" loading="lazy" alt="">
                 </div>
                 <div class="conteudo-categorias">
                     <div class="descricao-categoria">
@@ -158,7 +170,7 @@
             </div>
             <div class="card-categoria">
                 <div class="caixa-img-cat">
-                    <img src="./img/modelo-infantil.jpg" alt="">
+                    <img src="./img/modelo-infantil.jpg" loading="lazy" alt="">
                 </div>
                 <div class="conteudo-categorias">
                     <div class="descricao-categoria">
@@ -184,7 +196,7 @@
         <h1 class="title-tematic">Simples e elegantes</h1>
         <div class="content" style="background-image: url(./img/background-simples.png);  background-size: cover; background-position: center;">
             <div class="active-image">
-                <img class="img" src="./img/background-1-s.jpg" alt="">
+                <img class="img" src="./img/background-1-s.jpg" loading="lazy" alt="">
             </div>
             <div class="products" id="example-products-1" style="background-image:url(./img/raiosroxos.png); background-size: 30%; background">
             </div>
@@ -197,7 +209,7 @@
         <h1 class="title-tematic dois">Coloridos e diversificados</h1>
         <div class="content" style="background-image: url(./img/background-colorido.jpg);  background-size: cover; background-position: center;">
             <div class="active-image">
-                <img class="img" src="./img/background-colorido2.jpg" alt="">
+                <img class="img" src="./img/background-colorido2.jpg" loading="lazy" alt="">
             </div>
             <div class="products" id="example-products-2" style="background-image: url(./img/colorido-fumaça.png);">
             </div>
@@ -209,7 +221,7 @@
         <h1 class="title-tematic tres">Temáticos e inspiradores</h1>
         <div class="content" style="background-image: url(./img/background-tematica.jpg); background-size: cover; background-position: center;">
             <div class="active-image">
-                <img class="img" src="./img/backgrond-tematicos.jpg" alt="">
+                <img class="img" src="./img/backgrond-tematicos.jpg" loading="lazy" alt="">
             </div>
             <div class="products" id="example-products-3" style="background-image: url(../img/simpson-hover.png); background-position: bottom; background-size: 37%;">
             </div>
@@ -227,7 +239,7 @@
         <div class="destaques">
             <div class="card-destaque">
                 <div class="caixa-img">
-                    <img src="./img/destaques/destaque1.png" alt="">
+                    <img src="./img/destaques/destaque1.png" loading="lazy" alt="">
                 </div>
                 <div class="conteudo-destaque">
                     <div class="descricao-destaque">
@@ -241,7 +253,7 @@
             <div class="card-destaque">
                 <div class="conteudo-destaque">
                     <div class="caixa-img">
-                        <img src="./img/destaques/destaque2.png" alt="">
+                        <img src="./img/destaques/destaque2.png" loading="lazy" alt="">
                     </div>
                     <div class="descricao-destaque">
                         <span>Travis Scott x Playstation x Nike Dunk Low</span>
@@ -253,7 +265,7 @@
             </div>
             <div class="card-destaque">
                 <div class="caixa-img">
-                    <img src="./img/destaques/destaque3.png" alt="">
+                    <img src="./img/destaques/destaque3.png" loading="lazy" alt="">
                 </div>
                 <div class="conteudo-destaque">
                     <div class="descricao-destaque">
@@ -332,7 +344,7 @@
         
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script charset="utf-8" src="./js/script.js"></script>
 </body>
 </html>

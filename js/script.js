@@ -1,3 +1,80 @@
+$('li > a ').click(function() {
+    $('li > a').removeClass('active');
+    $(this).addClass('active'); 
+}); 
+
+$('.flechinha.dois').click(function() {
+
+    if($('.ul-border2').hasClass('displayzin')){
+        $('.ul-border2').removeClass('displayzin')
+        $(".flechinha.dois").css({"top":"50%", "transform":"rotate(0deg)"});
+        $(".a-ul-border2.um").removeClass('displayzin2')
+        $(".a-ul-border2.dois").removeClass('displayzin2')
+        $(".a-ul-border2.tres").removeClass('displayzin2')
+        $(".a-ul-border2.um").css({"transition":"none !important", 
+        "transition-delay":"0ms"})
+        $(".a-ul-border2.dois").css({"transition":"none !important", 
+        "transition-delay":"0ms"})
+        $(".a-ul-border2.tres").css({"transition":"none !important", 
+        "transition-delay":"0ms"})
+        $('.infantil-c2').removeClass('displayzin3')
+        $('.ul-border2').removeClass('displayzin2')
+    }
+    
+    else if($('.ul-border2').hasClass('displayzin2')){
+        $('.ul-border2').removeClass('displayzin2')
+        $(".a-ul-border2.um").removeClass('displayzin2')
+        $(".a-ul-border2.dois").removeClass('displayzin2')
+        $(".a-ul-border2.tres").removeClass('displayzin2')
+        $('.infantil-c2').removeClass('displayzin3')
+        $(".a-ul-border2.um").css({"transition":"none !important", 
+        "transition-delay":"0ms"})
+        $(".a-ul-border2.dois").css({"transition":"none !important", 
+        "transition-delay":"0ms"})
+        $(".a-ul-border2.tres").css({"transition":"none !important", 
+        "transition-delay":"0ms"})
+        $('.ul-border2').css({"height":"0"})
+        $(".flechinha.dois").css({"top":"50%", "transform":"rotate(0deg)"});
+    }
+    else{
+        $('.ul-border2').addClass('displayzin')
+        $(".flechinha.dois").css({"top":"11%", "transform":"rotate(-180deg)"});
+        $(".a-ul-border2.um").addClass('displayzin2')
+        $(".a-ul-border2.dois").addClass('displayzin2')
+        $(".a-ul-border2.tres").addClass('displayzin2')
+        $(".a-ul-border2.um").css({"transition": "visibility 300ms ease;", 
+        "transition-delay":"300ms"})
+        $(".a-ul-border2.dois").css({"transition": "visibility 300ms ease;", 
+        "transition-delay":"700ms"})
+        $(".a-ul-border2.tres").css({"transition": "visibility 300ms ease;", 
+        "transition-delay":"1100ms"})
+    }
+
+}); 
+
+$('.flechinha.tres').click(function(){
+
+    if($('.infantil-c2').hasClass('displayzin3')){
+        $('.infantil-cs').removeClass('displayzin3')
+        $('.ul-border2').addClass('displayzin2')
+        $('.ul-border2').css({"height":"auto"})
+        $(".flechinha.tres").css({"top":"83%", "transform":"rotate(0deg)"});
+        $('.infantil-c2').removeClass('displayzin3')
+
+    }
+    
+    else{
+        $('.flechinha.tres').css({"top":"56.5%","transform":"rotate(-180deg)"})
+        $('.infantil-c2').addClass('displayzin3')
+        $('.ul-border2').removeClass('displayzin')
+        $('.ul-border2').addClass('displayzin2')
+        $('.ul-border2').css({"height":"auto !important"})
+        $('.ul-border2').css({"visibility":"visible !important"})
+    }
+});
+
+
+
 fetch("../test.json")
     .then(response => response.json()).then(produtos => {
         console.log(produtos)

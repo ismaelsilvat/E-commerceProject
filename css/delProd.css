@@ -40,8 +40,9 @@ body{
 #cardLateral{
     margin-top: 10%;
     border-bottom: 2px solid #8a48fa;
-    width: 60%;
+    width: 70%;
     height: 7%;
+    z-index: 999;
 }
 
 #cardLateral a{
@@ -56,8 +57,7 @@ body{
 }
 
 #cardLateral a:hover{
-    font-size: 2.3rem;
-    letter-spacing: 1px;
+    letter-spacing: .1rem;
     transform: translateY(-12%);
     color: #8a48fa;
 }
@@ -66,7 +66,7 @@ body{
     width: 80%;
     height: 100vh;
     position: relative;
-    background-color: black;
+    background-color: #151515;
 }
 
 .containerR h2{
@@ -85,7 +85,7 @@ body{
 }
 
 .containerADD{
-    background-color: black;
+    background-color: #151515;
 
     color: #9e5ed6;
     display: flex;
@@ -180,6 +180,8 @@ body{
     color: #8a48fa;
     font-size: 20px;
     margin-top: 2%;
+    outline: none;
+
 }
 
 .mid-file li{
@@ -231,6 +233,8 @@ body{
 .containerEDIT input{
     width: 100%;
     height: 75px;
+    outline: none;
+
 }
 
 .imgAddProd{
@@ -282,6 +286,8 @@ body{
     border-bottom: 2px solid #8a48fa;
     margin-bottom: 3%;
     padding: 1%;
+    outline: none;
+
 }
 
 .inp-localizar input::placeholder{
