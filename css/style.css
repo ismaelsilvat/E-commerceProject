@@ -31,15 +31,19 @@ body{
 /* HEADER */
 
 header{
-    width: 100%;
-    height: 90vh;
-    background: #101010;
     position: relative;
-    margin-bottom: 35px;
+    width: 100%;
+    height: 100vh;
+    background: #181818;
 }
 
-
-
+.bg-image{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    bottom: 0;
+    opacity: 0.8;
+}
 .video-back{
     position: absolute;
     right: 0;
@@ -49,7 +53,8 @@ header{
     width: auto;
     height: auto;
     opacity: 0.8;
-    z-index: -1;
+    z-index: 99;
+    display: flex;
 }
 
 .video-back-2{
