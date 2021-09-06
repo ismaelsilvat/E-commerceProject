@@ -33,7 +33,7 @@ fetch("../test.json")
                     <div class="card-img">
                         <div class="slider-card sc${produto.id}">
                             <div class="slideC active">
-                                <img class="img-card" src="${produto.imagens[0]}">
+                                <img class="img-card" src="${produto.imagens[0]}" loading="lazy">
                             </div>
                             <div class="slideC">
                                 <img class="img-card" src="${produto.imagens[1]}">
