@@ -33,21 +33,18 @@ $('.flechinha.dois').click(function() {
         "transition-delay":"0ms"})
         $(".a-ul-border2.tres").css({"transition":"none !important", 
         "transition-delay":"0ms"})
-        $('.ul-border2').css({"height":"0"})
-        $(".flechinha.dois").css({"top":"50%", "transform":"rotate(0deg)"});
+        $(".flechinha.dois").css({"top":"35%", "transform":"rotate(0deg)"});
+        $('.flechinha.tres').css({"top":"84%","transform":"rotate(0deg)"})
     }
     else{
         $('.ul-border2').addClass('displayzin')
-        $(".flechinha.dois").css({"top":"11%", "transform":"rotate(-180deg)"});
+        $(".flechinha.dois").css({"top":"7%", "transform":"rotate(-180deg)"});
         $(".a-ul-border2.um").addClass('displayzin2')
         $(".a-ul-border2.dois").addClass('displayzin2')
         $(".a-ul-border2.tres").addClass('displayzin2')
-        $(".a-ul-border2.um").css({"transition": "visibility 300ms ease;", 
-        "transition-delay":"300ms"})
-        $(".a-ul-border2.dois").css({"transition": "visibility 300ms ease;", 
-        "transition-delay":"700ms"})
-        $(".a-ul-border2.tres").css({"transition": "visibility 300ms ease;", 
-        "transition-delay":"1100ms"})
+        $(".a-ul-border2.um").css({"transition": "visibility 300ms ease;"})
+        $(".a-ul-border2.dois").css({"transition": "visibility 300ms ease;"})
+        $(".a-ul-border2.tres").css({"transition": "visibility 300ms ease;"})
     }
 
 }); 
@@ -55,24 +52,38 @@ $('.flechinha.dois').click(function() {
 $('.flechinha.tres').click(function(){
 
     if($('.infantil-c2').hasClass('displayzin3')){
-        $('.infantil-cs').removeClass('displayzin3')
-        $('.ul-border2').addClass('displayzin2')
-        $('.ul-border2').css({"height":"auto"})
-        $(".flechinha.tres").css({"top":"83%", "transform":"rotate(0deg)"});
         $('.infantil-c2').removeClass('displayzin3')
-
+        $('.infantil-c2').css({"height":"0 !important"})
+        $('.infantil-c2').css({"visibility":"hidden !important"})
+        $('.infantil-c2').css({"transition":"all 0ms ease !important", 
+        "transition":"0ms"})
+        $('.ul-border2').addClass('displayzin2')
+        $(".flechinha.tres").css({"top":"83%", "transform":"rotate(0deg)"});
+        $(".flechinha.dois").css({"top":"7%", "transform":"rotate(-180deg)"});
+    }
+    
+    else if($('.infantil-c2').hasClass('displayzin2')){
+        $('.ul-border2').css({"height":"auto !important"})
+        $('.infantil-c2').removeClass('displayzin2')
     }
     
     else{
+        $(".flechinha.dois").css({"top":"5.5%", "transform":"rotate(-180deg)"});
         $('.flechinha.tres').css({"top":"56.5%","transform":"rotate(-180deg)"})
         $('.infantil-c2').addClass('displayzin3')
         $('.ul-border2').removeClass('displayzin')
         $('.ul-border2').addClass('displayzin2')
         $('.ul-border2').css({"height":"auto !important"})
         $('.ul-border2').css({"visibility":"visible !important"})
+        $('.a-ul-border2.tres').addClass('displayzin4')
     }
 });
 
+let testCart = document.getElementById('test-cart')
+
+testCart.addEventListener('click', function(){
+    
+})
 
 
 fetch("../test.json")
@@ -110,7 +121,7 @@ fetch("../test.json")
                     <div class="card-img">
                         <div class="slider-card sc${produto.id}">
                             <div class="slideC active">
-                                <img class="img-card" src="${produto.imagens[0]}" loading="lazy">
+                                <img class="img-card" src="${produto.imagens[0]}">
                             </div>
                             <div class="slideC">
                                 <img class="img-card" src="${produto.imagens[1]}">
@@ -144,6 +155,7 @@ fetch("../test.json")
                 <div class="product${+1}">
                         <div class="name-product">
                             <span id="name-product">${produto.nome}</span>
+                            <span id="price">R$ ${produto.valor}</span>
                         </div>
                         <div class="img-product">
                             <img id="image-example-product" src="${"./img/allstar.jpg"}" alt="">
@@ -160,10 +172,11 @@ fetch("../test.json")
                 const exampleProductInfos = `
                 <div class="product${+2}">
                         <div class="name-product">
-                            <span id="name-product">${produto.nome}</span>
+                        <span id="name-product">${produto.nome}</span>
+                        <span id="price">R$ ${produto.valor}</span>
                         </div>
                         <div class="img-product">
-                            <img id="image-example-product" src="${"./img/airshadow.jpeg"}" alt="">
+                            <img id="image-example-product" src="${"./img/airshadow.png"}" alt="">
                         </div>
                         <div class="button-product">
                             <a class="btn-example-product" href="projeto.html?produto=${produtoTransformadoJsonCodificado}">Ver produto</a>
@@ -180,9 +193,10 @@ fetch("../test.json")
             <div class="product${+1}">
                     <div class="name-product">
                         <span id="name-product">${produto.nome}</span>
+                        <span id="price">R$ ${produto.valor}</span>
                     </div>
                     <div class="img-product">
-                        <img id="image-example-product" src="${"./img/simponssk8.jpg"}" alt="">
+                        <img id="image-example-product" src="${"./img/simpsonSK8.png"}" alt="">
                     </div>
                     <div class="button-product">
                         <a class="btn-example-product" href="projeto.html?produto=${produtoTransformadoJsonCodificado}">Ver produto</a>
@@ -197,9 +211,10 @@ fetch("../test.json")
                 <div class="product${+2}">
                         <div class="name-product">
                             <span id="name-product">${produto.nome}</span>
+                            <span id="price">R$ ${produto.valor}</span>
                         </div>
                         <div class="img-product">
-                            <img id="image-example-product" src="${"./img/simponsvsThesimpsons.jpg"}" alt="">
+                            <img id="image-example-product" src="${"./img/simpsons.png"}" alt="">
                         </div>
                         <div class="button-product">
                             <a class="btn-example-product" href="projeto.html?produto=${produtoTransformadoJsonCodificado}">Ver produto</a>
@@ -215,9 +230,10 @@ fetch("../test.json")
                 <div class="product${+1}">
                         <div class="name-product">
                             <span id="name-product">${produto.nome}</span>
+                            <span id="price">R$ ${produto.valor}</span>
                         </div>
                         <div class="img-product">
-                            <img id="image-example-product" src="${"./img/lowtrd.jpg"}" alt="">
+                            <img id="image-example-product" src="${"./img/lowtrd.png"}" alt="">
                         </div>
                         <div class="button-product">
                             <a class="btn-example-product" href="projeto.html?produto=${produtoTransformadoJsonCodificado}">Ver produto</a>
@@ -231,9 +247,10 @@ fetch("../test.json")
                 <div class="product${+2}">
                         <div class="name-product">
                             <span id="name-product">${produto.nome}</span>
+                            <span id="price">R$ ${produto.valor}</span>
                         </div>
                         <div class="img-product">
-                            <img id="image-example-product" src="${"./img/tenis-nike-air-force-1-infantil-314192-117-7.png"}" alt="">
+                            <img id="image-example-product" src="${"./img/airForce.png"}" alt="">
                         </div>
                         <div class="button-product">
                             <a class="btn-example-product" href="projeto.html?produto=${produtoTransformadoJsonCodificado}">Ver produto</a>
@@ -473,148 +490,174 @@ let index_22 = 0;
 
 
 
-const slidesheader = document.querySelector(".slider-header").children;
-const indicatorheader = document.querySelector(".indicator-header")
+// const slidesheader = document.querySelector(".slider-header").children;
+// const indicatorheader = document.querySelector(".indicator-header")
 
 
-function circleIndicatorHeader() {
-    for (let i = 0; i < slidesheader.length; i++) {
+// function circleIndicatorHeader() {
+//     for (let i = 0; i < slidesheader.length; i++) {
+//         const div = document.createElement("div");
+//         div.innerHTML = i + 1
+//         div.setAttribute("onclick", "indicateSlidehHeader(this)")
+//         div.id = i
+//         if (i == 0) {
+//             div.className = "active"
+//         }
+//         indicatorheader.appendChild(div)
+//     }
+// }
+
+// circleIndicatorHeader()
+
+// function indicateSlidehHeader(element) {
+//     index_22 = element.id;
+//     changeSlidehHeader();
+//     updateCircleIndicatorHeader();
+//     resetTimerHeader();
+// }
+
+// function updateCircleIndicatorHeader() {
+//     for (let i = 0; i < indicatorheader.children.length; i++) {
+//         indicatorheader.children[i].classList.remove("active")
+//     }
+//     indicatorheader.children[index_22].classList.add("active")
+// }
+
+// function prevSlidehHeader() {
+//     if (index_22 == 0) {
+//         index_22 = slidesheader.length - 1;
+//     } else {
+//         index_22--
+//     }
+//     changeSlidehHeader()
+// }
+
+// function nextSlidehHeader() {
+//     if (index_22 == slidesheader.length - 1) {
+//         index_22 = 0;
+//     } else {
+//         index_22++
+//     }
+    
+//     changeSlidehHeader();
+// }
+
+// function changeSlidehHeader() {
+//     for (let i = 0; i < slidesheader.length; i++) {
+//         slidesheader[i].classList.remove("active")
+//     }
+//     slidesheader[index_22].classList.add("active")
+// }
+
+// function resetTimerHeader() {
+//     clearInterval(timerHeader);
+//     timerHeader = setInterval(autoPlayHeader, 4000)
+// }
+
+// function autoPlayHeader() {
+//     nextSlidehHeader();
+//     updateCircleIndicatorHeader();
+// }
+
+// let timerHeader = setInterval(autoPlayHeader, 5000)
+
+
+let indexMaster = 0
+
+const slidesMaster = document.querySelector(".slider").children;
+            
+const indicatorMaster = document.querySelector(".indicatorMaster");
+
+const prevMaster = document.querySelector(".prevMaster");
+
+const nextMaster = document.querySelector(".nextMaster");
+
+
+prevMaster.addEventListener("click", function() {
+
+    prevSlideMaster();
+    updateCircleIndicatorMaster();
+    resetTimerMaster();
+
+})
+
+
+nextMaster.addEventListener("click", function() {
+
+    nextSlideMaster();
+    updateCircleIndicatorMaster();
+    resetTimerMaster();
+
+})
+
+
+function circleIndicatorMaster() {
+    for (let i = 0; i < slidesMaster.length; i++) {
         const div = document.createElement("div");
         div.innerHTML = i + 1
-        div.setAttribute("onclick", "indicateSlidehHeader(this)")
+        div.setAttribute("onclick", "indicateSlideMaster(this)")
         div.id = i
         if (i == 0) {
             div.className = "active"
         }
-        indicatorheader.appendChild(div)
+        indicatorMaster.appendChild(div)
     }
 }
 
-circleIndicatorHeader()
+circleIndicatorMaster()
 
-function indicateSlidehHeader(element) {
-    index_22 = element.id;
-    changeSlidehHeader();
-    updateCircleIndicatorHeader();
-    resetTimerHeader();
+function indicateSlideMaster(element) {
+    indexMaster = element.id;
+    changeSlideMaster();
+    updateCircleIndicatorMaster();
+    resetTimerMaster();
 }
 
-function updateCircleIndicatorHeader() {
-    for (let i = 0; i < indicatorheader.children.length; i++) {
-        indicatorheader.children[i].classList.remove("active")
+function updateCircleIndicatorMaster() {
+    for (let i = 0; i < indicatorMaster.children.length; i++) {
+        indicatorMaster.children[i].classList.remove("active")
     }
-    indicatorheader.children[index_22].classList.add("active")
+    indicatorMaster.children[indexMaster].classList.add("active")
 }
 
-function prevSlidehHeader() {
-    if (index_22 == 0) {
-        index_22 = slidesheader.length - 1;
+function prevSlideMaster() {
+    if (indexMaster == 0) {
+        indexMaster = slidesMaster.length - 1;
     } else {
-        index_22--
+        indexMaster--
     }
-    changeSlidehHeader()
+    changeSlideMaster()
 }
 
-function nextSlidehHeader() {
-    if (index_22 == slidesheader.length - 1) {
-        index_22 = 0;
+function nextSlideMaster() {
+    if (indexMaster == slidesMaster.length - 1) {
+        indexMaster = 0;
     } else {
-        index_22++
+        indexMaster++
     }
+
     
-    changeSlidehHeader();
+    changeSlideMaster();
 }
 
-function changeSlidehHeader() {
-    for (let i = 0; i < slidesheader.length; i++) {
-        slidesheader[i].classList.remove("active")
+function changeSlideMaster() {
+    for (let i = 0; i < slidesMaster.length; i++) {
+        slidesMaster[i].classList.remove("active")
     }
-    slidesheader[index_22].classList.add("active")
+    slidesMaster[indexMaster].classList.add("active")
 }
 
-function resetTimerHeader() {
-    clearInterval(timerHeader);
-    timerHeader = setInterval(autoPlayHeader, 4000)
+function resetTimerMaster() {
+    clearInterval(timerMaster);
+    timerMaster = setInterval(autoPlayMaster, 4000)
 }
 
-function autoPlayHeader() {
-    nextSlidehHeader();
-    updateCircleIndicatorHeader();
+function autoPlayMaster() {
+    nextSlideMaster();
+    updateCircleIndicatorMaster();
 }
 
-let timerHeader = setInterval(autoPlayHeader, 5000)
 
+let timerMaster = setInterval(autoPlayMaster, 4000)
 
-let index_2 = 0;
-
-
-const slides = document.querySelector(".slider").children;
-const indicator = document.querySelector(".indicator")
-
-
-function circleIndicator() {
-    for (let i = 0; i < slides.length; i++) {
-        const div = document.createElement("div");
-        div.innerHTML = i + 1
-        div.setAttribute("onclick", "indicateSlide(this)")
-        div.id = i
-        if (i == 0) {
-            div.className = "active"
-        }
-        indicator.appendChild(div)
-    }
-}
-
-circleIndicator()
-
-function indicateSlide(element) {
-    index_2 = element.id;
-    changeSlide();
-    updateCircleIndicator();
-    resetTimer();
-}
-
-function updateCircleIndicator() {
-    for (let i = 0; i < indicator.children.length; i++) {
-        indicator.children[i].classList.remove("active")
-    }
-    indicator.children[index_2].classList.add("active")
-}
-
-function prevSlide() {
-    if (index_2 == 0) {
-        index_2 = slides.length - 1;
-    } else {
-        index_2--
-    }
-    changeSlide()
-}
-
-function nextSlide() {
-    if (index_2 == slides.length - 1) {
-        index_2 = 0;
-    } else {
-        index_2++
-    }
-    
-    changeSlide();
-}
-
-function changeSlide() {
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active")
-    }
-    slides[index_2].classList.add("active")
-}
-
-function resetTimer() {
-    clearInterval(timer);
-    timer = setInterval(autoPlay, 4000)
-}
-
-function autoPlay() {
-    nextSlide();
-    updateCircleIndicator();
-};
-
-let timer = setInterval(autoPlay, 8000)
+console.log(indexMaster);

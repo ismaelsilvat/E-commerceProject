@@ -60,6 +60,7 @@ function addProd() {
                 li[0].innerHTML = 'Esse produto ja foi cadastrado!'
                 inputs[0].style.border = 'red solid 2px'
                 send = false;
+                window.location.reload()
             }
 
             if (produtoCadastro[i].codigo == inputs[1].value) {

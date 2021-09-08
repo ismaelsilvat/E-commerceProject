@@ -16,37 +16,37 @@ body{
     color: rgb(179, 179, 179);
     background-color: #181818;
     margin: auto;
-    margin-top: 4%;
+    margin-top: 2%;
     padding: 1.5%;
     width: 80%;
     height: auto;
     font-family: 'Righteous', cursive;
-    border: 2px solid rgb(139, 0, 139);
+    border: 2px solid #8a48fa;
     border-radius: 15px;
 }
 
 .titulo h2{
-    color: rgb(139, 0, 139);
+    color: #8a48fa;
     font-family: 'Righteous', cursive;
     font-size: 200%;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
     text-align: center;
 }
 
 .titulo-pagina h2{
     background-color: #292929;
-    color: rgb(139, 0, 139);
+    color: #8a48fa;
     text-align: center;
     justify-content: center;
     display: flex;
-    padding-top: 1.5%;    
+    padding-top: 1%;    
 }
 
 
 /* Parte Moska Shoes */
 
 .conteudo #titulo h2{
-    color: rgb(139, 0, 139);
+    color: #8a48fa;
     font-family: 'Righteous', cursive;
     font-size: 200%;
 }
@@ -64,7 +64,7 @@ body{
 .historia-empresa p{
     width: 55%;
     height: auto;
-    margin-top: 4%;
+    margin-top: 2%;
     margin-right: 7%;
     text-align: justify;
 }
@@ -94,7 +94,7 @@ body{
 }
 
 .col-hmarca h2{
-    color: rgb(139, 0, 139);
+    color: #8a48fa;
     font-family: 'Righteous', cursive;
     font-size: 200%;
 }   
@@ -118,43 +118,47 @@ body{
     justify-content: center;
     margin: 10px 15px;
     line-height: 155%;
+    
 }
 
 
 .visao{
     background-color: #121212;
-    border: 1px solid #c700ce5e;
+    border: 1px solid #8a48fa;
     padding: 5% 10%;
     width: 170%;
     height: 170px;
     border-radius: 12px;
     text-align: center;
+    transition: 200ms linear;
 }
 
 .missao{
     background-color: #121212;
-    border: 1px solid #c700ce5e;
+    border: 1px solid #8a48fa;
     padding: 5% 10%;
     width: 170%;
     height: 170px;
     border-radius: 12px;
     text-align: center;
+    transition: 200ms linear;
 }
 
 .valor{
     background-color: #121212;
-    border: 1px solid #c700ce5e;
+    border: 1px solid #8a48fa;
     padding: 5% 10%;
     width: 170%;
     height: 170px;
     border-radius: 12px;
     text-align: center;
+    transition: 200ms linear;
 }
 
 .visao:hover, .missao:hover, .valor:hover{
     background-color: #0a0a0a;
-    color: #c700ce5e;
-    box-shadow: 0px 0px 10px #c700ce5e;
+    color: #8a48fa;
+    box-shadow: 0px 0px 10px #8a48fa;
 
 }
 
@@ -176,8 +180,8 @@ body{
 .grupo img{
     width: 50%;
     height: auto;
-    box-shadow: 0px 0px 10px #c700ce5e;
-    border: 2px solid #c700ce5e;
+    box-shadow: 0px 0px 10px #8a48fa;
+    border: 2px solid #8a48fa;
     border-radius: 50%;
 }
 
@@ -189,16 +193,22 @@ body{
 }
 
 .grupo h2{
-    color: #c700ce5e;
+    color: #8a48fa;
 }
 
 .participantes{
-    color: #c700ce5e;
+    color: #8a48fa;
+   
 }
 
 .grupo h3 i:hover{
     font-size: 130%;
     cursor: unset;
+}
+
+.grupo p{
+    height: 25px;
+    margin-bottom: 10%;
 }
 
 .grupo p i{
@@ -208,6 +218,7 @@ body{
 .david i, .ismael i, .guilherme i, .victor i{
     margin-top: 1.5%;
     font-size: 130%;
+    transition: 150ms linear;
 }
 
 .david i:not(:first-child), .ismael i:not(:first-child), .guilherme i:not(:first-child), .victor i:not(:first-child){
@@ -215,7 +226,7 @@ body{
 }
 
 .david i:hover, .ismael i:hover, .guilherme i:hover, .victor i:hover{
-    color: #c700ce5e;
+    color: #8a48fa;
     font-size: 150%;
     cursor: pointer;
 }
@@ -232,8 +243,6 @@ body{
 .victor img{
     width: 60%;
 }
-
-
 
 .col-1-participantes{
     display: flex;

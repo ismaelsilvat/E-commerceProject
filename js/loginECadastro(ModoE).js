@@ -44,6 +44,8 @@ cadastrar.addEventListener('click', function(){
   cadastro();  
 })
 
+let logou = 0
+
 var userS = JSON.parse(localStorage.getItem("Users"))
 
 
@@ -110,7 +112,6 @@ function Logar(){
   if( 'admin' == credencial.value  || 'ADMIN' == credencial.value || 'Admin' == credencial.value && 'admin' == senhaLogin.value || 'ADMIN' == senhaLogin.value || 'Admin' == senhaLogin.value){
     window.open('addProd.html', '_self')
       infos.login = 1
-      
   }
 
   else{
@@ -158,7 +159,16 @@ function Logar(){
     }else{
   
           // Senão, mostra mensagem de login falhou
-          alert("Login falhou!")
+          Swal.fire({
+            background: '#181818',
+            backdrop: 'boolean',
+            icon: 'error',
+            // timer: "2000",
+            // timerProgressBar: true,
+            title: 'Credenciais incorretas',
+            text: 'As credenciais não foram encontradas em nosso sistema',
+            footer: '<a href="loginECadastro(ModoE).html">Não tem uma conta?</a>'
+          })
   
     }   
   }

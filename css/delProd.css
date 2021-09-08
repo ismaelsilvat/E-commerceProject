@@ -24,7 +24,7 @@ body{
 .container-barraLateral{
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: #181818;
     width: 20%;
     height: 100vh;
 }
@@ -103,6 +103,10 @@ body{
     border-radius: 15px;
 }
 
+.container-bottom button{
+    margin: 0;
+}
+
 .iptInfo{
     margin-top: 2%;
     display: flex;
@@ -123,7 +127,7 @@ body{
     color: #8a48fa;
     font-size: 24px;
     padding: .8%;
-    height: 50px;
+    height: 40px;
     width: 80%;
     background-color: transparent;
     border: none;
@@ -190,6 +194,25 @@ body{
     text-decoration: none;
     list-style-type: none;
 }
+
+
+#img{
+    width: 40%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin: auto;
+    padding: 1%;
+
+}
+
+#img img{
+    max-width: 70%;
+    
+}
+
 
 .btn-addProd{
     color: #8a48fa;
@@ -338,3 +361,232 @@ body{
 }
 
 /* Excluir Produto */
+
+
+
+/* Responsividade */
+
+@media screen and (max-width: 2500px){
+    .iptInfo h4{
+        margin: 1%;
+    }
+}
+
+@media screen and (max-width: 2200px){
+    .iptInfo h4{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 2000px){
+    .container-inputs h2{
+        margin: 0;
+        margin-top: 1%;
+        height: 90%;
+    }
+
+    .container-barraLateral{
+        width: 25%;
+    }
+
+    .allCards{
+        width: 100%;
+    }
+
+    .allCards a{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1800px){
+    .containerADD{
+        height: 90%;
+    }
+
+    .container-inputs{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .container-inputs h2{
+        font-size: 3rem;
+    }
+
+    .container-inputs h4{
+        font-size: 2rem;
+    }
+
+    .iptInfo input{
+        font-size: 1rem;
+    }
+
+    .iptInfo textarea{
+        height: 170px;
+        font-size: 1rem;
+    }
+
+    .mid-file input{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1600px){
+
+    .container-barraLateral{
+        width: 30%;
+    }
+    
+    #cardLateral a{
+        font-size: 1.8rem;
+    }
+
+}
+
+@media screen and (max-width: 1200px){
+    .containerADD{
+        width: 75%;
+        height: auto;
+    }
+
+    .containerADD h2{
+        font-size: 2.5rem;
+    }
+
+    .containerADD h4{
+        font-size: 1.5rem;
+    }
+
+    .containerADD input{
+        font-size: .8rem;
+        margin-bottom: 2%;
+    }
+
+    .containerADD textarea{
+        font-size: .8rem;
+        margin-bottom: 2%;
+    }
+
+    .containerADD button{
+        padding: 2%;
+        font-size: 1.5rem;
+    }
+
+    .logoMoska img{
+        width: 85%;
+    }
+
+    #cardLateral a{
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+    .containerADD{
+        width: 80%
+    }
+
+    .containerADD h2{
+        font-size: 2.2rem;
+    }
+
+    #cardLateral {
+        width: 80%;
+    }
+
+    #cardLateral a{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+
+    .containerADD h2{
+        font-size: 2rem;
+    }
+
+    .containerADD h4{
+        font-size: 1.4rem;
+    }
+
+    .containerADD button{
+        font-size: 1.2rem;
+    }
+
+    #cardLateral a{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+
+    .containerADD h2{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 1.8rem;
+    }
+
+    .containerADD h4{
+        font-size: 1.2rem;
+    }
+
+    .containerADD textarea{
+        height: 120px;
+    }
+
+    #cardLateral{
+        width: 100%;
+    }
+
+    #cardLateral a{
+        font-size: .8rem;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+    
+    .containerADD{
+        height: 63%;
+    }
+
+    .containerADD h2{
+        font-size: 1.4rem;
+        margin: 3%;
+    }
+
+    .containerADD h4{
+        font-size: .9rem;
+        margin-top: 2%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .containerADD input{
+        height: 35px;
+        font-size: .7rem;
+        margin-bottom: 3%;
+    }
+    
+    .containerADD textarea{
+        height: 70px;
+    }
+    
+    .containerADD button{
+        font-size: .8rem; 
+    }
+    
+    .mid-file input{
+        font-size: .5rem;
+    }
+
+    #cardLateral a:hover{
+        letter-spacing: .05rem;
+    }
+
+}

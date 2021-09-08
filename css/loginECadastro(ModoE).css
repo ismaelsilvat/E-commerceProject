@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;700&display=swap');
 
+.swal2-title, .swal2-html-container{
+    color: white !important;
+}
+
+.swal2-icon.swal2-error, .swal2-icon.swal2-error {
+    border: 3px solid #8a48fa !important;
+    color: #8a48fa !important;
+}
+
+.swal2-icon.swal2-error [class^=swal2-x-mark-line]{
+    background-color: #8a48fa !important;
+}
+
+.swal2-footer{
+    border-top: 3px solid #8a48fa !important;
+}
+
+.swal2-styled.swal2-confirm{
+    background-color: #8a48fa !important;
+    font-weight: bold;
+}
+
+.swal2-popup.swal2-modal.swal2-icon-error.swal2-show{
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,8 +33,15 @@
 }
 
 body{
-    font-family: 'inconcolata', monospace;  
- 
+    font-family: 'inconcolata', monospace;      
+    background-color: black;
+}
+
+.imgbg{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    opacity: .6;
 }
 
 .container{
@@ -17,7 +49,6 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh; 
-    background-color: #151515;
 }
 
 /* Parte do cadastro */
@@ -29,12 +60,12 @@ body{
 }
 
 .titulo-bem-vindo{
-    color: rgb(0, 0, 0);
+    color: black;
     padding-bottom: 5%;
 }
 
 .titulo-volta{
-    color: #c202db;
+    color: #8a48fa;
     padding: 6% 0% 4%;
 
 }
@@ -46,7 +77,7 @@ body{
 }
 
 .descricao-1{
-    color: rgb(0, 0, 0);
+    color: black;
 }
 
 .descricao-2{
@@ -62,7 +93,7 @@ body{
     border-radius: 15px;
     border: 1px solid white;
     text-transform: uppercase;
-    color: white;
+    color: black;
     font-size: 10px;
     padding: 10px 30px;
     cursor: pointer;
@@ -79,28 +110,28 @@ body{
 }
 
 .btn-primario:hover{
-    color: #c202db;
-    background-color: rgb(0, 0, 0);
+    color: #8a48fa;
+    background-color: black;
     border-color: none;
     
 }
 
 .btn-secundario{
-    color: #c202db;
-    border: 1px solid #c202db;
-    background-color: rgb(0, 0, 0);
+    color: #8a48fa;
+    border: 1px solid #8a48fa;
+    background-color: black;
     margin: 5% 0% 15%;
     transition: background-color 1s;
 }
 
 .btn-secundario:hover{
-    color: white;
-    background-color: #51015c;
-    border: 1px solid #c202db;
+    color: black;
+    background-color: #8a48fa;
+    border: 1px solid #8a48fa;
 }
 
 .conteudo{
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     border-radius: 15px;
     width: 75%;
     height: 65%;
@@ -112,7 +143,7 @@ body{
 .conteudo::before{
     content: "";
     position: absolute;
-    background-color: #51015c;
+    background-color: #8948fad0;
     width: 42%;
     height: 100%;
     border-top-left-radius: 12px;
@@ -167,7 +198,7 @@ body{
 }
 
 .link-social-media:hover{
-    color: #8f00a1;
+    color: #8a48fa;
     font-size: 200%;
 }
 
@@ -182,7 +213,7 @@ body{
 }
 
 .item-social-media a{
-    color: #c202db;
+    color: #8a48fa;
     font-size: 30px;
     align-self: center;
 }
@@ -193,7 +224,7 @@ body{
 }
 
 .label-informacao{
-    color: #8f00a1;
+    color: #8a48fa;
     font-size: 20px;
     background-color: #181818;
     border-radius: 15px;
@@ -228,7 +259,7 @@ body{
     border: none;
     background-color: #181818;
     margin: 2%;
-    color: #c202db;
+    color: #8a48fa;
 }
 
 .form input:focus{
@@ -256,7 +287,7 @@ body{
 }
 
 .password{
-    color: #8f00a1;
+    color: #8a48fa;
     font-size: 14px; 
     margin: 15px 0 ;
     align-self: center;
@@ -372,6 +403,10 @@ body{
         height: 100%;
     }
 
+    .conteudo{
+        width: 90%;
+    }
+
     .titulo{
         font-size: 14px;
     }
@@ -392,7 +427,7 @@ body{
     }
 
     .link-social-media:hover{
-        color: #8f00a1;
+        color: #8a48fa;
         font-size: 130%;
     }
 
@@ -401,7 +436,7 @@ body{
     }
 
     .form{
-        width: 90%;
+        width: 80%;
     }
 
     .col-2 label{

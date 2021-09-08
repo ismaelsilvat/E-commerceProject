@@ -21,9 +21,12 @@
             <div class="items">
                 <div class="container-items">
                     <div class="contact">
-                        <i class="fas fa-phone-alt"></i><a href="contato.html">Contato</a>
+                        <a class="rs" href="contato.html"><i class="fas fa-phone-alt"></i><span>Contato</span></a>
+                        <a href="http://"><i class="fab fa-whatsapp"></i> 991891499</a>
+                        <a href="https://www.instagram.com/loja.moskashoes/"><i class="fab fa-instagram"></i>@loja.moskashoes</a>
                     </div>
                     <div class="login">
+                        <i class="rs far fa-money-bill-alt"></i><a class="rs">R$</a></i>
                         <i class="fas fa-user"></i><a href="loginECadastro(ModoE).html">Login</a>
                     </div>
                 </div>
@@ -34,7 +37,7 @@
                     <div class="logo">
                         <div class="a-logo">
                             <a href="index.html">
-                                <img src="./img/logo.png" class="image-logo-header" alt="">
+                                <img src="./img/logo.png" class="image-logo-header" alt=""><span>Moska Shoes</span>
                             </a>
                         </div>
                     </div>
@@ -45,10 +48,39 @@
                     </div> 
                     <div class="cart">
                         <div class="cart-items">
-                            <a href="carrinho.html">
-                                <i class="fas fa-shopping-cart"></i>
-                                <span>Seu carrinho</span>
+                            <a href="destaques.html">
+                                <i class="far fa-star"></i>
+                                <span>Destaques</span>
                             </a>
+                            <a href="carrinho.html"
+                            id="test-cart">
+                                <i class="fas fa-shopping-cart">
+                                    <input class="cart-num" type="text" id="cart-num" value="0">
+                                </i>
+                                <span>Carrinho</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="search-bar dois">
+                            <input class="input-search" type="text" id="search" autocomplete="off">
+                            <label class="label-search" for="search">Buscar</label>
+                            <a class="button-search" href=""><i class="fas fa-search"></i></a>           
+                        </div> 
+                        <div class="cart dois">
+                            <div class="cart-items">
+                                <a href="destaques.html">
+                                    <i class="far fa-star"></i>
+                                    <span>Destaques</span>
+                                </a>
+                                <a href="carrinho.html"
+                                id="test-cart">
+                                    <i class="fas fa-shopping-cart">
+                                        <input class="cart-num" type="text" id="cart-num" value="0">
+                                    </i>
+                                    <span>Carrinho</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -56,12 +88,12 @@
             <div class="navbar">
                 <nav class="nav">
                     <ul class="ul">
-                        <li class="li"><a href="index.html" class="a active">Principal</a></li>
-                        <li class="li li-dropdown"><a class="a dropdrop" href="">Produtos<i class="flechinha fas fa-chevron-down"></i></a>
+                        <li class="li li-dropdown"><a class="a dropdrop" href="">Catálogo<i class="flechinha fas fa-chevron-down"></i></a>
                             <ul class="ul-border">
+                                <li class="li-ul-border"><a class="a-ul-border" href="masculino.html">Todos</a></li>
                                 <li class="li-ul-border"><a class="a-ul-border" href="masculino.html">Masculino</a></li>
                                 <li class="li-ul-border"><a class="a-ul-border" href="feminino.html">Feminino</a></li>
-                                <li class="infantil li-ul-border"><a class="a-ul-border" href="infantil.html">Infantil</a>
+                                <li class="infantil li-ul-border"><a class="a-ul-border" href="infantil.html">Infantil<i class="fas fa-plus"></i></a>
                                     <ul class="infantil-c">
                                         <li class="li-infantil-c"><a class="a-infantil-c" href="infantil-masc.html">Masculino</a></li>
                                         <li class="li-infantil-c"><a class="a-infantil-c" href="infantil-fem.html">Feminino</a></li>
@@ -70,13 +102,14 @@
                             </ul>
                         </li>
                         <li class="li centro"><a class="a" href="sobre.html">Especiais</a></li>
+                        <li class="li"><a href="index.html" class="a active">Principal</a></li>
                         <li class="li centro-2"><a class="a" href="sobre.html">Sobre</a></li>
                         <li class="li"><a class="a" href="sobre.html">Contato</a></li>
                     </ul>
                 </nav>
             </div>
             <input type="checkbox" id="checkbox-menu">
-            <label for="checkbox-menu">
+            <label class="check_responsive" for="checkbox-menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -84,6 +117,12 @@
             <div class="navbar2">
                 <nav class="nav2">
                     <ul class="ul2">
+                        <li class="li2 l">
+                            <a class="log" href="loginECadastro(ModoE).html"><i class="fas fa-user"></i></a>
+                            <a class="car-res" href="carrinho.html"
+                            id="test-cart"><i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </li>
                         <li class="li2"><a class="a2 active" href="index.html">Principal</a></li>
                         <li class="li2 li-dropdown2"><a class="a2 dropdrop2" href="contato.html">Produtos</a><i class="flechinha dois fas fa-chevron-down"></i>
                             <ul class="ul-border2">
@@ -104,30 +143,41 @@
                 </nav>
             </div>
         </div>
-        <!-- <section class="header-carousel">
-            <div class="slider-header">
-                <div class="slideh active">
-                    <img class="logoheader" src="./img/a.png" alt="">
-                </div>
-                <div class="slideh">
-                    <img src="./img/carousel-header/frase.png" alt="">
-                </div>
-                <div class="slideh">
-                    <img src="./img/carousel-header/frase2.png" alt="">
-                </div>
-                <div class="slideh">
-                    <img src="./img/carousel-header/frase3.png" alt="">
-                </div>
-                <div class="slideh">
-                    <img src="./img/carousel-header/frase4.png" alt="">
-                </div>
-                <div class="slideh">
-                    <img src="./img/carousel-header/frase5.png" alt="">
-                </div>
-                <div id="indicator" class="indicator-header"></div>
-            </div>
-        </section> -->
     </header>
+    <div class="carousels">
+        
+        <section class="carousel-master">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="./img/carousel-body/imagem3.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/carousel-body/imagem4.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/carousel-body/imagem1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/carousel-body/imagem2.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/carousel-body/imagem5.jpg" alt="">
+                </div>
+            </div>
+            <div class="controls-Master">
+                <div class="prevMaster">
+                    <span> < </span>
+
+                </div>
+                <div class="nextMaster">
+                    <span> > </span>
+                </div>
+            </div>
+    
+            <div id="indicatorMaster" class="indicatorMaster"></div>
+    
+        </section>
+    </div>
 
     <div class="contentt">
         <div class="info-text">
@@ -135,20 +185,20 @@
             <h2 class="sub">Só aqui você encontrará o MELHOR, mais CONFORTÁVEL e mais ESTILOSO modelo, pelo melhor preço. </h2>
         </div>
 
-        <!-- <div class="video">
-            <video src="KD12-_-Nike.mp4" autoplay= "1" muted= "1" loop> 
-        </div> -->
-    </div>
+         <div class="video">
+            <video src="Nike-Joyride-_-Behind-the-Design-_-Nike.mp4" autoplay= "1" muted= "1" loop> 
+        </div> 
+    </div> 
     
 
-    <div class="container-categorias">
+     <div class="container-categorias">
         <div class="descricao">
             Categorias
         </div>
         <div class="categorias">
             <div class="card-categoria">
                 <div class="caixa-img-cat">
-                    <img src="./img/modelo-masc.png" loading="lazy" alt="">
+                    <img src="./img/modelo-masc.png"  alt="">
                 </div>
                 <div class="conteudo-categorias">
                     <div class="descricao-categoria">
@@ -159,7 +209,7 @@
             </div>
             <div class="card-categoria">
                 <div class="caixa-img-cat">
-                    <img src="./img/modelo-feminino.png" loading="lazy" alt="">
+                    <img src="./img/modelo-feminino.png"  alt="">
                 </div>
                 <div class="conteudo-categorias">
                     <div class="descricao-categoria">
@@ -170,7 +220,7 @@
             </div>
             <div class="card-categoria">
                 <div class="caixa-img-cat">
-                    <img src="./img/modelo-infantil.jpg" loading="lazy" alt="">
+                    <img src="./img/modelo-infantil.jpg"  alt="">
                 </div>
                 <div class="conteudo-categorias">
                     <div class="descricao-categoria">
@@ -187,45 +237,32 @@
             <h2 class="sub">Em nossa loja todos se sentem na moda.</h2>
         </div>
 
-        <!-- <div class="video">
+      <div class="video">
             <video src="Nike-Joyride-_-Behind-the-Design-_-Nike.mp4" autoplay= "1" muted= "1" loop> 
-        </div> -->
+        </div>
+    </div> 
+
+    <div class="example-models">
+        <div class="info-text">
+            <h1 class="main">Casuais e elegantes</h1>
+        </div>
+        <div class="products" id="example-products-1">
+        </div>
     </div>
 
     <div class="example-models">
-        <h1 class="title-tematic">Simples e elegantes</h1>
-        <div class="content" style="background-image: url(./img/background-simples.png);  background-size: cover; background-position: center;">
-            <div class="active-image">
-                <img class="img" src="./img/background-1-s.jpg" loading="lazy" alt="">
-            </div>
-            <div class="products" id="example-products-1" style="background-image:url(./img/raiosroxos.png); background-size: 30%; background">
-            </div>
-
+        <div class="info-text">
+            <h1 class="main">Coloridos e diversificados</h1>
+        </div>
+        <div class="products" id="example-products-2">
         </div>
     </div>
     
-
     <div class="example-models">
-        <h1 class="title-tematic dois">Coloridos e diversificados</h1>
-        <div class="content" style="background-image: url(./img/background-colorido.jpg);  background-size: cover; background-position: center;">
-            <div class="active-image">
-                <img class="img" src="./img/background-colorido2.jpg" loading="lazy" alt="">
-            </div>
-            <div class="products" id="example-products-2" style="background-image: url(./img/colorido-fumaça.png);">
-            </div>
-
+        <div class="info-text">
+            <h1 class="main">Temáticos e inspiradores</h1>
         </div>
-    </div>
-
-    <div class="example-models">
-        <h1 class="title-tematic tres">Temáticos e inspiradores</h1>
-        <div class="content" style="background-image: url(./img/background-tematica.jpg); background-size: cover; background-position: center;">
-            <div class="active-image">
-                <img class="img" src="./img/backgrond-tematicos.jpg" loading="lazy" alt="">
-            </div>
-            <div class="products" id="example-products-3" style="background-image: url(../img/simpson-hover.png); background-position: bottom; background-size: 37%;">
-            </div>
-
+        <div class="products" id="example-products-3">
         </div>
     </div>
 
@@ -239,7 +276,7 @@
         <div class="destaques">
             <div class="card-destaque">
                 <div class="caixa-img">
-                    <img src="./img/destaques/destaque1.png" loading="lazy" alt="">
+                    <img src="./img/destaques/destaque1.png"  alt="">
                 </div>
                 <div class="conteudo-destaque">
                     <div class="descricao-destaque">
@@ -253,7 +290,7 @@
             <div class="card-destaque">
                 <div class="conteudo-destaque">
                     <div class="caixa-img">
-                        <img src="./img/destaques/destaque2.png" loading="lazy" alt="">
+                        <img src="./img/destaques/destaque2.png"  alt="">
                     </div>
                     <div class="descricao-destaque">
                         <span>Travis Scott x Playstation x Nike Dunk Low</span>
@@ -265,7 +302,7 @@
             </div>
             <div class="card-destaque">
                 <div class="caixa-img">
-                    <img src="./img/destaques/destaque3.png" loading="lazy" alt="">
+                    <img src="./img/destaques/destaque3.png"  alt="">
                 </div>
                 <div class="conteudo-destaque">
                     <div class="descricao-destaque">
@@ -277,7 +314,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="descricao">
         <h1>
@@ -286,12 +323,13 @@
     </div>
     <div class="container-produtos" id="container-produtos">
     </div>
-    
-   <footer>
-       <div class="container-footer">
-           <div class="footer-top first-footer">
-               <div class="col-footer">
-                   <h2>Loja</h2>
+
+    <footer>
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Loja</h4>
+                    <ul class="ul-text">
                         <li><a href="index.html">Principal</a></li>
                         <li><a href="loginECadastro(ModoE).html">Logar</a></li>
                         <li><a href="carrinho.html">Carrinho</a></li>
@@ -299,51 +337,37 @@
                         <li><a href="masculino.html">Masculino</a></li>
                         <li><a href="feminino.html">Feminino</a></li>
                         <li><a href="infantil.html">Infantil</a></li>
-               </div>
-            </div>
-            <div class="footer-top second-footer">
-                <div class="col-footer">
-                    <h2>Fale conosco</h2>
-                    <a href="tel: 048991891499">Entre em contato</a>
-                    <a href="contato.html">Suporte</a>
+                    </ul>
                 </div>
-            </div>
-            <div class="footer-top third-footer">
-                <div class="col-footer">
-                    <h2>Conecte-se a nós</h2>
-                    <a href="#"><i class="icon fab fa-instagram-square"></i></a>
-                    <a href="#"><i class="icon fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="icon fab fa-twitter-square"></i></a>
-                    <a href="#"><i class="icon fab fa-whatsapp-square"></i></a>
+                <div class="footer-col">
+                    <h4>Fale Conosco</h4>
+                    <ul class="ul-text">
+                        <li><a href="tel: 048991891499">Entre em contato</a></li>
+                        <li><a href="contato.html">Suporte</a></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="footer-top fourth-footer">
-                <div class="col-footer">
-                    <h2>Formas de pagamento</h2>
-                    <div class="formas-de-pagamento">
-                        <div class="row-pag">
-                            <li class="logo-pag"><img src="./img/logos/bancodobrasil.png" alt=""></li>
-                            <li class="logo-pag"><img src="./img/logos/bradesco.png" alt=""></li>
-                            <li class="logo-pag"><img src="./img/logos/itau.png" alt=""></li>
-                            <li class="logo-pag"><img src="./img/logos/paypal.png" alt=""></li>
-                        </div>
-                        <div class="row-pag">
-                            <li class="logo-pag dois"><img src="./img/logos/picpay.png" alt=""></li>
-                            <li class="logo-pag dois"><img src="./img/logos/pix.png" alt=""></li>    
-                            <li class="logo-pag dois"><img src="./img/logos/visa.png" alt=""></li>
-                        </div>
+                <div class="footer-col">
+                    <h4>Conecte-se a nós</h4>
+                    <div class="ul-icon">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
+                <div class="footer-col">
+                    <h4>Formas de Pagamento</h4>
+                    <ul class="ul-img">
+                        <a href="#"><img src="./img/logos/itau.png" alt=""></a>
+                        <a href="#"><img src="./img/logos/visa.png" alt=""></a>
+                        <a href="#"><img src="./img/logos/bancodobrasil.png" alt=""></a>
+                        <a href="#"><img src="./img/logos/bradesco.png" alt=""></a>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            &copy; MoskaShoes. Todos os direitos reservados. Comércio de Produtos Esportivos Ltda - CNPJ: 12.344.321/0012-32
-            Rodovia Jose Carlos Daux, 500 Techno Towers - Torre 2 - sala 209 - João Paulo, Florianópolis - SC, 88030-000
-        </div>
     </footer>
-        
-
-
+  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script charset="utf-8" src="./js/script.js"></script>
 </body>

@@ -9,8 +9,6 @@ body{
     display: flex;
 }
 
-/* Adicionar Produtos */
-
 .logoMoska{
     width: 100%;
     height: 30%;
@@ -24,7 +22,7 @@ body{
 .container-barraLateral{
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: #181818;
     width: 20%;
     height: 100vh;
 }
@@ -93,7 +91,7 @@ body{
     justify-content: center;
     position: absolute;
     width: 60%;
-    height: 85%;
+    height: auto;
     margin: auto;
     left: 50%;
     transform: translate(  -50%, -50%);
@@ -104,7 +102,7 @@ body{
 }
 
 .iptInfo{
-    margin-top: 2%;
+    margin-top: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,7 +112,7 @@ body{
 .iptInfo h4{
     color: white;
     width: 78%;
-    margin-top: 3%;
+    margin-top: 4%;
     margin-bottom: .8%;
     font-size: 38px;
 }
@@ -173,13 +171,13 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 
 .mid-file input{
     color: #8a48fa;
     font-size: 20px;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 .mid-file li{
@@ -189,7 +187,22 @@ body{
     list-style-type: none;
 }
 
-.btn-addProd{
+#imgimg{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#imgimg img{
+    max-width: 20%;
+    max-height: 20%;
+}
+
+.btn-addProd button{
     color: #8a48fa;
     background-color: transparent;
     border: none;
@@ -204,19 +217,12 @@ body{
     transition: 300ms linear;
 }
 
-.btn-addProd:hover{
+.btn-addProd button:hover{
     font-size: 2.2rem;
     cursor: pointer;
     color: black;
     background-color: #8a48fa;
 }
-
-/* Adicionar Produtos */
-
-
-
-
-
 
 .containerEDIT{
     width: 80%;
@@ -239,10 +245,8 @@ body{
 }
 
 .mudar{
-    display: none;
+    display: none !important;
 }
-
-/* Excluir Produto */
 
 .localizar{
     width: 100%;
@@ -323,12 +327,6 @@ body{
     height: 74%;
 }
 
-/* Excluir Produto */
-
-
-
-/* Excluir User */  
-
 .container-delUser{
     height: 70%;
 }
@@ -344,8 +342,226 @@ body{
     text-align: flex-start;
 }
 
+/* Responsividade */
 
+@media screen and (max-width: 2500px){
+    .iptInfo h4{
+        margin: 1%;
+    }
+}
 
+@media screen and (max-width: 2200px){
+    .iptInfo h4{
+        margin: 0;
+    }
+}
 
+@media screen and (max-width: 2000px){
+    .container-inputs h2{
+        margin: 0;
+        margin-top: 1%;
+        height: 90%;
+    }
 
-/* Excluir User */  
+    .container-barraLateral{
+        width: 25%;
+    }
+
+    .allCards{
+        width: 100%;
+    }
+
+    .allCards a{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1800px){
+   
+    .container-inputs{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .container-inputs h2{
+        font-size: 3rem;
+    }
+
+    .container-inputs h4{
+        font-size: 2rem;
+    }
+
+    .iptInfo input{
+        font-size: 1rem;
+    }
+
+    .iptInfo textarea{
+        height: 170px;
+        font-size: 1rem;
+    }
+
+    .mid-file input{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1600px){
+
+    .container-barraLateral{
+        width: 30%;
+    }
+    
+    #cardLateral a{
+        font-size: 1.8rem;
+    }
+
+}
+
+@media screen and (max-width: 1200px){
+    .containerADD{
+        width: 75%;
+        height: auto;
+    }
+
+    .containerADD h2{
+        font-size: 2.5rem;
+    }
+
+    .containerADD h4{
+        font-size: 1.5rem;
+    }
+
+    .containerADD input{
+        font-size: .8rem;
+        margin-bottom: 2%;
+    }
+
+    .containerADD textarea{
+        font-size: .8rem;
+        margin-bottom: 2%;
+    }
+
+    .containerADD button{
+        padding: 2%;
+        font-size: 1.5rem;
+    }
+
+    .logoMoska img{
+        width: 85%;
+    }
+
+    #cardLateral a{
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+    .containerADD{
+        width: 80%
+    }
+
+    .containerADD h2{
+        font-size: 2.2rem;
+    }
+
+    #cardLateral {
+        width: 80%;
+    }
+
+    #cardLateral a{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+
+    .containerADD h2{
+        font-size: 2rem;
+    }
+
+    .containerADD h4{
+        font-size: 1.4rem;
+    }
+
+    .containerADD button{
+        font-size: 1.2rem;
+    }
+
+    #cardLateral a{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+
+    .containerADD h2{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 1.8rem;
+    }
+
+    .containerADD h4{
+        font-size: 1.2rem;
+    }
+
+    .containerADD textarea{
+        height: 120px;
+    }
+
+    #cardLateral{
+        width: 100%;
+    }
+
+    #cardLateral a{
+        font-size: .8rem;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+    
+    .containerADD{
+        height: 63%;
+    }
+
+    .containerADD h2{
+        font-size: 1.4rem;
+        margin: 3%;
+    }
+
+    .containerADD h4{
+        font-size: .9rem;
+        margin-top: 2%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .containerADD input{
+        height: 35px;
+        font-size: .7rem;
+        margin-bottom: 3%;
+    }
+    
+    .containerADD textarea{
+        height: 70px;
+    }
+    
+    .containerADD button{
+        font-size: .8rem; 
+    }
+    
+    .mid-file input{
+        font-size: .5rem;
+    }
+
+    #cardLateral a:hover{
+        letter-spacing: .05rem;
+    }
+
+}
