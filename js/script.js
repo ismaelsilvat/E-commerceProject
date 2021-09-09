@@ -339,7 +339,7 @@ fetch("../test.json")
         
 
         let indexteste = 0
-        for(let indexxx = 1; indexxx <= produtos.length; indexxx++){
+        for(let indexxx = 1; indexxx <= containerProdutos.length; indexxx++){
             
             const slidescard = document.querySelector(".sc" + (indexxx));
             
