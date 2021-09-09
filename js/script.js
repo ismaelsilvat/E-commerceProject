@@ -272,7 +272,7 @@ fetch("../test.json")
 
                 console.log(produto);    
                 
-                let button = document.getElementById('btn-cart' + index)
+                let button = document.getElementById('btn-cart' + (index + 1))
         
                 var  contador  =  1
                 button.addEventListener("click", function() {
