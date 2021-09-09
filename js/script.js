@@ -88,7 +88,6 @@ testCart.addEventListener('click', function(){
 
 fetch("../test.json")
     .then(response => response.json()).then(produtos => {
-        console.log(produtos)
 
         const containerProdutos = document.getElementById('container-produtos');
 
@@ -114,41 +113,43 @@ fetch("../test.json")
 
             //  const decodedData = atob(encodedData)
 
-            console.log(produtoTransformadoJsonCodificado);
+            if(produto.id <= 15){
 
-            const modeloDeProduto =
-                `<div class="card">
-                    <div class="card-img">
-                        <div class="slider-card sc${produto.id}">
-                            <div class="slideC active">
-                                <img class="img-card" src="${produto.imagens[0]}">
+                const modeloDeProduto =
+                    `<div class="card">
+                        <div class="card-img">
+                            <div class="slider-card sc${produto.id}">
+                                <div class="slideC active">
+                                    <img class="img-card" src="${produto.imagens[0]}" loading="lazy">
+                                </div>
+                                <div class="slideC">
+                                    <img class="img-card" src="${produto.imagens[1]}" loading="lazy">
+                                </div>
+                                <div class="slideC">
+                                    <img class="img-card" src="${produto.imagens[2]}" loading="lazy">
+                                </div>
                             </div>
-                            <div class="slideC">
-                                <img class="img-card" src="${produto.imagens[1]}">
+                            <div class="controls-card">
+                                <div class="prev-card pc${produto.id}">
+                                    <span> < </span>
+    
+                                </div>
+                                <div class="next-card nc${produto.id}">
+                                    <span> > </span>
+                                </div>
                             </div>
-                            <div class="slideC">
-                                <img class="img-card" src="${produto.imagens[2]}">
-                            </div>
+                            <div id="indicator-card" class="indicator-card ic${produto.id}"></div>
                         </div>
-                        <div class="controls-card">
-                            <div class="prev-card pc${produto.id}">
-                                <span> < </span>
+                        <span class="nome">${produto.nome}</span>
+                        <span class="preço">R$${produto.valor}</span>
+                        <span class="juros">${produto.juros}</span>
+                        <a href="projeto.html?produto=${produtoTransformadoJsonCodificado}" class="btn">Ver produto</a>
+                        <a class="btn-cart" id="btn-cart${index + 1}" style="cursor: pointer"><i class="fas fa-cart-plus"></i></button>
+                    </div>`
+    
+                containerProdutos.innerHTML = containerProdutos.innerHTML + modeloDeProduto;
+            }
 
-                            </div>
-                            <div class="next-card nc${produto.id}">
-                                <span> > </span>
-                            </div>
-                        </div>
-                        <div id="indicator-card" class="indicator-card ic${produto.id}"></div>
-                    </div>
-                    <span class="nome">${produto.nome}</span>
-                    <span class="preço">${produto.valor}</span>
-                    <span class="juros">${produto.juros}</span>
-                    <a href="projeto.html?produto=${produtoTransformadoJsonCodificado}" class="btn">Ver produto</a>
-                    <a class="btn-cart" id="btn-cart${index + 1}" style="cursor: pointer"><i class="fas fa-cart-plus"></i></button>
-                </div>`
-
-            containerProdutos.innerHTML = containerProdutos.innerHTML + modeloDeProduto;
 
             if(produto.nome == "All Star Tie Dye"){ 
                 const exampleProductInfos = `
@@ -259,75 +260,86 @@ fetch("../test.json")
                 
                     exampleProductSimple.innerHTML = exampleProductSimple.innerHTML + exampleProductInfos;   
             }
-    }
-
-    
-    
-    for(let index = 0; index < produtos.length; index++){
-        
-        const produto = produtos[index]
-        
-        let button = document.getElementById('btn-cart' + (index + 1))
-
-        
-        var  contador  =  1
-        button.addEventListener("click", function() {
-            console.log(contador) ;
-            prod();  
-        });
-        
-        
-        function prod(){
-            
-            let position = JSON.parse(localStorage.getItem('infoLog'))
-            
-            if(position === null){
-                alert('Você tem que estar logado para onseguir adicionar um produto no carrinho')
-                window.open('loginECadastro(ModoE).html', '_self')
-            }
-            else{
-                
-                let dados = JSON.parse(localStorage.getItem("Users"))
-                
-                let num = position.position
-                console.log(num);
-                
-                let linhaProd = {
-                    estrutura: `<div class="row align-items-center" style="height: 200px; background-color: rgba(255, 255, 255, 0.048);">
-                    <img class="w-25 h-75" src="${produto.imagens[0]}" alt="">
-                    <h2 class="w-25 text-center text-white fs-4 fw-normal">${produto.nome}</h2>
-                    <div class="col w-25 h-100 d-flex justify-content-center align-items-center">
-                        <div class="select-cont${contador} select-cont" style="height: 15%">
-                        <a href="javascript:min(${contador});" class="a-fle"><i class="flecha far fa-minus-square"></i></a>
-                        <input id="field${contador}" class="sel-txt" type="text" value = "1" onkeypress="validar(this); return numerico(event);"/>
-                        <a href="javascript:max(${contador});" class="a-fle"><i class="flecha far fa-plus-square"></i></a>
-                        </div>
-                        </div>
-                        <span class="w-25 text-center text-white" id="valor-total-prod${contador}"></span>
-                        </div>`,
-                        quantidade: 1,
-                        id: contador,
-                        valor: produto.valor,
-                }
-                
-                contador += 1
-         
-                
-                dados[num].carrinho.push(linhaProd) 
-            console.log(dados);
-            localStorage.setItem("Users", JSON.stringify(dados))
-            // window.location.reload()
-            }
-
-
         }
-    }
+
+    
+    
+        for(let index = 0; index < produtos.length; index++){
+
+            if (produtos[index].id <= 15) {
+                
+                const produto = produtos[index]
+
+                console.log(produto);    
+                
+                let button = document.getElementById('btn-cart' + (index + 1))
+        
+                var  contador  =  1
+                button.addEventListener("click", function() {
+                    console.log(contador) ;
+                    prod();  
+                })            
+                    
+                    function prod(){
+                        
+                        let position = JSON.parse(localStorage.getItem('infoLog'))
+                        
+                        if(position === null){
+                            alert('Você necessita estar logado para adicionar um produto ao carrinho')
+                            window.open('loginECadastro(ModoE).html', '_self')
+                        }
+                        else{
+                            
+                            let dados = JSON.parse(localStorage.getItem("Users"))
+                            
+                            let num = position.position
+                            console.log(num);
+                            
+                            let linhaProd = {
+                                estrutura: `<div class="row align-items-center" style="height: 200px; background-color: rgba(255, 255, 255, 0.048);">
+                                <img class="w-25 h-75" src="${produto.imagens[0]}" alt="">
+                                <h2 class="nome w-25 text-center text-white fs-4 fw-normal">${produto.nome}</h2>
+                                <div class="col w-25 h-100 d-flex justify-content-center align-items-center">
+                                <div class="select-cont${contador} select-cont" style="height: 15%">
+                                <a href="javascript:min(${contador});" class="a-fle"><i class="flecha far fa-minus-square"></i></a>
+                                <input id="field${contador}" class="sel-txt" type="text" value = "1" onkeypress="validar(this); return numerico(event);"/>
+                                <a href="javascript:max(${contador});" class="a-fle"><i class="flecha far fa-plus-square"></i></a>
+                                </div>
+                                </div>
+                                <span class="w-25 text-center text-white" id="valor-total-prod${contador}"></span>
+                                </div>`,
+                                quantidade: 1,
+                                id: contador,
+                                valor: produto.valor,
+                            }
+                            
+                            contador += 1
+                            
+                            
+                            dados[num].carrinho.push(linhaProd) 
+                            console.log(dados);
+                            localStorage.setItem("Users", JSON.stringify(dados))
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                background: '#181818',
+                                title: 'Produto adicionado ao carrinho com suceso',
+                                showConfirmButton: false,
+                                timer: 1500
+                              })
+                            // window.location.reload()
+                        }
+                    
+                }
+            }
+            
+        }
     
 
         
 
         let indexteste = 0
-        for(let indexxx = 1; indexxx <= produtos.length; indexxx++){
+        for(let indexxx = 1; indexxx <= containerProdutos.length; indexxx++){
             
             const slidescard = document.querySelector(".sc" + (indexxx));
             
@@ -649,7 +661,7 @@ function changeSlideMaster() {
 
 function resetTimerMaster() {
     clearInterval(timerMaster);
-    timerMaster = setInterval(autoPlayMaster, 4000)
+    timerMaster = setInterval(autoPlayMaster, 7000)
 }
 
 function autoPlayMaster() {
@@ -658,6 +670,6 @@ function autoPlayMaster() {
 }
 
 
-let timerMaster = setInterval(autoPlayMaster, 4000)
+let timerMaster = setInterval(autoPlayMaster, 7000)
 
 console.log(indexMaster);

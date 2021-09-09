@@ -150,9 +150,8 @@ function Logar(){
     if (logou == 1){
   
           // Mostra mensagem de login efetuado
-          alert("Login efetuado!")
-          localStorage.setItem('infoLog', JSON.stringify(infos))
-          window.open('index.html', '_self')
+          window.open('index.html')
+                  localStorage.setItem('infoLog', JSON.stringify(infos))
           // Pula para a página Principal
        
   

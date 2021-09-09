@@ -5,77 +5,249 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/produto.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/logos/Logo Oficial Miniatura.png"/>
+    <title>Moska Shoes</title>
 </head>
 
 <body>
-    <div class="imagens">
-        <ul class="imagens-coluna">
-            <li>
-                <img id="img01" src="" alt="primeira imagem coluna" onclick="img1 ();">
-            </li>
-            <li>
-                <img id="img02" src="" alt="segunda imagem coluna" onclick="img2 ();">
-            </li>
-            <li>
-                <img id="img03" src="" alt="terceira imagem coluna" onclick="img3 ();">
-            </li>
-        </ul>
-        <div class="container-img">
-            <img src="" alt="imagem principal" id="imagen-principal">
+    <header>
+        <!-- <img class="video-back-2" src="./img/fachry-zella-devandra-lXuyEh7DeC8-unsplash.jpg" alt=""> -->
+        <div class="container-header">
+            <div class="items">
+                <div class="container-items">
+                    <div class="contact">
+                        <a class="rs" href="contato.html"><i class="fas fa-phone-alt"></i><span>Contato</span></a>
+                        <a href="http://"><i class="fab fa-whatsapp"></i> 991891499</a>
+                        <a href="https://www.instagram.com/loja.moskashoes/"><i class="fab fa-instagram"></i>@loja.moskashoes</a>
+                    </div>
+                    <div class="login">
+                        <i class="rs far fa-money-bill-alt"></i><a class="rs">R$</a></i>
+                        <i class="fas fa-user"></i><a href="loginECadastro(ModoE).html">Login</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row-header">
+                <div class="container-row">
+                    <div class="logo">
+                        <div class="a-logo">
+                            <a href="index.html">
+                                <img src="./img/logos/Logo oficial.png" class="image-logo-header" alt=""><span>Moska Shoes</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="search-bar">
+                        <input class="input-search" type="text" id="search" autocomplete="off">
+                        <label class="label-search" for="search">Buscar</label>
+                        <a class="button-search" href=""><i class="fas fa-search"></i></a>           
+                    </div> 
+                    <div class="cart">
+                        <div class="cart-items">
+                            <a href="#anchor">
+                                <i class="far fa-star"></i>
+                                <span>Destaques</span>
+                            </a>
+                            <a href="carrinho.html"
+                            id="test-cart">
+                                <i class="fas fa-shopping-cart">
+                                    <input class="cart-num" type="text" id="cart-num" value="0">
+                                </i>
+                                <span>Carrinho</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="search-bar dois">
+                            <input class="input-search" type="text" id="search" autocomplete="off">
+                            <label class="label-search" for="search">Buscar</label>
+                            <a class="button-search" href=""><i class="fas fa-search"></i></a>           
+                        </div> 
+                        <div class="cart dois">
+                            <div class="cart-items">
+                                <a href="#anchor">
+                                    <i class="far fa-star"></i>
+                                    <span>Destaques</span>
+                                </a>
+                                <a href="carrinho.html"
+                                id="test-cart">
+                                    <i class="fas fa-shopping-cart">
+                                        <input class="cart-num" type="text" id="cart-num" value="0">
+                                    </i>
+                                    <span>Carrinho</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <nav class="nav">
+                    <ul class="ul">
+                        <li class="li li-dropdown"><a class="a dropdrop" href="todos.html">Catálogo<i class="flechinha fas fa-chevron-down"></i></a>
+                            <ul class="ul-border">
+                                <li class="li-ul-border"><a class="a-ul-border" href="todos.html">Todos</a></li>
+                                <li class="li-ul-border"><a class="a-ul-border" href="masculino.html">Masculino</a></li>
+                                <li class="li-ul-border"><a class="a-ul-border" href="feminino.html">Feminino</a></li>
+                                <li class="infantil li-ul-border"><a class="a-ul-border" href="infantil.html">Infantil<i class="fas fa-plus"></i></a>
+                                    <ul class="infantil-c">
+                                        <li class="li-infantil-c"><a class="a-infantil-c" href="infantil-masc.html">Masculino</a></li>
+                                        <li class="li-infantil-c"><a class="a-infantil-c" href="infantil-fem.html">Feminino</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="li centro"><a class="a" href="especiais.html">Especiais</a></li>
+                        <li class="li"><a href="index.html" class="a active">Principal</a></li>
+                        <li class="li centro-2"><a class="a" href="sobre.html">Sobre</a></li>
+                        <li class="li"><a class="a" href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <input type="checkbox" id="checkbox-menu">
+            <label class="check_responsive" for="checkbox-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>        
+            <div class="navbar2">
+                <nav class="nav2">
+                    <ul class="ul2">
+                        <li class="li2 l">
+                            <a class="log" href="loginECadastro(ModoE).html"><i class="fas fa-user"></i></a>
+                            <a class="car-res" href="carrinho.html"
+                            id="test-cart"><i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </li>
+                        <li class="li2"><a class="a2 active" href="index.html">Principal</a></li>
+                        <li class="li2 li-dropdown2"><a class="a2 dropdrop2" href="todos.html">Produtos</a><i class="flechinha dois fas fa-chevron-down"></i>
+                            <ul class="ul-border2">
+                                <li class="li-ul-border2"><a class="a-ul-border2 um" href="masculino.html">Masculino</a></li>
+                                <li  class="li-ul-border2"><a class="a-ul-border2 dois" href="feminino.html">Feminino</a></li>
+                                <li class="li-ul-border2 infantildois"><a class="a-ul-border2 tres dropdrop2" href="infantil.html">Infantil</a><i class="flechinha tres fas fa-chevron-down"></i>
+                                    <ul class="infantil-c2">
+                                        <li class="li-infantil-c2"><a class="a-infantil-c2" href="infantil-masc.html">Masculino</a></li>
+                                        <li class="li-infantil-c2"><a class="a-infantil-c2" href="infantil-fem.html">Feminino</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="li2 centro"><a class="a2" href="especiais.html">Especiais</a></li>
+                        <li class="li2 centro-2"><a class="a2" href="sobre.html">Sobre</a></li>
+                        <li class="li2"><a class="a2" href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </div>
-    <div class="produto">
-        <div class="informações-do-produto">
-            <h1 id="nome-do-produto">TENIS TENIS</h1>
-            <h2 id="valor">R$ 1599,99</h2>
-            <p>até 12x de R$99,99</p>
-            <a href="#">Produto feminino</a>
+    </header>
+
+    <div class="container-content">
+        <div class="imagens">
+            <ul class="imagens-coluna">  
+                <img class="img01" src="" alt="primeira imagem coluna" onclick="img1 ();">
+                <img class="img02" src="" alt="segunda imagem coluna" onclick="img2 ();">
+                <img class="img03" src="" alt="terceira imagem coluna" onclick="img3 ();">
+            </ul>
+            <div class="container-img">
+                <img src="" alt="imagem principal" id="imagen-principal">
+            </div>
         </div>
-        <div class="escolhas-do-comprador">
-            <div>
+        <div class="produto">
+            <div class="informações-do-produto">
+                <h1 id="nome-do-produto">TENIS TENIS</h1>
+                <h2 id="valor">R$ 1599,99</h2>
+                <p>até 12x de R$99,99</p>
+                <a href="#">Produto feminino</a>
+            </div>
+            <div class="escolhas-do-comprador">
                 <h3 id="titulo-tamanho">Tamanho</h2>
-            </div>
-            <div class="escolhas-de-tamanho">
-                <ul class="seletor-de-tamanho">
-                    <li class="tamanho">36</li>
-                    <li class="tamanho">37</li>
-                    <li class="tamanho">38</li>
-                    <li class="tamanho">39</li>
-                    <li class="tamanho">40</li>
-                </ul>
-            </div>
-            <div>
+                <div class="escolhas-de-tamanho">
+                    <ul class="seletor-de-tamanho">
+                        <input class="tamanho" value="36" readonly>
+                        <input class="tamanho" value="37" readonly>
+                        <input class="tamanho" value="38" readonly>
+                        <input class="tamanho" value="39" readonly>
+                        <input class="tamanho" value="40" readonly>
+                    </ul>
+                </div>
                 <h3 id="titulo-cor">Cor do Tênis</h2>
+                <div class="escolha-de-cores">
+                    <input type="button" id="botao1">
+                    <input type="button" id="botao2">
+                    <input type="button" id="botao3">
+                    <input type="button" id="botao4">
+                </div>
             </div>
-            <div class="escolha-de-cores">
-                <input type="button" id="botao1">
-                <input type="button" id="botao2">
-                <input type="button" id="botao3">
-                <input type="button" id="botao4">
+            <div class="botoes-de-compra">
+                <a class="botao-comprar-agora" style="color: white;" href="#">Comprar agora</a>
+                <a href="javascript:prod()" class="botao-colocar-no-carrinho" style="color: white;" href="#">Colocar no Carrinho</a>
             </div>
-            <br>
-        </div>
-        <div class="botoes-de-compra">
-            <a id="botao-comprar-agora" style="color: white;" href="#">comprar agora</a>
-            <a id="botao-colocar-no-carrinho" style="color: white;" href="#">Colocar no Carrinho</a>
-
-
         </div>
     </div>
+
     <div class="descrição">
-        <hr class="linha-descrição">
-        <h3 class="titulo-descrição">Descrição do Produto </h3>
-        <div class="descrição-do-produto" >
-            <p id="descri">Lorem ipsum dolor sit amet consectetur adipiscing, elit porttitor nam potenti ullamcorper, ridiculus at orci nunc feugiat. Accumsan lacinia dictum suspendisse ut urna tempor at, ac nostra sapien senectus ad. Nulla venenatis sed tristique ultrices
-                in dignissim morbi est eleifend, fermentum elementum aliquet cursus dolor ex curabitur magnis. Tellus hac lacus dictum libero dui curae nam, facilisis curabitur magnis nullam sagittis vel a felis, metus et nulla lacinia dis condimentum.</p>
-        </div>
+        <h3 class="titulo-descrição">Descrição do Produto</h3>
+        <p id="descri">Lorem ipsum dolor sit amet consectetur adipiscing, elit porttitor nam potenti ullamcorper, ridiculus at orci nunc feugiat. Accumsan lacinia dictum suspendisse ut urna tempor at, ac nostra sapien senectus ad. Nulla venenatis sed tristique ultrices
+        in dignissim morbi est eleifend, fermentum elementum aliquet cursus dolor ex curabitur magnis. Tellus hac lacus dictum libero dui curae nam, facilisis curabitur magnis nullam sagittis vel a felis, metus et nulla lacinia dis condimentum.</p>
+    </div>
 
 
-
+        <footer>
+            <div class="footer-container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Loja</h4>
+                        <ul class="ul-text">
+                            <li><a href="index.html">Principal</a></li>
+                            <li><a href="loginECadastro(ModoE).html">Logar</a></li>
+                            <li><a href="carrinho.html">Carrinho</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="masculino.html">Masculino</a></li>
+                            <li><a href="feminino.html">Feminino</a></li>
+                            <li><a href="infantil.html">Infantil</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Fale Conosco</h4>
+                        <ul class="ul-text">
+                            <li><a href="tel: 048991891499">Entre em contato</a></li>
+                            <li><a href="contato.html">Suporte</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Conecte-se a nós</h4>
+                        <div class="ul-icon">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Formas de Pagamento</h4>
+                        <ul class="ul-img">
+                            <a href="#"><img src="./img/logos/itau.png" alt=""></a>
+                            <a href="#"><img src="./img/logos/visa.png" alt=""></a>
+                            <a href="#"><img src="./img/logos/bancodobrasil.png" alt=""></a>
+                            <a href="#"><img src="./img/logos/bradesco.png" alt=""></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; MoskaShoes. Todos os direitos reservados. Comércio de Produtos Esportivos Ltda - CNPJ: 12.344.321/0012-32
+                Rodovia Jose Carlos Daux, 500 Techno Towers - Torre 2 - sala 209 - João Paulo, Florianópolis - SC, 88030-000
+            </div>
+        </footer>
 
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script charset="utf-8" src="./js/produto.js"></script>
 <script charset="utf-8" src="./js/script.js"></script>
 

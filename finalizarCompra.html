@@ -9,6 +9,7 @@
     <title>Finalizar Compra</title>
     <link rel="stylesheet" href="./fontawesome-free-5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./css/finalizarCompra.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 </head>
 
-<body onload="verificar_login_index()">
+<body>
 
     <header>
         <!-- <img class="video-back-2" src="./img/fachry-zella-devandra-lXuyEh7DeC8-unsplash.jpg" alt=""> -->
@@ -192,10 +193,6 @@
                 </div>
                 <div class="container-mid">
                     <div class="mid-top">
-                        <div class="mid-top-top">
-                            <label for="">Itens do pedido:</label>
-                            <h4 class="itemDeCompra">Item(s) de compra</h4>
-                        </div>
                         <div class="mid-top-bot">
                             <span>Preço a pagar:</span>
                             <span id="preco1"></span>
@@ -219,11 +216,60 @@
                 </div>
                 <div class="container-bot">
                     <button onclick="validacao()" id="preco2"></button>
-                    <a href="">Adicionar mais itens</a>
+                    <a href="todos.html">Adicionar mais itens</a>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Loja</h4>
+                    <ul class="ul-text">
+                        <li><a href="index.html">Principal</a></li>
+                        <li><a href="loginECadastro(ModoE).html">Logar</a></li>
+                        <li><a href="carrinho.html">Carrinho</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="masculino.html">Masculino</a></li>
+                        <li><a href="feminino.html">Feminino</a></li>
+                        <li><a href="infantil.html">Infantil</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Fale Conosco</h4>
+                    <ul class="ul-text">
+                        <li><a href="tel: 048991891499">Entre em contato</a></li>
+                        <li><a href="contato.html">Suporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Conecte-se a nós</h4>
+                    <div class="ul-icon">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Formas de Pagamento</h4>
+                    <ul class="ul-img">
+                        <a href="#"><img src="./img/logos/itau.png" alt=""></a>
+                        <a href="#"><img src="./img/logos/visa.png" alt=""></a>
+                        <a href="#"><img src="./img/logos/bancodobrasil.png" alt=""></a>
+                        <a href="#"><img src="./img/logos/bradesco.png" alt=""></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; MoskaShoes. Todos os direitos reservados. Comércio de Produtos Esportivos Ltda - CNPJ: 12.344.321/0012-32
+            Rodovia Jose Carlos Daux, 500 Techno Towers - Torre 2 - sala 209 - João Paulo, Florianópolis - SC, 88030-000
+        </div>
+    </footer>
+  
 
 
     <script src="./js/finalizarCompra.js"></script>

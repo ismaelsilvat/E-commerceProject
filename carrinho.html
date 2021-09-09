@@ -5,52 +5,156 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./fontawesome-free-5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="./css/carrinho.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/carrinho.css">
     <title>Document</title>
 </head>
 <body onload="valor2()">
     <header>
-        <nav class="navbar navbar-light bg-dark d-flex align-items-center h-100 p-0">
-            <div class="container-fluid justify-content-space-between h-100">
-                <a class="navbar-brand w-25 d-flex justify-content-center h-100" href="index.html" >
-                    <img src="./img/a.png" alt="">
-                </a>
-                <div class="dropdown w-25 h-100 d-flex align-items-center
-                justify-content-center">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-dark m-0 top-99" aria-labelledby="dropdownMenuButton2">
-                      <li><a class="dropdown-item" href="index.html">Voltar à Principal</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="produtos.html">Produtos</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="destaques.html">Destaques</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="sobre.html">Sobre</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="contato.html">Contato</a></li>
-                      <li><hr class="dropdown-divider"></li>  
-                    </ul>
-                  </div>
+        <!-- <img class="video-back-2" src="./img/fachry-zella-devandra-lXuyEh7DeC8-unsplash.jpg" alt=""> -->
+        <div class="container-header">
+            <div class="items">
+                <div class="container-items">
+                    <div class="contact">
+                        <a class="rs" href="contato.html"><i class="fas fa-phone-alt"></i><span>Contato</span></a>
+                        <a href="http://"><i class="fab fa-whatsapp"></i> 991891499</a>
+                        <a href="https://www.instagram.com/loja.moskashoes/"><i class="fab fa-instagram"></i>@loja.moskashoes</a>
+                    </div>
+                    <div class="login">
+                        <i class="rs far fa-money-bill-alt"></i><a class="rs">R$</a></i>
+                        <i class="fas fa-user"></i><a href="loginECadastro(ModoE).html">Login</a>
+                    </div>
+                </div>
+
             </div>
-        </nav>
+            <div class="row-header">
+                <div class="container-row">
+                    <div class="logo">
+                        <div class="a-logo">
+                            <a href="index.html">
+                                <img src="./img/logos/Logo oficial.png" class="image-logo-header" alt=""><span>Moska Shoes</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="search-bar">
+                        <input class="input-search" type="text" id="search" autocomplete="off">
+                        <label class="label-search" for="search">Buscar</label>
+                        <a class="button-search" href=""><i class="fas fa-search"></i></a>           
+                    </div> 
+                    <div class="cart">
+                        <div class="cart-items">
+                            <a href="#anchor">
+                                <i class="far fa-star"></i>
+                                <span>Destaques</span>
+                            </a>
+                            <a href="carrinho.html"
+                            id="test-cart">
+                                <i class="fas fa-shopping-cart">
+                                    <input class="cart-num" type="text" id="cart-num" value="0">
+                                </i>
+                                <span>Carrinho</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="search-bar dois">
+                            <input class="input-search" type="text" id="search" autocomplete="off">
+                            <label class="label-search" for="search">Buscar</label>
+                            <a class="button-search" href=""><i class="fas fa-search"></i></a>           
+                        </div> 
+                        <div class="cart dois">
+                            <div class="cart-items">
+                                <a href="#anchor">
+                                    <i class="far fa-star"></i>
+                                    <span>Destaques</span>
+                                </a>
+                                <a href="carrinho.html"
+                                id="test-cart">
+                                    <i class="fas fa-shopping-cart">
+                                        <input class="cart-num" type="text" id="cart-num" value="0">
+                                    </i>
+                                    <span>Carrinho</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <nav class="nav">
+                    <ul class="ul">
+                        <li class="li li-dropdown"><a class="a dropdrop" href="todos.html">Catálogo<i class="flechinha fas fa-chevron-down"></i></a>
+                            <ul class="ul-border">
+                                <li class="li-ul-border"><a class="a-ul-border" href="todos.html">Todos</a></li>
+                                <li class="li-ul-border"><a class="a-ul-border" href="masculino.html">Masculino</a></li>
+                                <li class="li-ul-border"><a class="a-ul-border" href="feminino.html">Feminino</a></li>
+                                <li class="infantil li-ul-border"><a class="a-ul-border" href="infantil.html">Infantil<i class="fas fa-plus"></i></a>
+                                    <ul class="infantil-c">
+                                        <li class="li-infantil-c"><a class="a-infantil-c" href="infantil-masc.html">Masculino</a></li>
+                                        <li class="li-infantil-c"><a class="a-infantil-c" href="infantil-fem.html">Feminino</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="li centro"><a class="a" href="especiais.html">Especiais</a></li>
+                        <li class="li"><a href="index.html" class="a active">Principal</a></li>
+                        <li class="li centro-2"><a class="a" href="sobre.html">Sobre</a></li>
+                        <li class="li"><a class="a" href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <input type="checkbox" id="checkbox-menu">
+            <label class="check_responsive" for="checkbox-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>        
+            <div class="navbar2">
+                <nav class="nav2">
+                    <ul class="ul2">
+                        <li class="li2 l">
+                            <a class="log" href="loginECadastro(ModoE).html"><i class="fas fa-user"></i></a>
+                            <a class="car-res" href="carrinho.html"
+                            id="test-cart"><i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </li>
+                        <li class="li2"><a class="a2 active" href="index.html">Principal</a></li>
+                        <li class="li2 li-dropdown2"><a class="a2 dropdrop2" href="todos.html">Produtos</a><i class="flechinha dois fas fa-chevron-down"></i>
+                            <ul class="ul-border2">
+                                <li class="li-ul-border2"><a class="a-ul-border2 um" href="masculino.html">Masculino</a></li>
+                                <li  class="li-ul-border2"><a class="a-ul-border2 dois" href="feminino.html">Feminino</a></li>
+                                <li class="li-ul-border2 infantildois"><a class="a-ul-border2 tres dropdrop2" href="infantil.html">Infantil</a><i class="flechinha tres fas fa-chevron-down"></i>
+                                    <ul class="infantil-c2">
+                                        <li class="li-infantil-c2"><a class="a-infantil-c2" href="infantil-masc.html">Masculino</a></li>
+                                        <li class="li-infantil-c2"><a class="a-infantil-c2" href="infantil-fem.html">Feminino</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="li2 centro"><a class="a2" href="especiais.html">Especiais</a></li>
+                        <li class="li2 centro-2"><a class="a2" href="sobre.html">Sobre</a></li>
+                        <li class="li2"><a class="a2" href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <div class="container-fluid mx-0 m-4" style="height: 5vh;">
+    <div class="container-fluid mx-0 m-4" style="height: 8vh; background-color: #181818;">
         <div class="row">
           <div class="col">
-            <h1 class="title">Carrinho</h1>
+            <h1 class="title text-white">Carrinho</h1>
           </div>
         </div>
     </div>
 
-    <div class="container-fluid d-flex justify-content-center" style="min-height: 77.9vh;">
+    <div class="container-fluid d-flex justify-content-center" style="min-height: 77.9vh; background-color: #151515;">
         <div class="row" style="width: 95%;">
-            <div class="col-8 d-flex flex-column bg-dark border-5 border-end">
+            <div class="prod col-12 col-md-8 d-flex flex-column border-5 border-end" style="border-color: #8a48fa !important">
                 <div class="row" style="padding-right: var(--bs-gutter-x,.75rem); padding-left: var(--bs-gutter-x,.75rem);">
                     <h1 class="title text-white mb-4">Produtos no carrinho</h1>
                     <div class="col-3"><h2 class="categorias text-center text-white">Imagem</h2></div>
@@ -59,21 +163,71 @@
                     <div class="col-3"><h2 class="categorias text-center text-white">Valor total</h2></div>
                 </div>
                 
-                <div class="container-fluid" id="container-prodsss"></div>
+                <div class="container-fluid" id="container-prodsss" style="background-color: transparent;"></div>
             </div>
-            <div class="col-4 d-flex flex-column justify-content-center bg-dark h-75">
+            <div class="prod col-8 col-md-4 d-flex flex-column justify-content-center h-75" style="background-color: #181818;">
                 <h1 class="title text-white mb-4 p-2 h-25">Pagamento</h1>
                 <div class="row justify-content-center h-50">
                     <div class="row"><h2 class="categorias text-center text-white f2-3">Preço total</h2>
-                        <span class="text-white text-center fs-4" id="precoTotal"></span>
-                        <span class="fs-5 d-flex text-white text-center justify-content-center align-items-center w-100">Ou à vista por  <p class="p-1 mt-auto mb-auto" id="aVista"></p></span>
+                        <span class="text-center fs-4" id="precoTotal" style="color: #8a48fa"></span>
+                        <span class="d-flex text-white text-center justify-content-center align-items-center w-100 fs-3">Ou à vista por  <p class="p-1 mt-auto mb-auto fs-3" style="color: #8a48fa" id="aVista"></p></span>
                     </div>
-                    <div class="row align-items-end"><button type="button" class="btn btn-secondary w-100 h-50 fs-3 fw-bold">Finalizar compra</button></div>
+                    <div class="row align-items-end"><a href="finalizarCompra.html" type="button" class="btn btn-secondary w-100 h-50 fs-3 fw-bold" style="border: 0; background-color: #8a48fa">Finalizar compra</a></div>
                 </div>
             </div>
         </div>
 
     </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Loja</h4>
+                    <ul class="ul-text">
+                        <li><a href="index.html">Principal</a></li>
+                        <li><a href="loginECadastro(ModoE).html">Logar</a></li>
+                        <li><a href="carrinho.html">Carrinho</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="masculino.html">Masculino</a></li>
+                        <li><a href="feminino.html">Feminino</a></li>
+                        <li><a href="infantil.html">Infantil</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Fale Conosco</h4>
+                    <ul class="ul-text">
+                        <li><a href="tel: 048991891499">Entre em contato</a></li>
+                        <li><a href="contato.html">Suporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Conecte-se a nós</h4>
+                    <div class="ul-icon">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Formas de Pagamento</h4>
+                    <ul class="ul-img">
+                        <a href="#"><img src="./img/logos/itau.png" alt=""></a>
+                        <a href="#"><img src="./img/logos/visa.png" alt=""></a>
+                        <a href="#"><img src="./img/logos/bancodobrasil.png" alt=""></a>
+                        <a href="#"><img src="./img/logos/bradesco.png" alt=""></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; MoskaShoes. Todos os direitos reservados. Comércio de Produtos Esportivos Ltda - CNPJ: 12.344.321/0012-32
+            Rodovia Jose Carlos Daux, 500 Techno Towers - Torre 2 - sala 209 - João Paulo, Florianópolis - SC, 88030-000
+        </div>
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- <script src="./js/script.js"></script> -->
     <script src="./js/carrinho.js"></script>

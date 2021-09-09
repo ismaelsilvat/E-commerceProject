@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
+    text-decoration: none !important;
+    list-style-type: none !important;
 }
 
 body{
+    width: 100%;
     font: 100%;
     position: relative;
     overflow-x: hidden;
@@ -20,7 +21,7 @@ header{
     position: relative;
     width: 100%;
     height: 22vh;
-    background-color: black;
+    background-color: #181818;
     z-index: 1;
 }
 
@@ -63,7 +64,6 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
 }
 
 /* ITEMS */
@@ -71,12 +71,11 @@ header{
 .items{
     width: 100%;
     height: 15%;
-    background-color: #222;
     border-bottom: 2px groove #8948fa67;
 }
 
 .container-items{
-    width: 80%;
+    width: 65%;
     height: 100%;
     margin: auto;
     display: flex;
@@ -110,6 +109,7 @@ header{
 
 .contact a, .login a{
     font-family: 'Bebas Neue', cursive;
+    font-weight: 300;
     color: #fff;
     align-items: center;
     justify-content: center;
@@ -138,12 +138,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px groove #8948fa67;
-    background-color: #222;
+    border-bottom: 3px groove #8948fa;
 }
 
 .container-row{
-    width: 80%;
+    width: 65%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -208,7 +207,7 @@ header{
     width: 70%;
     height: 45px;
     background: white;
-    border: 2px solid #222;
+    border: 2px solid #8948fa;
     border-radius: 25px;
     color: #8a48fa;
     font-size: 100%;
@@ -224,7 +223,7 @@ header{
 .input-search:focus{
     transition: all 1000ms ease;
     background: rgb(10,10,10);
-    background: linear-gradient(142deg, rgba(10,10,10,0.7) 59%, #8a48fa 100%);
+    background: linear-gradient(142deg, rgba(10,10,10,0.7) 59%, #9456ff 100%);
     border: 2px groove #8a48fa;
 }
 
@@ -235,7 +234,7 @@ header{
     align-items: center;
     cursor: pointer;
     transition: all 1200ms ease;
-    font-family:'Roboto', sans-serif; 
+    font-family: 'Bebas Neue', cursive;
     font-size: 100%;
     font-size: 1.2rem;
     font-weight: bold;
@@ -249,39 +248,35 @@ header{
 }
 
 .input-search:focus ~ .label-search{
-    left: 90%;
+    left: 70%;
     color: #8a48fa;
     opacity: 0;
-    background-color: #080808;
+}
+
+.input-search:focus ~ .button-search{
+    background-color: rgba(0, 0, 0, 0.815);
 }
 
 .button-search{
     position: absolute;
     left: 70%;
-    width: 15%;
-    height: 45px;
+    width: 14.9%;
+    height: 41px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #252525;
+    background-color: #222;
     border: 0;
-    border-radius: 0 19px 19px 0;
+    border-left: 2px solid #8948fa;
+    border-radius: 0 20px 20px 0;
     transition: ease;
     transition-duration: 500ms;
     transition-property: border-left;
     z-index: 1;
 }
 
-.input-search:focus ~ .button-search{
-    border-left: 2px solid #8a48fa;
-}
-
-.input-search:focus ~ .button-search i{
+.input-search:focus ~ .button-search i, .button-search i:hover{
     color: #8a48fa;
-}
-
-.input-search:focus ~ .button-search:hover i{
-    color: rgb(164, 112, 253);
 }
 
 .button-search i{
@@ -292,14 +287,12 @@ header{
     align-items: center;
     font-size: 150%;
     font-size: 1.5rem;
-    color: #8A48FA;
-    transition-duration: 500ms;
-    transition: color 500ms ease, font-size 800ms ease;
+    color: #8948fa;
+    transition: all 300ms ease;
 }
 
 .button-search:hover > i{
-    font-size: 1rem;
-    color: rgb(79, 0, 214);
+    font-size: 1.7rem;
 }
 
 
@@ -462,8 +455,7 @@ input[type=number] {
     height: 25%;
     display: flex;
     justify-content: center;
-    background-color: #222;
-    border-bottom: 4px groove #8948fa67;
+    border-bottom: 4px groove #8948fa;
 }
 
 .navbar .nav{
@@ -474,7 +466,7 @@ input[type=number] {
 }
 
 .navbar .nav .ul{
-    width: 80%;  
+    width: 72%;  
     height: 100%;
     display: flex;
     align-items: center;
@@ -528,7 +520,7 @@ input[type=number] {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #151515; 
+    background-color: #222; 
     transition: all 300ms ease;
     border-top: 3px solid #8A48FA;
     z-index: -1;
@@ -546,6 +538,8 @@ input[type=number] {
     align-items: center;
     justify-content: center;
     transition: all 300ms ease;
+    position: relative;
+    z-index: 999;
 }
 
 .li-ul-border, .a-ul-border{
@@ -610,8 +604,7 @@ input[type=number] {
 }
 
 .active{
-    text-decoration: underline #8948fa !important;
-    color: #8A48FA !important;
+    text-decoration: underline   #8948fa !important;
 }
 
 
@@ -635,7 +628,7 @@ input[type=number] {
     height: 100px;
     background-color: #222;
     transition: all 300ms ease;
-    z-index: 1;
+    z-index: 999;
 }
 
 .infantil:hover > .infantil-c{
@@ -845,61 +838,13 @@ input[type=number] {
 
 /* END-NAVBAR RESPONSIVE */
 
-/* IMPORTANTES */
-
-
-.redes-sociais-1{
-    height: 100%;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-}
-
-.redes-sociais-1 li{
-    width: 13%;
-    height: 100%;
-}
-
-.redes-sociais-1 li a{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
-.redes-sociais-1 li a i{
-    width: 100%;
-    height: 100%;
-    font-size: clamp(1rem, 0.9vw + 0.9vh, 2rem); 
-    display: flex;
-    align-items: center;
-    transition: ease;
-    transition-duration: 250ms;
-    transition-property: font-size, color;
-}
-
-.redes-sociais-1 li a i::before{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.redes-sociais-1 li a i:hover{
-    font-size: clamp(1rem, 1vw + 1vh, 2rem); 
-    color: rgb(255, 0, 255);
-}
-
-
-
-
 /* END-CONTAINER-HEADER */
 
 .carousels{
     height: 75vh;
     z-index: -1;
+    position: relative;
+    top: -2vh;
     background-color: #222;
 }
 
@@ -929,10 +874,12 @@ input[type=number] {
     display: none;
     width: 100%;
     height: 100%;
-    animation: slide 8s ease;
 }
 
 .carousel-master .slide.active {
+    max-width: 100%;
+    background-size: cover;
+    background-position: center 100%;
     display: flex;
     opacity: 0.8;
     position: relative;
@@ -940,9 +887,67 @@ input[type=number] {
 }
 
 .carousel-master .slide.active img{
+    max-width: 100%;
     width: 100%;
+    object-fit: fill;
     position: relative;
     z-index: -1;
+    animation: slide 7s ease;
+}
+
+.slide.active .text-carousel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 40%;
+    padding: 15px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.897);
+    border-radius: 15px;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    color: #9e5ed6;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    transition: all 300ms ease;
+}
+
+@keyframes top{
+    from{
+        left: 50%;
+        opacity: 0;
+    }
+    to{
+        left: 0%;
+        opacity: 1;
+    }
+}
+
+.text-carousel h1{
+    position: relative;
+    animation: top 1200ms ease forwards;
+}
+
+
+
+.text-carousel h2{
+    width: 60%;
+    margin: auto;
+    height: 70%;
+    position: relative;
+    font-family:'Roboto', sans-serif; 
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    color: #fff;
+    font-size: 1.4rem;
+    animation: top 1250ms ease forwards;
+    animation-delay: 100ms;
 }
 
 @keyframes slide {
@@ -1094,43 +1099,87 @@ input[type=number] {
     margin: auto;
     display: flex;
     position: relative;
+    top: -2vh;
     z-index: 0;
     flex-direction: column;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
     background-color: #222;
 }
 
 .info-text{
-    width: 100%;
-    margin-bottom: 1.5vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 2.5vw;
     align-items: center;
-}
-
-.info-text .main{
-    text-align: center;
-    color: #fff;
-    font-size: calc(60px + (4.375vw - 68px)/ 2);
-    font-weight: bold;
-    font-style: oblique;
-    font-family:'Roboto', sans-serif; 
     
 }
 
-.info-text .main.dois{
+.info-text.dois{
+    justify-content: center;
+}
+
+.main.name{
+    color: #fff !important;
+    border-color: #fff !important;
+}
+
+.main.name.left{
+    margin: 0;
+    text-align: left;
+}
+
+.main.name.center{
+    color: #fff !important;
+    border-color: #fff !important;
+}
+
+.main.name.right{
+    margin: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+.info-text.dois .main{
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.info-text.tres{
+    justify-content: flex-end;
+}
+
+.info-text .main{
     width: 50%;
-    font-size: calc(35px + (4.375vw - 68px)/ 2);
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    font-size: 3.23rem;
+    font-weight: bold;
+    font-style: oblique;
+    font-family: 'Bebas Neue', cursive;
+    border-bottom: 2px solid #fff;
+}
+
+.info-text .main.dois{
+    width: auto !important;
+    margin: auto;
+    margin-bottom: 2vw;
+    font-size: 3rem;
+    color: #fff;
+    border-color: #fff
 }
 
 .info-text .sub{
+    margin: auto;
     width: 50%;
     text-align: center;
     color: #fff;
-    font-size: calc(20px + (1.125vw - 18px)/ 2);
-    font-family:'Roboto', sans-serif; 
+    font-size: 1.3rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
+    margin-top: 2px;
 }
 
 .video{
@@ -1140,59 +1189,58 @@ input[type=number] {
     align-items: center;
 }
 
-.video video{
+.video img{
     min-width: 100vw;
     height: 77vh;
-    object-fit: cover;
+    -webkit-box-shadow: 0px 0px 20px 6px black; 
+    box-shadow: 0px 0px 20px 6px black;
 }
 
 .container-categorias{
-    width: 98%;
-    height: 80vh;
+    width: 99%;
+    height: 95vh;
     margin: auto;
     position: relative;
-    -webkit-border-top-left-radius: 12px;
-    -webkit-border-top-right-radius: 12px;
-    -webkit-border-bottom-left-radius: 12px;
-    -webkit-border-bottom-right-radius: 12px;
-    background-color: #f9f9f9;
-    border-top: 0;
-    border-bottom: 0;
+    -webkit-box-shadow: 0px 0px 20px 6px black; 
+    background-color: #181818;
+    box-shadow: 0px 0px 20px 6px black;
+    border-radius: 20px;
     margin-top: 5vw;
     margin-bottom: 4.5vw;
 }
 
 .container-categorias .descricao{
-    width: 100%;
+    width: 50%;
     padding: 15px;
     margin: auto;
     font-size: 5rem;
     font-family:'Roboto', sans-serif; 
     font-weight: bold;
     font-style: oblique;
-    color: #222;
+    color: #fff;
     text-align: center;
     margin-bottom: 3vw;
-    border-bottom: 4px groove rgb(255, 255, 255);
+    border-bottom: 3px groove rgb(255, 255, 255);
 }
 
 .categorias{
+    width: 100%;
     margin: auto;
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .categorias > .card-categoria{ 
-    flex: 0 0 30%;
+    flex: 0 0 28%;
 }
 
 .card-categoria{
     padding: 0px;
-    height: 450px;
-    border-radius: 15px;
+    height: 600px;
+    border-radius: 10%;
     display: flex;
     overflow: hidden;
     margin: 10px;
@@ -1205,14 +1253,14 @@ input[type=number] {
 }
 
 .card-categoria:hover{
-    box-shadow: 0px 0px 10px 1px #8a48fa;
-    -webkit-box-shadow: 0px 0px 10px 1px #8a48fa;
-    -moz-box-shadow: 0px 0px 10px 1px #8a48fa;
+    box-shadow: 0px 0px 15px 1px black;
+    -webkit-box-shadow: 0px 0px 15px 1px black;
+    -moz-box-shadow: 0px 0px 15px 1px black;
     z-index: 2;
 }
 
 .card-categoria:hover .descricao span{
-    background-color : rgba(0, 0, 0, 0.705);
+    background-color : rgba(0, 0, 0, 0.8);
     color: rgb(175, 0, 175);
 }
 
@@ -1232,18 +1280,17 @@ input[type=number] {
 }
 
 .caixa-img-cat img{
-    width: 100%;
+    min-width: 100%;
     height: 100%;
-    z-index: 100;
+    object-fit: cover;
     opacity: 1;
-    transition: 300ms ease-in-out;
-    transform: scale(1.11);
+    transition: all 400ms ease;
 }
 
 .card-categoria:hover .caixa-img-cat img{
     opacity: 0.3;
     overflow: hidden;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .descricao-categoria{
@@ -1258,7 +1305,7 @@ input[type=number] {
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-color: rgba(0, 0, 0, 0.671);
+    background-color: rgba(0, 0, 0, 0.5);
     transition: all 200ms ease 100ms;
 }
 
@@ -1281,7 +1328,7 @@ input[type=number] {
     text-align: center;
     font-size: calc(65px + (4.375vw - 68px)/ 2);
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+        font-family: 'Bebas Neue', cursive;
     font-style: oblique;
     color: #fff;
     margin-bottom: 2vw;
@@ -1293,18 +1340,41 @@ input[type=number] {
     position: relative;
     text-align: center;
     font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif; 
+        font-family: 'Bebas Neue', cursive; 
     font-style: oblique;
     color: #9e5ed6;
 }
 
+.variedade{
+    width: 100%;
+    padding: 35px 10px 55px 10px;
+    margin: auto;
+    background-color: #222;
+}
+
 .example-models{
     width: 100%;
-    height: 80vh;
+    height: 90vh;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 60px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    background-color: #151515;
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px 1px black;
+    -webkit-box-shadow: 0px 0px 15px 1px black;
+    -moz-box-shadow: 0px 0px 15px 1px black;
+}
+
+.example-models.branco{
+    background-color: #8948fa83;
+    box-shadow: 0px 0px 15px 1px white;
+    -webkit-box-shadow: 0px 0px 15px 1px white;
+    -moz-box-shadow: 0px 0px 15px 1px white;
 }
 
 .img-product img{
@@ -1320,7 +1390,7 @@ input[type=number] {
 .products{
     width: 95%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .button-product a{
@@ -1341,9 +1411,14 @@ input[type=number] {
     background-color: #6b15ff;
 }
 
+.products > .product1, .products .product2{
+    flex: 0 0 35%;
+}
+
 .product1, .product2{
     width: 35%;
-    border: 2px solid rgba(137, 72, 250, 0.767);
+    height: 600px;
+    border: 2px solid #fff;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -1387,9 +1462,9 @@ input[type=number] {
 }
 
 #image-example-product{
-    max-width: 100%;
+    max-width: 92%;
     max-height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .button-product{
@@ -1411,50 +1486,10 @@ input[type=number] {
     cursor: pointer;
 }
 
-/* Resposivity */
-
-@media screen and (max-width:800px){
-    #example-products-3, #example-products-2, #example-products-1{
-        justify-content: center;
-    }
-
-    .product1, .product2{
-        width: 40%;
-    }
-
-    .product1:first-child, .product2:first-child{
-        margin-right: 5%;
-    }
-    
-    .product1 img, .product2 img{
-        width: 100%;
-    }   
-}
-
-@media screen and (max-width:600px){
-    #example-products-3, #example-products-2, #example-products-1{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .product1:first-child, .product2:first-child{
-        margin-right: 0;
-        margin-bottom: 2%;
-    }
-    
-    .product1 span, .product2 span{
-        font-size: 1.3rem;
-        width: 85%;
-    }
-}
-
-/* Resposivity */
 /* BODY */
 
 .container-destaques{
-    width: 100%;
+    width: 99%;
     margin: auto;
     margin-top: 70px;
     margin-bottom: 70px;
@@ -1464,19 +1499,24 @@ input[type=number] {
     -webkit-border-bottom-left-radius: 12px;
     -webkit-border-bottom-right-radius: 12px; */
     border-top: 0;
+    border-radius: 25px;
     border-bottom: 0;
+    background-color: #151515;
+    -webkit-box-shadow: 0px 0px 15px 6px black; 
+    box-shadow: 0px 0px 15px 6px black;
 }
 
 .descricao{
     width: 50%;
     padding: 15px;
     margin: auto;
+    margin-top: 10px;
     font-size: calc(35px + (4.375vw - 68px)/ 2);
     font-style: oblique;
-    font-family: 'Roboto', sans-serif;
-    color: rgb(255, 255, 255);
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
     text-align: center;
-    border-bottom: 5px solid rgb(255, 255, 255);
+    border-bottom: 3px solid #fff;
 }
 
 .destaques{
@@ -1491,17 +1531,17 @@ input[type=number] {
 }
 
 .destaques > .card-destaque{ 
-    flex: 1 1 500px;
+    flex: 0 0 32%;
 }
 
 .card-destaque{
     height: 580px;
     padding: 0px;
-    border-radius: 15px;
     overflow: hidden;
     margin: 10px;
     position: relative;
     z-index: 3;
+    border: 4px solid #222;
     box-shadow: 0px 0px 5px 1px #fff;
     -webkit-box-shadow: 0px 0px 5px 1px #fff;
     -moz-box-shadow: 0px 0px 5px 1px #fff;
@@ -1568,7 +1608,6 @@ input[type=number] {
     z-index: 100;
     opacity: 1;
     transition: 500ms ease-in-out;
-    object-fit: fill;
 }
 
 .card-destaque:hover .caixa-img img{
@@ -1605,7 +1644,7 @@ input[type=number] {
     font-size: 1.7rem;
     font-weight: bold;
     font-style: oblique;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Bebas Neue', cursive;
     color: black;
     text-align: center;
     background-color: #f9f9f9
@@ -1619,7 +1658,7 @@ input[type=number] {
     transform: translateY(-25%);
     bottom: 0%;
     font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Bebas Neue', cursive;
     color: rgb(190, 190, 190);
 }
 
@@ -1627,53 +1666,54 @@ input[type=number] {
     top: 35%;
 }
 
-.descricao-destaque button{
+.descricao-destaque .botao-destaque{
     width: 100%;
     height: 10%;
     background: #050505;
-    color: rgb(190, 190, 190);
+    color: #8A48FA;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
     border: 0;
     border-top: 3px solid #8a48fa;
     border-left: 0;
     font-weight: bold;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 90%;
     bottom: 0%;
     left: 0%;
     right: 0%;
     z-index: 10;
-    font-size: 15px;
     transition: ease;
     transition-duration: 500ms;
     transition-property: background, border, color, font-weight, letter-spacing, font-size;
     cursor: pointer;
 }
 
-.descricao-destaque button:hover{
+.descricao-destaque .botao-destaque:hover{
     color: #8a48fa;
     background: #070707;
     font-weight: bold;
-    font-size: 18px;
-    letter-spacing: 0px;
+    font-size: 1.6rem;
+    letter-spacing: 4px;
 }
 
-
-
-
-
-
-
 .container-produtos{
-    margin: 20px;
+    width: 99%;
     margin: auto;
+    background-color: #181818;
+    -webkit-box-shadow: 0px 0px 15px 6px black; 
+    box-shadow: 0px 0px 15px 6px black;
+    margin-top: 3px;
     position: relative;
-    -webkit-border-top-left-radius: 50px;
-    -webkit-border-top-right-radius: 50px;
+    padding-top: 15px;
+    border-radius: 50px;
     border-top: 0;
     border-bottom: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 3px;
     
 }
 
@@ -1681,10 +1721,21 @@ input[type=number] {
     flex: 1 1 500px;
 }
 
-.container-produtos .descricao{
-    color: #fff;
-    border-bottom:2px double #fff;
+.prods{
+    width: 100%;
     margin-bottom: 40px;
+}
+
+.prods h1{
+    width: 75%;
+    margin: auto;
+    border-bottom: 4px groove #fff;
+    text-align: center;
+    color: #fff;
+    font-style: oblique;
+    letter-spacing: 3px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4rem;
 }
 
 .card{
@@ -1705,10 +1756,6 @@ input[type=number] {
     transform: scale(0.95);
     background: transparent;
 }
-
-
-
-.card-img .controls-card
 
 .card-img .slider-card{
     width: 100%;
@@ -1767,9 +1814,9 @@ input[type=number] {
     height: 10%;
     line-height: 1.3;
     text-align: center;
-    font-family:'Roboto', sans-serif; 
-    font-size: 18px;
-    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
     color: #fff;
     display: flex;
     align-items: center;
@@ -1780,17 +1827,20 @@ input[type=number] {
 .card .preço{
     height: 12%;
     line-height: 2;
-    font-size: 21px;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', cursive;
     color: #B636EB;
     text-align: center;
-    font-weight: 200;
     margin-top: 3px;
 }
 
 .card .juros{
     height: 12%;
     line-height: 2;
-    font-size: 16px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-family: 'Bebas Neue', cursive;
     color: #fff;
     text-align: center;
 }
@@ -1798,7 +1848,9 @@ input[type=number] {
 .card .juros span{
     color: #B636EB;
     line-height: 2;
-    font-size: 19px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-family: 'Bebas Neue', cursive;
     font-weight: 200;
 }
 
@@ -1814,7 +1866,8 @@ input[type=number] {
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: 'Bebas Neue', cursive;
     background-color: #8948fa;
     text-align: center;
     transition: ease;
@@ -1861,7 +1914,6 @@ input[type=number] {
 .controls-card .prev-card,
 .controls-card .next-card {
   position: absolute;
-  z-index: 3;
   top: 0%;
   width: 10%;
   height: 55%;
@@ -1872,7 +1924,7 @@ input[type=number] {
   justify-content: center;
   text-align: center;
   line-height: 40px;
-  font-size: 23px;
+  font-size: 1.5rem;
   font-weight: bold;
   transition: all 1250ms ease;
   border-bottom: 3px solid #8A48FA;
@@ -1926,15 +1978,44 @@ input[type=number] {
 /* Resposivity */
 /* FOOTER */
 
+.maisProd{
+    width: 50%;
+    height: 10vh;
+    margin: auto;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(19, 19, 19);
+    color: #fff !important;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
+}
+
+.maisProd .h1todos .todos{
+    color: #8948fa;
+    transition: all 300ms ease;
+}
+
+.maisProd .h1todos .todos:hover{
+    letter-spacing: 4px;
+}
+
 
 footer {
     background-color: #151515;
-    padding: 55px 0;
+    padding-top: 55px;
   }
   
 footer .row {
+    height: 90%;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 55px;
 }
 
 .footer-container {
@@ -1952,10 +2033,11 @@ footer .row {
 }
 
 .footer-col h4 {
-    font-size: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', cursive;
     color: white;
     margin-bottom: 2rem;
-    font-weight: 600;
     position: relative;
 }
 
@@ -1975,17 +2057,18 @@ footer .row {
 }
 
 .footer-col ul li a {
-    font-size: 16px;
+    width: 25%;
+    font-size: 1.1rem;
+    font-family: 'Bebas Neue', cursive;
     text-transform: capitalize;
-    color: #bbbbbb;
+    color: #bbbbbbe5;
     text-decoration: none;
-    font-weight: 400;
     display: block;
     transition: all 0.3s ease;
 }
 
 .footer-col .ul-text li a:hover {
-    color: white;
+    color: #8948fa;
     padding-left: 6px;
 }
 
@@ -2014,17 +2097,27 @@ footer .row {
 }
 
 .ul-img > a{
-    min-width: 55px;
+    min-width: 40px;
 }
 
 .ul-img a{
-    height: 50px;
+    height: 40px;
     margin: 3px;
     display: flex;
 }
 
 .ul-img a img{
-    width: 55px;
+    max-width: 55px;
+}
+
+.footer-bottom{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    background-color: #8948fa;
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
 }
 
 @media screen and (min-width: 2000px){
@@ -2039,6 +2132,9 @@ footer .row {
         width: 90%;
     }
 
+    .destaques > .card-destaque {
+        flex: 0 0 40%;
+    }
    
 
     .navbar .nav{
@@ -2050,9 +2146,33 @@ footer .row {
   
 @media screen and (max-width: 1024px) {
 
+    .card{
+        width: 47%;
+    }
+
+    .destaques > .card-destaque {
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        flex: 0 0 60%;
+    }
+
+    .slide.active .text-carousel{
+        width: 75%;
+        height: 60vh;
+    }
+
+    .text-carousel h1{
+        font-size: 2.5rem;
+    }
+
+    .text-carousel h2{
+        width: 90%;
+        font-size: 2rem;
+    }
+
 
     .container-header{
-        background-color: #222;
+        background-color: #181818;
     }
 
     .conteudo-categorias{
@@ -2146,18 +2266,70 @@ footer .row {
 }
 
 @media (max-width: 768px) {
+
+    .slide.active .text-carousel{
+        width: 78%;
+        height: 70%;
+    }
+
+    .text-carousel h1{
+        font-size: 2.4rem;
+    }
+
+    .text-carousel h2{
+        width: 90%;
+        font-size: 1.8rem;
+    }
+
+
+    .card{
+        width: 65%;
+    }
+
+
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
     }
 
+    #example-products-3, #example-products-2, #example-products-1{
+        justify-content: center;
+    }
 
-    .card-categoria{
+    .product1, .product2{
+        width: 40%;
+    }
 
+    .product1:first-child, .product2:first-child{
+        margin-right: 5%;
+    }
+    
+    .product1 img, .product2 img{
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 656px){
+
+    .slide.active .text-carousel{
+        width: 78%;
+        height: 60%;
+    }
+
+    .text-carousel h1{
+        font-size: 2.4rem;
+    }
+
+    .text-carousel h2{
+        width: 90%;
+        font-size: 1.8rem;
+    }
+
+    .maisProd{
+        width: 80%;
+        height: auto;
+    }
+
     .example-models .content .active-image .img{
         object-fit: cover;
         height: 60vh;
@@ -2183,9 +2355,41 @@ footer .row {
 
 @media (max-width: 575px) {
 
-    
+    .slide.active .text-carousel{
+        height: 50%;
+    }
 
-    .video video{
+    .text-carousel h1{
+        font-size: 1.8rem;
+    }
+
+    .text-carousel h2{
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .carousels{
+        height: 50vh;
+
+    }
+
+    .main.name{
+        font-size: 1rem;
+    }
+
+    .destaques > .card-destaque {
+        flex: 0 0 90%;
+    }
+
+    .slide.active img{
+        object-fit: fill;
+    }
+
+    .a-logo{
+        height: 70%;
+    }    
+
+    .video img{
         object-fit: fill;
     }
 
@@ -2215,10 +2419,71 @@ footer .row {
 
     .footer-col {
         width: 100%;
-        }
+    }
+            
+    #example-products-3, #example-products-2, #example-products-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .example-models{
+        height: auto;
+    }
+        
+    .product1, .product2{
+        width: 95%;
+    }
+        
+    .product1:first-child, .product2:first-child{
+        margin-right: 0;
+        margin-bottom: 5%;
+    }
+            
+    .product1 span, .product2 span{
+        font-size: 1.3rem;
+        width: 85%;
+    }
     }
 
 @media screen and (max-width: 425px) {
+
+    .text-carousel h1{
+        font-size: 1.4rem;
+    }
+
+    .text-carousel h2{
+        width: 90%;
+        font-size: 0.8rem;
+    }
+
+    .video img{
+        height: 40vh;
+    }
+
+    .card{
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .slide.active .text-carousel{
+        width: 78%;
+        height: 60%;
+    }
+
+    .text-carousel h2{
+        width: 97%;
+    }
+
+    .prods h1{
+        width: 100%;
+        font-size: 2.4rem;
+    }
+
+    .contentt{
+        padding-bottom: 0;
+    }
 
     .container-items, .container-row{
         width: 90%;
@@ -2283,14 +2548,15 @@ footer .row {
     
     .info-text .main{
         margin-bottom: .8vw;
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         width: 100%;
     }
 
     .info-text .main.dois{
         width: 100%;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
+    
 
     .info-text .sub{
         width: 100%;
@@ -2308,7 +2574,7 @@ footer .row {
     }
 
     .card-categoria{
-        height: auto;
+        height: 500px;
     }
 
     .caixa-img-cat img{
@@ -2325,28 +2591,26 @@ footer .row {
     }
 
     .descricao-destaque span{
-        font-size: .65rem;
+        font-size: .85rem;
     }
 
     .descricao-destaque .p-descricao{
-        top: 32%;
+        top: 45%;
         font-size: 0.85rem;
     }
 
     .descricao-destaque .p-descricao.tres{
-        top: 21.5%;
+        top: 36.5%;
     }
     
     .card-destaque{
-        height: 286px;
+        height: 50vh;
     }
 
     .example-models{
         width: 100%;
         margin-top: 75px;
     }
-
-    
 
     .example-models .title-tematic{
         width: 100%;
@@ -2367,10 +2631,12 @@ footer .row {
     }
 
     .container-produtos{
-        width: 97%;
+        width: 99%;
+        border-radius: 0;
     }
 
     .card{
+        width: 95%;
         height: 370px;
     }
 
@@ -2417,7 +2683,7 @@ footer .row {
       .footer-bottom {
         display: flex;
         align-items: center;
-        font-size: .75rem;
+        font-size: 1.2rem;
       }
 
       .ul-img a{
@@ -2431,6 +2697,13 @@ footer .row {
   
 
 @media  screen and (max-width: 360px) {
+
+    .slide.active .text-carousel{
+        width: 70%;
+        height: 60%;
+        top: 45%;
+    }
+
     .example-models .title-tematic{
         width: 100%;
         font-size: 2.1rem;

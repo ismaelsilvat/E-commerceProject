@@ -1,33 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('../4.7.0/css/font-awesome.min.css');
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: #000000;
-}
-
 .container{
+    width: 100%;
     color: rgb(179, 179, 179);
     background-color: #181818;
     margin: auto;
     margin-top: 2%;
-    padding: 1.5%;
-    width: 80%;
-    height: auto;
-    font-family: 'Righteous', cursive;
-    border: 2px solid #8a48fa;
-    border-radius: 15px;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .titulo h2{
     color: #8a48fa;
-    font-family: 'Righteous', cursive;
+    font-family: 'Bebas Neue', cursive;
     font-size: 200%;
     padding-bottom: 1%;
     text-align: center;
@@ -47,7 +29,8 @@ body{
 
 .conteudo #titulo h2{
     color: #8a48fa;
-    font-family: 'Righteous', cursive;
+    font-family: 'Bebas Neue', cursive;
+
     font-size: 200%;
 }
 
@@ -91,11 +74,13 @@ body{
 .col-hmarcaIMG img{
     width: 35%;
     height: auto;
+    opacity: .6;
 }
 
 .col-hmarca h2{
     color: #8a48fa;
-    font-family: 'Righteous', cursive;
+    font-family: 'Bebas Neue', cursive;
+
     font-size: 200%;
 }   
 
@@ -256,14 +241,38 @@ body{
 
 /* Grupo participantes */
 
+/* FOOTER */
+
+.maisProd{
+    width: 50%;
+    height: 10vh;
+    margin: auto;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(19, 19, 19);
+    color: #fff !important;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
+}
+
+.maisProd .h1todos .todos{
+    color: #8948fa;
+    transition: all 300ms ease;
+}
+
+.maisProd .h1todos .todos:hover{
+    letter-spacing: 4px;
+}
+
 /* Responsividade */
 
 @media screen and (min-width:280px){
-
-    .container{
-        width: 90%;
-        font-size: 60%;
-    }
 
     .historia-empresa{
         flex-direction: column;
@@ -293,18 +302,6 @@ body{
         margin: 5% 0;
         font-size: 150%;
     }
-
-    .valores{
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin: 0;
-    }
-
-    .visao, .missao, .valor{
-        width: 120%;
-        font-size: 140%;
-    }
     
     .col-1-participantes, .col-2-participantes{
         margin-top: 5%;
@@ -316,6 +313,33 @@ body{
 
     .col-2-participantes{
         flex-direction: column;
+    }
+
+    .valores{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cols{
+        max-width: 100% !important;
+    }
+
+    .visao{
+        width: 90%;
+        height: 30%;
+        font-size: 120%;
+    }
+    
+    .missao{
+        width: 90%;
+        height: 30%;
+        font-size: 120%;
+    }
+
+    .valor{
+        width: 90%;
+        height: 30%;
+        font-size: 120%;
     }
 
 
@@ -332,6 +356,33 @@ body{
     .historia-empresa img{
         width: 40%;
         padding: 4%;
+    }
+
+    .cols{
+        max-width: 100% !important;
+    }
+
+    .valores{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .visao{
+        width: 50%;
+        height: 30%;
+        font-size: 120%;
+    }
+    
+    .missao{
+        width: 50%;
+        height: 30%;
+        font-size: 120%;
+    }
+
+    .valor{
+        width: 50%;
+        height: 30%;
+        font-size: 120%;
     }
 
     .col-hmarcaIMG{
@@ -367,21 +418,29 @@ body{
     }
 
     .valores{
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cols{
+        max-width: 100% !important;
     }
 
     .visao{
-        width: 160%;
+        width: 50%;
+        height: 30%;
         font-size: 120%;
     }
     
     .missao{
-        width: 120%;
+        width: 50%;
+        height: 30%;
         font-size: 120%;
     }
 
     .valor{
-        width: 200%;
+        width: 50%;
+        height: 30%;
         font-size: 120%;
     }
 
@@ -399,17 +458,20 @@ body{
     }
 
     .visao{
-        width: 160%;
+        height: 30%;
+        width: 70%;
         font-size: 120%;
     }
     
     .missao{
-        width: 160%;
+        height: 30%;
+        width: 70%;
         font-size: 120%;
     }
 
     .valor{
-        width: 200%;
+        width: 70%;
+        height: 30%;
         font-size: 120%;
     }
 
@@ -430,19 +492,19 @@ body{
     }
 
     .visao{
-        width: 220%;
+        width: 50%;
         height: 330px;
         font-size: 120%;
     }
     
     .missao{
-        width: 220%;
+        width: 50%;
         height: 330px;
         font-size: 120%;
     }
 
     .valor{
-        width: 220%;
+        width: 50%;
         height: 330px;
         font-size: 120%;
     }
@@ -495,10 +557,4 @@ body{
     .victor h3{
         margin-top: 7%;
     }
-
-
-
-
 }
-
-/* Responsividade */
