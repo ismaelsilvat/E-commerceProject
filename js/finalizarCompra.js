@@ -1,10 +1,10 @@
-let containerR = document.querySelector('.container-r');
-let select = containerR.querySelector('select');
-let containerLmid = document.querySelector('.container-l-mid');
-let containerLtop = document.querySelector('.container-l-top');
+var containerrr = document.querySelector('.container-r');
+var select = containerrr.querySelector('select');
+var containerLmid = document.querySelector('.container-l-mid');
+var containerLtop = document.querySelector('.container-l-top');
 
 var preco = []
-let precoStorage = JSON.parse(localStorage.getItem('acumulador'))
+var precoStorage = JSON.parse(localStorage.getItem('acumulador'))
 
 for(let i = 0; i < 2; i++){
     var precoo = document.getElementById('preco' + (i + 1))
@@ -29,17 +29,25 @@ function validacao() {
 
         if (input.value == '') {
             input.style.border = 'red solid 2px'
-
-            li[i].innerHTML = 'Preencha os campos!'
-
             send = false;
         }
     }
+
+    
 
 
     if (send !== true) {
         return false
     }
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        background: '#181818',
+        title: 'Compra realizada com sucesso.',
+        showConfirmButton: false,
+        footer: '<a href="index.html">Voltar para a principal</a>'
+      })
+
 
 };
 
@@ -179,37 +187,11 @@ clearErrors = (inputs, li) => {                         // function pra limpar o
     for (let i = 0; i < inputs.length; i++) {
 
         if (inputs[i].value !== '') {
-
             inputs[i].style.border = '';
-
-            li[i].innerHTML = '';
-
         }
     }
 };
 
 
-///////////////////////////////////// jQuery ∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖∖
 
 
-
-let optionsCpf1Mask = { // plugin para máscaras no cpf/cnpj -- jQuery
-    onKeyPress: function (cpf, ev, el, op) {
-        let masks = ['000.000.000-00', '00.000.000/0000-00'];
-        $('#cpf1').mask((cpf.length > 14) ? masks[1] : masks[0], op);
-    }
-}
-
-$('#cpf1').length > 11 ? $('#cpf1').mask('00.000.000/0000-00', optionsCpf1Mask) : $('#cpf1').mask('000.000.000-00', optionsCpf1Mask);
-$('#cpf2').length > 11 ? $('#cpf2').mask('00.000.000/0000-00', optionsCpf1Mask) : $('#cpf2').mask('000.000.000-00', optionsCpf1Mask);
-
-
-
-let optionsDataMask = { // plugin para máscaras nos inputs de data de nascimento e validade cartão -- jQuery
-    onKeyPress: function (date, ev, el, op) {
-        let masks = ['00/00/00', '00/00'];
-        $('#inputData').mask((date.length > 5) ? masks[0] : masks[0], op);
-    }
-}
-
-$('#inputData').length > 5 ? $('#inputData').mask('00/00', optionsDataMask) : $('#inputData').mask('00/00/00', optionsDataMask);
