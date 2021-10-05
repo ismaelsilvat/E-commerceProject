@@ -2569,6 +2569,7 @@ footer .row {
 
     .container-categorias .descricao{
         width: 100%;
+        height: auto;
         border-bottom: 2px groove rgb(255, 255, 255);
     }
 
