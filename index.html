@@ -4,41 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./fontawesome-free-5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./img/logos/Logo Oficial Miniatura.png"/>
     <title>Moska Shoes</title>
 </head>
 <body>
     <header>
-        <!-- <img class="video-back-2" src="./img/fachry-zella-devandra-lXuyEh7DeC8-unsplash.jpg" alt=""> -->
         <div class="container-header">
             <div class="items">
                 <div class="container-items">
                     <div class="contact">
-                        <a class="rs" href="contato.html"><i class="fas fa-phone-alt"></i><span>Contato</span></a>
-                        <a href="http://"><i class="fab fa-whatsapp"></i> 991891499</a>
-                        <a href="https://www.instagram.com/loja.moskashoes/"><i class="fab fa-instagram"></i>@loja.moskashoes</a>
+                        <a href="contato.html"><i class="fas fa-phone-alt"></i>Contato</a>
+                        <a href="https://www.instagram.com/loja.moskashoes/"><i class="fab fa-instagram"></i>Instagram</a>
                     </div>
                     <div class="login">
-                        <i class="rs far fa-money-bill-alt"></i><a class="rs">R$</a></i>
-                        <i class="fas fa-user"></i><a href="loginECadastro(ModoE).html">Login</a>
+                        <a class="hidden" href="http://api.whatsapp.com/send?1=pt_BR&phone=55048991891499"><i class="fab fa-whatsapp"></i>Whatsapp</a>
+                        <a href="loginECadastro(ModoE).html"><i class="fas fa-user"></i>Login</a>
                     </div>
                 </div>
-
             </div>
             <div class="row-header">
                 <div class="container-row">
                     <div class="logo">
-                        <div class="a-logo">
-                            <a href="index.html">
-                                <img src="./img/logos/Logo oficial.png" class="image-logo-header" alt=""><span>Moska Shoes</span>
+                        <div class="container-a-logo">
+                            <a class="a-logo" href="index.html">
+                                <img src="./img/logos/Logo oficial.png" class="image-logo-header" alt=""><p class="site-name">Moska Shoes</p>
                             </a>
                         </div>
                     </div>
@@ -62,13 +56,13 @@
                             </a>
                         </div>
                     </div>
-                    <div class="grid">
-                        <div class="search-bar dois">
+                    <div class="responsive-items">
+                        <div class="search-bar second">
                             <input class="input-search" type="text" id="search" autocomplete="off">
                             <label class="label-search" for="search">Buscar</label>
                             <a class="button-search" href=""><i class="fas fa-search"></i></a>           
                         </div> 
-                        <div class="cart dois">
+                        <div class="cart second">
                             <div class="cart-items">
                                 <a href="#anchor">
                                     <i class="far fa-star"></i>
@@ -89,22 +83,24 @@
             <div class="navbar">
                 <nav class="nav">
                     <ul class="ul">
-                        <li class="li li-dropdown"><a class="a dropdrop" href="todos.html">Catálogo<i class="flechinha fas fa-chevron-down"></i></a>
-                            <ul class="ul-border">
-                                <li class="li-ul-border"><a class="a-ul-border" href="todos.html">Todos</a></li>
-                                <li class="li-ul-border"><a class="a-ul-border" href="masculino.html">Masculino</a></li>
-                                <li class="li-ul-border"><a class="a-ul-border" href="feminino.html">Feminino</a></li>
-                                <li class="infantil li-ul-border"><a class="a-ul-border" href="infantil.html">Infantil<i class="fas fa-plus"></i></a>
-                                    <ul class="infantil-c">
-                                        <li class="li-infantil-c"><a class="a-infantil-c" href="infantil-masc.html">Masculino</a></li>
-                                        <li class="li-infantil-c"><a class="a-infantil-c" href="infantil-fem.html">Feminino</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="li centro"><a class="a" href="especiais.html">Especiais</a></li>
+                        <div class="li">
+                            <li class="li-dropdown"><a class="a dropdrop" href="todos.html">Catálogo<i class="arrow fas fa-chevron-down"></i></a>
+                                <ul class="ul-border">
+                                    <li class="li-ul-border"><a class="a-ul-border" href="todos.html">Todos</a></li>
+                                    <li class="li-ul-border"><a class="a-ul-border" href="masculino.html">Masculino</a></li>
+                                    <li class="li-ul-border"><a class="a-ul-border" href="feminino.html">Feminino</a></li>
+                                    <li class="infantil li-ul-border"><a class="a-ul-border" href="infantil.html">Infantil<i class="fas fa-plus"></i></a>
+                                        <ul class="infantil-c">
+                                            <li class="li-infantil-c"><a class="a-infantil-c" href="infantil-masc.html">Masculino</a></li>
+                                            <li class="li-infantil-c"><a class="a-infantil-c" href="infantil-fem.html">Feminino</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </div>
+                        <li class="li"><a class="a" href="especiais.html">Especiais</a></li>
                         <li class="li"><a href="index.html" class="a active">Principal</a></li>
-                        <li class="li centro-2"><a class="a" href="sobre.html">Sobre</a></li>
+                        <li class="li"><a class="a" href="sobre.html">Sobre</a></li>
                         <li class="li"><a class="a" href="contato.html">Contato</a></li>
                     </ul>
                 </nav>
@@ -115,21 +111,21 @@
                 <span></span>
                 <span></span>
             </label>        
-            <div class="navbar2">
-                <nav class="nav2">
-                    <ul class="ul2">
-                        <li class="li2 l">
+            <div class="responsive-navbar">
+                <nav>
+                    <ul>
+                        <li class="icons">
                             <a class="log" href="loginECadastro(ModoE).html"><i class="fas fa-user"></i></a>
                             <a class="car-res" href="carrinho.html"
                             id="test-cart"><i class="fas fa-shopping-cart"></i>
                             </a>
                         </li>
                         <li class="li2"><a class="a2 active" href="index.html">Principal</a></li>
-                        <li class="li2 li-dropdown2"><a class="a2 dropdrop2" href="todos.html">Produtos</a><i class="flechinha dois fas fa-chevron-down"></i>
+                        <li class="li2 li-dropdown2"><a class="a2 dropdrop2" href="todos.html">Produtos</a><i class="arrow second fas fa-chevron-down"></i>
                             <ul class="ul-border2">
-                                <li class="li-ul-border2"><a class="a-ul-border2 um" href="masculino.html">Masculino</a></li>
-                                <li  class="li-ul-border2"><a class="a-ul-border2 dois" href="feminino.html">Feminino</a></li>
-                                <li class="li-ul-border2 infantildois"><a class="a-ul-border2 tres dropdrop2" href="infantil.html">Infantil</a><i class="flechinha tres fas fa-chevron-down"></i>
+                                <li class="li-ul-border2"><a class="a-ul-border2 first" href="masculino.html">Masculino</a></li>
+                                <li  class="li-ul-border2"><a class="a-ul-border2 second" href="feminino.html">Feminino</a></li>
+                                <li class="li-ul-border2 kidsecond"><a class="a-ul-border2 third dropdrop2" href="infantil.html">Infantil</a><i class="arrow third fas fa-chevron-down"></i>
                                     <ul class="infantil-c2">
                                         <li class="li-infantil-c2"><a class="a-infantil-c2" href="infantil-masc.html">Masculino</a></li>
                                         <li class="li-infantil-c2"><a class="a-infantil-c2" href="infantil-fem.html">Feminino</a></li>
@@ -137,51 +133,51 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="li2 centro"><a class="a2" href="especiais.html">Especiais</a></li>
-                        <li class="li2 centro-2"><a class="a2" href="sobre.html">Sobre</a></li>
+                        <li class="li2"><a class="a2" href="especiais.html">Especiais</a></li>
+                        <li class="li2"><a class="a2" href="sobre.html">Sobre</a></li>
                         <li class="li2"><a class="a2" href="contato.html">Contato</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <div class="carousels">
-        
-        <section class="carousel-master">
+
+    <section class="carousels">
+        <div class="carousel-master">
             <div class="slider">
                 <div class="slide active">
                     <img src="./img/carousel-body/imagem3.jpg" loading="lazy" alt="">
                     <div class="text-carousel">
-                        <h1>Aqui todos ficam na moda</h1>
-                        <h2>Independente de seus ESTILOS e GOSTOS, o conforto de um bom tênis sempre estará garantido.</h2>
+                        <h1 class="main">Aqui todos ficam na moda</h1>
+                        <h2 class="sub">Independente de seus ESTILOS e GOSTOS, o conforto de um bom tênis sempre estará garantido.</h2>
                     </div>
                 </div>
                 <div class="slide">
                     <img src="./img/carousel-body/imagem4.jpg" loading="lazy" alt="">
                     <div class="text-carousel">
-                        <h1>Estamos há 20 anos no mercado</h1>
-                        <h2>Apresentamos a maior variedade de produtos do mercado sendo a referência no que se diz à CONFORTO e ESTILO.</h2>
+                        <h1 class="main">Estamos há 20 anos no mercado</h1>
+                        <h2 class="sub">Apresentamos a maior variedade de produtos do mercado sendo referência no que se diz à CONFORTO e ESTILO.</h2>
                     </div>
                 </div>
                 <div class="slide">
                     <img src="./img/carousel-body/imagem1.jpg" loading="lazy" alt="">
                     <div class="text-carousel">
-                        <h1>Está difícil achar um modelo que o agrade?</h1>
-                        <h2>Navegue agora e encontre apenas aqui o tênis que se encaixe com você.</h2>
+                        <h1 class="main">Está difícil achar um modelo que o agrade?</h1>
+                        <h2 class="sub">Navegue agora e encontre apenas aqui o tênis que se encaixe com seu gosto.</h2>
                     </div>
                 </div>
                 <div class="slide">
                     <img src="./img/carousel-body/imagem2.jpg" loading="lazy" alt="">
                     <div class="text-carousel">
-                        <h1>Quer encontrar aquele modelo que viu seu ídolo usando?</h1>
-                        <h2>Aqui você encontrar os modelos mais famosos e destacados de todo o mundo</h2>
+                        <h1 class="main">Quer encontrar o modelo que viu seu ídolo usando?</h1>
+                        <h2 class="sub">Aqui você encontra os modelos mais famosos e destacados de todo o mundo</h2>
                     </div>
                 </div>
                 <div class="slide">
                     <img src="./img/carousel-body/imagem5.jpg" loading="lazy" alt="">
                     <div class="text-carousel">
-                        <h1>Precisando de um novo Tênis?</h1>
-                        <h2>Navegando em nosso site, você sairá daqui com um BOM tênis.</h2>
+                        <h1 class="main">Precisando de um novo tênis?</h1>
+                        <h2 class="sub">Navegando em nosso site, você sairá daqui com um EXCELENTE tênis.</h2>
                     </div>
                 </div>
             </div>
@@ -194,161 +190,156 @@
                     <span> > </span>
                 </div>
             </div>
-    
             <div id="indicatorMaster" class="indicatorMaster"></div>
-    
-        </section>
-    </div>
-
-    <div class="contentt">
-        <div class="info-text">
-            <h1 class="main">EM BUSCA DO TÊNIS CERTO? </h1>
-            <h2 class="sub">Só aqui você encontrará o MELHOR, mais CONFORTÁVEL e mais ESTILOSO modelo, pelo melhor preço. </h2>
         </div>
+    </section>
 
-         <div class="video">
-            <img src="./img/jordan.jpg" alt=""> 
+    <section class="background-content">
+        <div class="content">
+            <div class="bg-image"></div>
+            <div class="background-text">
+                <div class="info-text">
+                    <h1 class="main">EM BUSCA DO TÊNIS CERTO? </h1>
+                    <h2 class="sub">Somente aqui você encontrará o MELHOR, mais CONFORTÁVEL e mais ESTILOSO modelo, pelo melhor preço. </h2>
+                </div>
+            </div>
         </div> 
-    </div> 
-    
+    </section>
+        
 
-     <div class="container-categorias">
-        <div class="descricao">
-            Categorias
+    <section class="container-categories">
+        <div class="description">
+            <h1 class="main">Categorias</h1>
+            <h2 class="sub">Moda Adulta e Infantil</h2>
         </div>
-        <div class="categorias">
-            <div class="card-categoria">
-                <div class="caixa-img-cat">
+        <div class="categories">
+            <div class="card-categorie">
+                <div class="box-img-cat">
                     <img src="./img/ModelMen.jpg" loading="lazy" alt="">
                 </div>
-                <div class="conteudo-categorias">
+                <div class="content-categories">
                     <a href="masculino.html">
-                        <div class="descricao-categoria">
-                            <span>Masculino</span>
-                            <p class="p-categoria">Já pensou usar o mesmo tênis que seu ídolo? Aqui você pode! Clique e ache o modelo certo para você.</p>
+                        <div class="description-categorie">
+                            <p class="main">Masculino</p>
+                            <p class="sub">Já pensou usar o mesmo tênis que seu ídolo? Aqui você pode! Clique e ache o modelo certo para você.</p>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="card-categoria">
-                <div class="caixa-img-cat">
+            <div class="card-categorie">
+                <div class="box-img-cat">
                     <img src="./img/modelWomen.jpg" alt="">
                 </div>
-                <div class="conteudo-categorias">
+                <div class="content-categories">
                     <a href="feminino.html">
-                        <div class="descricao-categoria">
-                            <span>Feminino</span>
-                            <p class="p-categoria">Em busca de um tênis estiloso que você vai gostar mais do que sua melhor amiga? Clique e ache o modelo certo para você.</p>
+                        <div class="description-categorie">
+                            <p class="main">Feminino</span>
+                            <p class="sub">Em busca de um tênis estiloso que você vai gostar mais do que sua melhor amiga? Clique e ache o modelo certo para você.</p>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="card-categoria">
-                <div class="caixa-img-cat">
+            <div class="card-categorie">
+                <div class="box-img-cat">
                     <img src="./img/modelKid.jpg"  alt="">
                 </div>
-                <div class="conteudo-categorias">
+                <div class="content-categories">
                     <a href="infantil.html">
-                        <div class="descricao-categoria">
-                            <span>Infantil</span>
-                            <p class="p-categoria">Precisa calçar seu pequeno? Aqui você encontrará os melhores modelos kids para seu filho! Clique e navegue agora.</p>
+                        <div class="description-categorie">
+                            <p class="main">Infantil</p>
+                            <p class="sub">Precisa calçar seu pequeno? Aqui você encontrará os melhores modelos kids para seu filho! Clique e navegue agora.</p>
                         </div>
                     </a>
-                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="variedade">
+    <section>
         <div class="example-models">
             <div class="info-text">
-                <h1 class="main name">Casuais e elegantes</h1>
+                <h1 class="main">Casuais e elegantes</h1>
             </div>
             <div class="products" id="example-products-1">
             </div>
         </div>
-    
         <div class="example-models">
-            <div class="info-text dois">
-                <h1 class="main name center">Coloridos e diversificados</h1>
+            <div class="info-text">
+                <h1 class="main">Coloridos e diversificados</h1>
             </div>
             <div class="products" id="example-products-2">
             </div>
         </div>
-        
         <div class="example-models escuro">
-            <div class="info-text tres">
-                <h1 class="main name">Temáticos e inspiradores</h1>
+            <div class="info-text">
+                <h1 class="main">Temáticos e inspiradores</h1>
             </div>
             <div class="products" id="example-products-3">
             </div>
         </div>
-    </div>
+    </section>
 
-
-
-    <div class="container-destaques" id="anchor">
-        <div class="descricao">
-            <h1>
-                Nossos destaques
-            </h1>
+    <section class="container-highlights" id="anchor">
+        <div class="description">
+            <h1 class="main">Destaques</h1>
         </div>
-        <div class="destaques">
-            <div class="card-destaque">
-                <div class="caixa-img">
+        <div class="highlights">
+            <div class="card-highlight">
+                <div class="box-img">
                     <img src="./img/destaques/destaque1.png"  alt="">
                 </div>
-                <div class="conteudo-destaque">
-                    <div class="descricao-destaque">
-                        <span>Tênis Nike SB Dunk Low Club 58 Gulf</span>
-                        <p class="p-descricao">O modelo lançado em 2018 na divisão de skateboard da Nike, preparou uma nova colorway do Blazer Mid, batizando de Club 58 inspirado nos lendários carros de corridas da Gulf Racing dos anos 60, onde tinham como principal caracteristicas
+                <div class="effect"></div>
+                <div class="content-highlight">
+                    <div class="description-highlight">
+                        <p class="main">tênis Nike SB Dunk Low Club 58 Gulf</p>
+                        <p class="sub">O modelo lançado em 2018 na divisão de skateboard da Nike, preparou uma nova colorway do Blazer Mid, batizando de Club 58 inspirado nos lendários carros de corridas da Gulf Racing dos anos 60, onde tinham como principal caracteristicas
                             as cores dos carros.</p>
-                        <a href="projeto.html?produto=JTI1N0IlMjUyMmlkJTI1MjIlMjUzQSUyNTIyMSUyNTIyJTI1MkMlMjUyMm5vbWUlMjUyMiUyNTNBJTI1MjJOaWtlLVNCLUR1bmstbG93LUNsdWItNTgtR3VsZiUyNTIyJTI1MkMlMjUyMmRlc2NyaWNhbyUyNTIyJTI1M0ElMjUyMk8lMjUyMHQlMjVDMyUyNUFBbmlzJTI1MjBmb2klMjUyMGRpc3BvbmliaWxpemFkbyUyNTIwZW0lMjUyMDIwMTglMjUyMG5hJTI1MjBkaXZpcyUyNUMzJTI1QTNvJTI1MjBkZSUyNTIwc2thdGVib2FyZCUyNTIwZGElMjUyME5pa2UlMjUyMHByZXBhcm91JTI1MjB1bWElMjUyMG5vdmElMjUyMGNvbG9yd2F5JTI1MjBkbyUyNTIwQmxhemVyJTI1MjBNaWQlMjUyMGJhdGl6YW5kbyUyNTIwZGUlMjUyMENsdWIlMjUyMDU4JTI1MjBpbnNwaXJhZG8lMjUyMG5vcyUyNTIwbGVuZCUyNUMzJTI1QTFyaW9zJTI1MjBjYXJyb3MlMjUyMGRlJTI1MjBjb3JyaWRhcyUyNTIwZGElMjUyMEd1bGYlMjUyMFJhY2luZyUyNTIwZG9zJTI1MjBhbm9zJTI1MjA2MCUyNTIwb25kZSUyNTIwdGluaGFtJTI1MjBjb21vJTI1MjBwcmluY2lwYWwlMjUyMGNhcmFjdGVyaXN0aWNhcyUyNTIwYXMlMjUyMGNvcmVzJTI1MjBkb3MlMjUyMGNhcnJvcy4lMjUyMiUyNTJDJTI1MjJ2YWxvciUyNTIyJTI1M0ElMjUyMjk5MCUyNTJDOTAlMjUyMiUyNTJDJTI1MjJqdXJvcyUyNTIyJTI1M0ElMjUyMk91JTI1MjBhdCUyNUMzJTI1QTklMjUyMGVtJTI1MjAlMjUzQ3NwYW4lMjUzRTEwJTI1M0MlMjUyRnNwYW4lMjUzRSUyNTIwdmV6ZXMlMjUyMGRlJTI1MjAlMjUzQ3NwYW4lMjUzRTk5JTI1MkMwOSUyNTNDJTI1MkZzcGFuJTI1M0UlMjUyMHNlbSUyNTIwanVyb3MuJTI1MjIlMjUyQyUyNTIyaW1hZ2VucyUyNTIyJTI1M0ElMjU1QiUyNTIyLiUyNTJGaW1nJTI1MkZwcm9kdXRvcyUyNTJGTmlrZS1TQi1EdW5rLWxvdy1DbHViLTU4LUd1bGYlMjUyRmltYWdlbTEucG5nJTI1MjIlMjUyQyUyNTIyLiUyNTJGaW1nJTI1MkZwcm9kdXRvcyUyNTJGTmlrZS1TQi1EdW5rLWxvdy1DbHViLTU4LUd1bGYlMjUyRmltYWdlbTIucG5nJTI1MjIlMjUyQyUyNTIyLiUyNTJGaW1nJTI1MkZwcm9kdXRvcyUyNTJGTmlrZS1TQi1EdW5rLWxvdy1DbHViLTU4LUd1bGYlMjUyRmltYWdlbTMucG5nJTI1MjIlMjU1RCUyNTdE" class="botao-destaque" onclick="destaque1()">Ver produto</a>
+                        <a href="projeto.html?produto=JTI1N0IlMjUyMmlkJTI1MjIlMjUzQSUyNTIyMSUyNTIyJTI1MkMlMjUyMm5vbWUlMjUyMiUyNTNBJTI1MjJOaWtlLVNCLUR1bmstbG93LUNsdWItNTgtR3VsZiUyNTIyJTI1MkMlMjUyMmRlc2NyaWNhbyUyNTIyJTI1M0ElMjUyMk8lMjUyMHQlMjVDMyUyNUFBbmlzJTI1MjBmb2klMjUyMGRpc3BvbmliaWxpemFkbyUyNTIwZW0lMjUyMDIwMTglMjUyMG5hJTI1MjBkaXZpcyUyNUMzJTI1QTNvJTI1MjBkZSUyNTIwc2thdGVib2FyZCUyNTIwZGElMjUyME5pa2UlMjUyMHByZXBhcm91JTI1MjB1bWElMjUyMG5vdmElMjUyMGNvbG9yd2F5JTI1MjBkbyUyNTIwQmxhemVyJTI1MjBNaWQlMjUyMGJhdGl6YW5kbyUyNTIwZGUlMjUyMENsdWIlMjUyMDU4JTI1MjBpbnNwaXJhZG8lMjUyMG5vcyUyNTIwbGVuZCUyNUMzJTI1QTFyaW9zJTI1MjBjYXJyb3MlMjUyMGRlJTI1MjBjb3JyaWRhcyUyNTIwZGElMjUyMEd1bGYlMjUyMFJhY2luZyUyNTIwZG9zJTI1MjBhbm9zJTI1MjA2MCUyNTIwb25kZSUyNTIwdGluaGFtJTI1MjBjb21vJTI1MjBwcmluY2lwYWwlMjUyMGNhcmFjdGVyaXN0aWNhcyUyNTIwYXMlMjUyMGNvcmVzJTI1MjBkb3MlMjUyMGNhcnJvcy4lMjUyMiUyNTJDJTI1MjJ2YWxvciUyNTIyJTI1M0ElMjUyMjk5MCUyNTJDOTAlMjUyMiUyNTJDJTI1MjJqdXJvcyUyNTIyJTI1M0ElMjUyMk91JTI1MjBhdCUyNUMzJTI1QTklMjUyMGVtJTI1MjAlMjUzQ3NwYW4lMjUzRTEwJTI1M0MlMjUyRnNwYW4lMjUzRSUyNTIwdmV6ZXMlMjUyMGRlJTI1MjAlMjUzQ3NwYW4lMjUzRTk5JTI1MkMwOSUyNTNDJTI1MkZzcGFuJTI1M0UlMjUyMHNlbSUyNTIwanVyb3MuJTI1MjIlMjUyQyUyNTIyaW1hZ2VucyUyNTIyJTI1M0ElMjU1QiUyNTIyLiUyNTJGaW1nJTI1MkZwcm9kdXRvcyUyNTJGTmlrZS1TQi1EdW5rLWxvdy1DbHViLTU4LUd1bGYlMjUyRmltYWdlbTEucG5nJTI1MjIlMjUyQyUyNTIyLiUyNTJGaW1nJTI1MkZwcm9kdXRvcyUyNTJGTmlrZS1TQi1EdW5rLWxvdy1DbHViLTU4LUd1bGYlMjUyRmltYWdlbTIucG5nJTI1MjIlMjUyQyUyNTIyLiUyNTJGaW1nJTI1MkZwcm9kdXRvcyUyNTJGTmlrZS1TQi1EdW5rLWxvdy1DbHViLTU4LUd1bGYlMjUyRmltYWdlbTMucG5nJTI1MjIlMjU1RCUyNTdE" class="button-highlight" onclick="destaque1()">Ver produto</a>
                     </div>
                 </div>
             </div>
-            <div class="card-destaque">
-                <div class="conteudo-destaque">
-                    <div class="caixa-img">
+            <div class="card-highlight">
+                <div class="content-highlight">
+                    <div class="box-img">
                         <img src="./img/destaques/destaque2.png"  alt="">
                     </div>
-                    <div class="descricao-destaque">
-                        <span>Travis Scott x Playstation x Nike Dunk Low</span>
-                        <p class="p-descricao">A oferta ostenta Swoosh marrom invertido, logotipo PlayStation na lateral do calcanhar, Cactus Jack na outra lateral, Sony no painel traseiro, cadarços e forro interno marrom, além de sola translúcida com o nome Playstation em
-                            letras ocidentais no pé esquerdo e em escrita japonesa no direito.</p>
-                        <a href="projeto.html?produto=JTI1N0IlMjUyMmlkJTI1MjIlMjUzQSUyNTIyMTIlMjUyMiUyNTJDJTI1MjJub21lJTI1MjIlMjUzQSUyNTIyVHJhdmlzJTI1MjBTY290dCUyNTIweCUyNTIwUGxheXN0YXRpb24lMjUyMHglMjUyME5pa2UlMjUyMER1bmslMjUyMExvdyUyNTIyJTI1MkMlMjUyMmRlc2NyaWNhbyUyNTIyJTI1M0ElMjUyMkElMjUyMG9mZXJ0YSUyNTIwb3N0ZW50YSUyNTIwU3dvb3NoJTI1MjBtYXJyb20lMjUyMGludmVydGlkbyUyNTJDJTI1MjBsb2dvdGlwbyUyNTIwUGxheVN0YXRpb24lMjUyMG5hJTI1MjBsYXRlcmFsJTI1MjBkbyUyNTIwY2FsY2FuaGFyJTI1MkMlMjUyMENhY3R1cyUyNTIwSmFjayUyNTIwbmElMjUyMG91dHJhJTI1MjBsYXRlcmFsJTI1MkMlMjUyMFNvbnklMjUyMG5vJTI1MjBwYWluZWwlMjUyMHRyYXNlaXJvJTI1MkMlMjUyMGNhZGFyJTI1QzMlMjVBN29zJTI1MjBlJTI1MjBmb3JybyUyNTIwaW50ZXJubyUyNTIwbWFycm9tJTI1MkMlMjUyMGFsJTI1QzMlMjVBOW0lMjUyMGRlJTI1MjBzb2xhJTI1MjB0cmFuc2wlMjVDMyUyNUJBY2lkYSUyNTIwY29tJTI1MjBvJTI1MjBub21lJTI1MjBQbGF5c3RhdGlvbiUyNTIwZW0lMjUyMGxldHJhcyUyNTIwb2NpZGVudGFpcyUyNTIwbm8lMjUyMHAlMjVDMyUyNUE5JTI1MjBlc3F1ZXJkbyUyNTIwZSUyNTIwZW0lMjUyMGVzY3JpdGElMjUyMGphcG9uZXNhJTI1MjBubyUyNTIwZGlyZWl0by4lMjUyMiUyNTJDJTI1MjJ2YWxvciUyNTIyJTI1M0ElMjUyMjM5OTklMjUyQzk5JTI1MjIlMjUyQyUyNTIyanVyb3MlMjUyMiUyNTNBJTI1MjJPdSUyNTIwYXQlMjVDMyUyNUE5JTI1MjBlbSUyNTIwJTI1M0NzcGFuJTI1M0UxMCUyNTNDJTI1MkZzcGFuJTI1M0UlMjUyMHZlemVzJTI1MjBkZSUyNTIwJTI1M0NzcGFuJTI1M0UzOTklMjUyQzk5JTI1M0MlMjUyRnNwYW4lMjUzRSUyNTIwc2VtJTI1MjBqdXJvcy4lMjUyMiUyNTJDJTI1MjJpbWFnZW5zJTI1MjIlMjUzQSUyNTVCJTI1MjIuJTI1MkZpbWclMjUyRnByb2R1dG9zJTI1MkZUcmF2aXMlMjUyMFNjb3R0JTI1MjB4JTI1MjBQbGF5c3RhdGlvbiUyNTIweCUyNTIwTmlrZSUyNTIwRHVuayUyNTIwTG93JTI1MkZpbWFnZW0xLnBuZyUyNTIyJTI1MkMlMjUyMi4lMjUyRmltZyUyNTJGcHJvZHV0b3MlMjUyRlRyYXZpcyUyNTIwU2NvdHQlMjUyMHglMjUyMFBsYXlzdGF0aW9uJTI1MjB4JTI1MjBOaWtlJTI1MjBEdW5rJTI1MjBMb3clMjUyRmltYWdlbTIucG5nJTI1MjIlMjUyQyUyNTIyLiUyNTJGaW1nJTI1MkZwcm9kdXRvcyUyNTJGVHJhdmlzJTI1MjBTY290dCUyNTIweCUyNTIwUGxheXN0YXRpb24lMjUyMHglMjUyME5pa2UlMjUyMER1bmslMjUyMExvdyUyNTJGaW1hZ2VtMy5wbmclMjUyMiUyNTVEJTI1N0Q=" class="botao-destaque" onclick="destaque2()">Ver produto</a>
+                    <div class="description-highlight">
+                        <p class="main">Travis Scott x Playstation x Nike Dunk Low</p>
+                        <p class="sub">A oferta ostenta Swoosh marrom invertido, logotipo PlayStation na lateral do calcanhar, Cactus Jack na outra lateral, Sony no painel traseiro, cadarços e forro interno marrom, além de sola escrita com o nome Playstation em
+                            letras ocidentais no lado esquerdo e em escrita japonesa no direito.</p>
+                        <a href="projeto.html?produto=JTI1N0IlMjUyMmlkJTI1MjIlMjUzQSUyNTIyMTIlMjUyMiUyNTJDJTI1MjJub21lJTI1MjIlMjUzQSUyNTIyVHJhdmlzJTI1MjBTY290dCUyNTIweCUyNTIwUGxheXN0YXRpb24lMjUyMHglMjUyME5pa2UlMjUyMER1bmslMjUyMExvdyUyNTIyJTI1MkMlMjUyMmRlc2NyaWNhbyUyNTIyJTI1M0ElMjUyMkElMjUyMG9mZXJ0YSUyNTIwb3N0ZW50YSUyNTIwU3dvb3NoJTI1MjBtYXJyb20lMjUyMGludmVydGlkbyUyNTJDJTI1MjBsb2dvdGlwbyUyNTIwUGxheVN0YXRpb24lMjUyMG5hJTI1MjBsYXRlcmFsJTI1MjBkbyUyNTIwY2FsY2FuaGFyJTI1MkMlMjUyMENhY3R1cyUyNTIwSmFjayUyNTIwbmElMjUyMG91dHJhJTI1MjBsYXRlcmFsJTI1MkMlMjUyMFNvbnklMjUyMG5vJTI1MjBwYWluZWwlMjUyMHRyYXNlaXJvJTI1MkMlMjUyMGNhZGFyJTI1QzMlMjVBN29zJTI1MjBlJTI1MjBmb3JybyUyNTIwaW50ZXJubyUyNTIwbWFycm9tJTI1MkMlMjUyMGFsJTI1QzMlMjVBOW0lMjUyMGRlJTI1MjBzb2xhJTI1MjB0cmFuc2wlMjVDMyUyNUJBY2lkYSUyNTIwY29tJTI1MjBvJTI1MjBub21lJTI1MjBQbGF5c3RhdGlvbiUyNTIwZW0lMjUyMGxldHJhcyUyNTIwb2NpZGVudGFpcyUyNTIwbm8lMjUyMHAlMjVDMyUyNUE5JTI1MjBlc3F1ZXJkbyUyNTIwZSUyNTIwZW0lMjUyMGVzY3JpdGElMjUyMGphcG9uZXNhJTI1MjBubyUyNTIwZGlyZWl0by4lMjUyMiUyNTJDJTI1MjJ2YWxvciUyNTIyJTI1M0ElMjUyMjM5OTklMjUyQzk5JTI1MjIlMjUyQyUyNTIyanVyb3MlMjUyMiUyNTNBJTI1MjJPdSUyNTIwYXQlMjVDMyUyNUE5JTI1MjBlbSUyNTIwJTI1M0NzcGFuJTI1M0UxMCUyNTNDJTI1MkZzcGFuJTI1M0UlMjUyMHZlemVzJTI1MjBkZSUyNTIwJTI1M0NzcGFuJTI1M0UzOTklMjUyQzk5JTI1M0MlMjUyRnNwYW4lMjUzRSUyNTIwc2VtJTI1MjBqdXJvcy4lMjUyMiUyNTJDJTI1MjJpbWFnZW5zJTI1MjIlMjUzQSUyNTVCJTI1MjIuJTI1MkZpbWclMjUyRnByb2R1dG9zJTI1MkZUcmF2aXMlMjUyMFNjb3R0JTI1MjB4JTI1MjBQbGF5c3RhdGlvbiUyNTIweCUyNTIwTmlrZSUyNTIwRHVuayUyNTIwTG93JTI1MkZpbWFnZW0xLnBuZyUyNTIyJTI1MkMlMjUyMi4lMjUyRmltZyUyNTJGcHJvZHV0b3MlMjUyRlRyYXZpcyUyNTIwU2NvdHQlMjUyMHglMjUyMFBsYXlzdGF0aW9uJTI1MjB4JTI1MjBOaWtlJTI1MjBEdW5rJTI1MjBMb3clMjUyRmltYWdlbTIucG5nJTI1MjIlMjUyQyUyNTIyLiUyNTJGaW1nJTI1MkZwcm9kdXRvcyUyNTJGVHJhdmlzJTI1MjBTY290dCUyNTIweCUyNTIwUGxheXN0YXRpb24lMjUyMHglMjUyME5pa2UlMjUyMER1bmslMjUyMExvdyUyNTJGaW1hZ2VtMy5wbmclMjUyMiUyNTVEJTI1N0Q=" class="button-highlight" onclick="destaque2()">Ver produto</a>
                     </div>
                 </div>
             </div>
-            <div class="card-destaque">
-                <div class="caixa-img">
+            <div class="card-highlight">
+                <div class="box-img">
                     <img src="./img/destaques/destaque3.png"  alt="">
                 </div>
-                <div class="conteudo-destaque">
-                    <div class="descricao-destaque">
-                        <span>Tênis nike Air Force 1 Low Travis Scott sail</span>
-                        <p class="p-descricao tres">O modelo Nike Air Force 1 Low Travis scott Sail traz um novo aspecto. Desta vez o garoto da Nike, Travis Scott, se uniu ao Swoosh, modificando as cores da silhueta do Air Force 1 Low.Suas caracteristicas são quase idênticas ao
+                <div class="content-highlight">
+                    <div class="description-highlight">
+                        <p class="main">Tênis nike Air Force 1 Low Travis Scott sail</p>
+                        <p class="sub">O modelo Nike Air Force 1 Low Travis scott Sail traz um novo aspecto. Desta vez o garoto da Nike, Travis Scott, se uniu ao Swoosh, modificando as cores da silhueta do Air Force 1 Low.Suas caracteristicas são quase idênticas ao
                             seu antecessor. Porém, este modelo apresenta uma parte superior em lona com costura reforçada. Naturalmente as caracteristicas mais atraentes neste par, são o Nilke Swoosh cromado em ambos os lados, lateral e medial.</p>
-                        <a href="projeto.html?produto=JTI1N0IlMjUyMmlkJTI1MjIlMjUzQSUyNTIyOCUyNTIyJTI1MkMlMjUyMm5vbWUlMjUyMiUyNTNBJTI1MjJOaWtlJTI1MjBBaXIlMjUyMEZvcmNlJTI1MjAxJTI1MjBMb3clMjUyMFRyYXZpcyUyNTIwU2NvdHQlMjUyMFNhaWwlMjUyMiUyNTJDJTI1MjJkZXNjcmljYW8lMjUyMiUyNTNBJTI1MjJPJTI1MjB0JTI1QzMlMjVBQW5pcyUyNTIwTmlrZSUyNTIwQWlyJTI1MjBGb3JjZSUyNTIwMSUyNTIwTG93JTI1MjBUcmF2aXMlMjUyMHNjb3R0JTI1MjBTYWlsJTI1MkMlMjUyMGNvbSUyNTIwdW0lMjUyMG5vdm8lMjUyMHBhciUyNTIwZGUlMjUyMGNodXRlcyUyNTIwdGFtYiUyNUMzJTI1QTltJTI1MkMlMjUyMGRlc3RhJTI1MjB2ZXolMjUyMG8lMjUyMGdhcm90byUyNTIwZGElMjUyME5pbGUlMjUyQyUyNTIwVHJhdmlzJTI1MjBTY290dCUyNTIwc2UlMjUyMHVuaXUlMjUyMGFvJTI1MjBTd29vc2glMjUyMGVtJTI1MjBvdXRybyUyNTIwY29ycmVkb3MlMjUyMGRlJTI1MjBjb3JlcyUyNTIwZGElMjUyMHNpbGh1ZXRhJTI1MjBMb3clMjUyMGRvJTI1MjBGb3IlMjVDMyUyNUE3YSUyNTIwQSUyNUMzJTI1QTlyZWElMjUyMDEuJTI1MjBDb20lMjUyMGNhcmFjdGVyaXN0aWNhcyUyNTIwcXVhc2UlMjUyMGlkJTI1QzMlMjVBQW50aWNhcyUyNTIwYW8lMjUyMHNldSUyNTIwYW50ZWNlc3NvciUyNTIwZXN0ZSUyNTIwbW9kZWxvJTI1MjBhcHJlc2VudGElMjUyMHVtYSUyNTIwcGFydGUlMjUyMHN1cGVyaW9yJTI1MjBlbSUyNTIwbG9uYSUyNTIwY29tJTI1MjBjb3N0dXJhJTI1MjByZWZvciUyNUMzJTI1QTdhZGEuJTI1MjBOYXR1cmFsbWVudGUlMjUyMHBvcmVtJTI1MjBhcyUyNTIwY2FyYWN0ZXJpc3RpY2FzJTI1MjBtYWlzJTI1MjBhdHJhZW50ZXMlMjUyMG5lc3RlJTI1MjBwYXIlMjUyMHMlMjVDMyUyNUEzbyUyNTIwbyUyNTIwTmlsa2UlMjUyMFN3b29zaCUyNTIwY3JvbWFkbyUyNTIwZW0lMjUyMGFtYm9zJTI1MjBvcyUyNTIwbGFkb3MlMjUyMGxhdGVyYWwlMjUyMGUlMjUyMG1lZGlhbCUyNTIwZSUyNTIwbyUyNTIwTW9za2ElMjUyMFNob2VzJTI1MjBubyUyNTIwdG9wbyUyNTIwZG9zJTI1MjBhdGFjYWRvcmVzJTI1MjBkZSUyNTIwdCUyNUMzJTI1QUFuaXMlMjUyMGVtJTI1MjBnb21hJTI1MjBsaW1wYSUyNTIwc2VuZG8lMjUyMG8lMjUyMG1haXMlMjUyMGRlc3RhcXVlJTI1MjBlbSUyNTIwdmVuZGFzLiUyNTIyJTI1MkMlMjUyMnZhbG9yJTI1MjIlMjUzQSUyNTIyNDkwJTI1MkM5MCUyNTIyJTI1MkMlMjUyMmp1cm9zJTI1MjIlMjUzQSUyNTIyT3UlMjUyMGF0JTI1QzMlMjVBOSUyNTIwZW0lMjUyMCUyNTNDc3BhbiUyNTNFMTAlMjUzQyUyNTJGc3BhbiUyNTNFJTI1MjB2ZXplcyUyNTIwZGUlMjUyMCUyNTNDc3BhbiUyNTNFNDklMjUyQzA5JTI1M0MlMjUyRnNwYW4lMjUzRSUyNTIwc2VtJTI1MjBqdXJvcy4lMjUyMiUyNTJDJTI1MjJpbWFnZW5zJTI1MjIlMjUzQSUyNTVCJTI1MjIuJTI1MkZpbWclMjUyRnByb2R1dG9zJTI1MkZuaWtlJTI1MjBhaXIlMjUyMGZvcmNlJTI1MjAxJTI1MjBsb3clMjUyMHRyYXZpcyUyNTIwc2NvdHQlMjUyMHNhaWwlMjUyRmltYWdlbTEucG5nJTI1MjIlMjUyQyUyNTIyLiUyNTJGaW1nJTI1MkZwcm9kdXRvcyUyNTJGbmlrZSUyNTIwYWlyJTI1MjBmb3JjZSUyNTIwMSUyNTIwbG93JTI1MjB0cmF2aXMlMjUyMHNjb3R0JTI1MjBzYWlsJTI1MkZpbWFnZW0yLnBuZyUyNTIyJTI1MkMlMjUyMi4lMjUyRmltZyUyNTJGcHJvZHV0b3MlMjUyRm5pa2UlMjUyMGFpciUyNTIwZm9yY2UlMjUyMDElMjUyMGxvdyUyNTIwdHJhdmlzJTI1MjBzY290dCUyNTIwc2FpbCUyNTJGaW1hZ2VtMy5wbmclMjUyMiUyNTVEJTI1N0Q=" class="botao-destaque" onclick="destaque3()">Ver produto</a>
+                        <a href="projeto.html?produto=JTI1N0IlMjUyMmlkJTI1MjIlMjUzQSUyNTIyOCUyNTIyJTI1MkMlMjUyMm5vbWUlMjUyMiUyNTNBJTI1MjJOaWtlJTI1MjBBaXIlMjUyMEZvcmNlJTI1MjAxJTI1MjBMb3clMjUyMFRyYXZpcyUyNTIwU2NvdHQlMjUyMFNhaWwlMjUyMiUyNTJDJTI1MjJkZXNjcmljYW8lMjUyMiUyNTNBJTI1MjJPJTI1MjB0JTI1QzMlMjVBQW5pcyUyNTIwTmlrZSUyNTIwQWlyJTI1MjBGb3JjZSUyNTIwMSUyNTIwTG93JTI1MjBUcmF2aXMlMjUyMHNjb3R0JTI1MjBTYWlsJTI1MkMlMjUyMGNvbSUyNTIwdW0lMjUyMG5vdm8lMjUyMHBhciUyNTIwZGUlMjUyMGNodXRlcyUyNTIwdGFtYiUyNUMzJTI1QTltJTI1MkMlMjUyMGRlc3RhJTI1MjB2ZXolMjUyMG8lMjUyMGdhcm90byUyNTIwZGElMjUyME5pbGUlMjUyQyUyNTIwVHJhdmlzJTI1MjBTY290dCUyNTIwc2UlMjUyMHVuaXUlMjUyMGFvJTI1MjBTd29vc2glMjUyMGVtJTI1MjBvdXRybyUyNTIwY29ycmVkb3MlMjUyMGRlJTI1MjBjb3JlcyUyNTIwZGElMjUyMHNpbGh1ZXRhJTI1MjBMb3clMjUyMGRvJTI1MjBGb3IlMjVDMyUyNUE3YSUyNTIwQSUyNUMzJTI1QTlyZWElMjUyMDEuJTI1MjBDb20lMjUyMGNhcmFjdGVyaXN0aWNhcyUyNTIwcXVhc2UlMjUyMGlkJTI1QzMlMjVBQW50aWNhcyUyNTIwYW8lMjUyMHNldSUyNTIwYW50ZWNlc3NvciUyNTIwZXN0ZSUyNTIwbW9kZWxvJTI1MjBhcHJlc2VudGElMjUyMHVtYSUyNTIwcGFydGUlMjUyMHN1cGVyaW9yJTI1MjBlbSUyNTIwbG9uYSUyNTIwY29tJTI1MjBjb3N0dXJhJTI1MjByZWZvciUyNUMzJTI1QTdhZGEuJTI1MjBOYXR1cmFsbWVudGUlMjUyMHBvcmVtJTI1MjBhcyUyNTIwY2FyYWN0ZXJpc3RpY2FzJTI1MjBtYWlzJTI1MjBhdHJhZW50ZXMlMjUyMG5lc3RlJTI1MjBwYXIlMjUyMHMlMjVDMyUyNUEzbyUyNTIwbyUyNTIwTmlsa2UlMjUyMFN3b29zaCUyNTIwY3JvbWFkbyUyNTIwZW0lMjUyMGFtYm9zJTI1MjBvcyUyNTIwbGFkb3MlMjUyMGxhdGVyYWwlMjUyMGUlMjUyMG1lZGlhbCUyNTIwZSUyNTIwbyUyNTIwTW9za2ElMjUyMFNob2VzJTI1MjBubyUyNTIwdG9wbyUyNTIwZG9zJTI1MjBhdGFjYWRvcmVzJTI1MjBkZSUyNTIwdCUyNUMzJTI1QUFuaXMlMjUyMGVtJTI1MjBnb21hJTI1MjBsaW1wYSUyNTIwc2VuZG8lMjUyMG8lMjUyMG1haXMlMjUyMGRlc3RhcXVlJTI1MjBlbSUyNTIwdmVuZGFzLiUyNTIyJTI1MkMlMjUyMnZhbG9yJTI1MjIlMjUzQSUyNTIyNDkwJTI1MkM5MCUyNTIyJTI1MkMlMjUyMmp1cm9zJTI1MjIlMjUzQSUyNTIyT3UlMjUyMGF0JTI1QzMlMjVBOSUyNTIwZW0lMjUyMCUyNTNDc3BhbiUyNTNFMTAlMjUzQyUyNTJGc3BhbiUyNTNFJTI1MjB2ZXplcyUyNTIwZGUlMjUyMCUyNTNDc3BhbiUyNTNFNDklMjUyQzA5JTI1M0MlMjUyRnNwYW4lMjUzRSUyNTIwc2VtJTI1MjBqdXJvcy4lMjUyMiUyNTJDJTI1MjJpbWFnZW5zJTI1MjIlMjUzQSUyNTVCJTI1MjIuJTI1MkZpbWclMjUyRnByb2R1dG9zJTI1MkZuaWtlJTI1MjBhaXIlMjUyMGZvcmNlJTI1MjAxJTI1MjBsb3clMjUyMHRyYXZpcyUyNTIwc2NvdHQlMjUyMHNhaWwlMjUyRmltYWdlbTEucG5nJTI1MjIlMjUyQyUyNTIyLiUyNTJGaW1nJTI1MkZwcm9kdXRvcyUyNTJGbmlrZSUyNTIwYWlyJTI1MjBmb3JjZSUyNTIwMSUyNTIwbG93JTI1MjB0cmF2aXMlMjUyMHNjb3R0JTI1MjBzYWlsJTI1MkZpbWFnZW0yLnBuZyUyNTIyJTI1MkMlMjUyMi4lMjUyRmltZyUyNTJGcHJvZHV0b3MlMjUyRm5pa2UlMjUyMGFpciUyNTIwZm9yY2UlMjUyMDElMjUyMGxvdyUyNTIwdHJhdmlzJTI1MjBzY290dCUyNTIwc2FpbCUyNTJGaW1hZ2VtMy5wbmclMjUyMiUyNTVEJTI1N0Q=" class="button-highlight main" onclick="destaque3()">Ver produto</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     
-    <div class="container-produtos" id="container-produtos">
-        <div class="prods">
-            <h1>
+    <section class="container-products" id="container-products">
+        <div class="products">
+            <h1 class="main">
                 Nossos produtos
             </h1>
         </div>
-    </div>
+    </section>
 
+    <section class="allProducts">
+        <h1 class="allh1">Deseja ver mais produtos? <a class="all" href="todos.html">Clique aqui.</a></h1>
+    </section>
 
-    <div class="maisProd">
-        <h1 class="h1todos">Deseja ver mais produtos? <a class="todos" href="todos.html">Clique aqui.</a></h1>
-    </div>
 
     <footer>
         <div class="footer-container">
@@ -394,12 +385,14 @@
         </div>
         <div class="footer-bottom">
             &copy; MoskaShoes. Todos os direitos reservados. Comércio de Produtos Esportivos Ltda - CNPJ: 12.344.321/0012-32
-            Rodovia Jose Carlos Daux, 500 Techno Towers - Torre 2 - sala 209 - João Paulo, Florianópolis - SC, 88030-000
+            Rodovia Jose Carlos Daux, 500 Techno Towers - Torre 2 - sala 209 - JoÃ£o Paulo, Florianópolis - SC, 88030-000
         </div>
     </footer>
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./js/sweetalert2.js"></script>
-    <script charset="utf-8" src="./js/script.js"></script>
+    <script charset="UTF-8" src="./js/script.js"></script>
+    <script src="./js/scrollParaLinkInterno.js"></script>
+
 </body>
 </html>

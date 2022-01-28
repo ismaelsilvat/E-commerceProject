@@ -1,9 +1,4 @@
-$('li > a ').click(function() {
-    $('li > a').removeClass('active');
-    $(this).addClass('active'); 
-}); 
-
-fetch("../test.json")
+fetch("../products.json")
     .then(response => response.json()).then(produtos => {
 
         const containerAll = document.getElementById('container-all');
