@@ -1,0 +1,20 @@
+button{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.swal2-title{
+    font-family: 'Bebas Neue', cursive;
+    font-style: oblique;
+    letter-spacing: 2px;
+}
+
+.swal2-html-container{
+    color: #414141;
+}
+
+:focus{
+    outline: 0 !important;
+    box-shadow: none !important;
+}

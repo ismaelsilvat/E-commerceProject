@@ -1218,6 +1218,7 @@ input[type=number] {
     overflow: hidden;
     position: relative;
     height: 650px;
+    margin: 1vw auto;
     cursor: pointer;
     box-shadow: 0px 0px 5px 1px black;
     -webkit-box-shadow: 0px 0px 5px 1px black;
@@ -1395,10 +1396,12 @@ input[type=number] {
 }
 .card .nome {
     height: 13%;
+    padding: 2px;
     font-family: 'Bebas Neue', cursive;
     font-size: 1.6rem;
     color: var(--text-color);
     letter-spacing: .5px;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1543,7 +1546,8 @@ input[type=number] {
     justify-content: center;
     font-family: 'Bebas Neue', cursive;
     color: #fff !important;
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 30px;
     text-align: center;
     -webkit-box-shadow: 0px 0px 15px 1px var(--main-color);
     box-shadow: 0px 0px 15px 1px var(--main-color);
@@ -1564,6 +1568,7 @@ input[type=number] {
 
 footer {
     padding-top: 55px;
+    margin-top: 30px;
     border-top: 2px groove var(--main-color);
 }
 
@@ -1811,6 +1816,12 @@ footer .row {
         width: 95%;
         height: 650px;   
     }
+
+    .allProducts{
+        width: 80%;
+        height: auto;
+    }
+
 }
 @media (max-width: 768px) {
 
@@ -1856,11 +1867,6 @@ footer .row {
 
     .sub{
         font-size: 1.3rem;
-    }
-
-    .allProducts{
-        width: 80%;
-        height: auto;
     }
 
     .example-models .content .active-image .img{
@@ -2149,7 +2155,7 @@ footer .row {
         font-size: 1.2rem;
     }
 
-    .carousels, .contentt, .product1, .product2, .card, .card-highlight, .card-categorie{
+    .carousels, .content, .product1, .product2, .card, .card-highlight, .card-categorie{
         height: 450px;
     }
 

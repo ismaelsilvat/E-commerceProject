@@ -88,7 +88,7 @@ fetch("../products.json")
 
             const product = products[index];
             var productJson = JSON.stringify(product);
-            const productTransformadoJsonCodificado = btoa(escape(encodeURIComponent(productJson))); 
+            const productCodified  = btoa(escape(encodeURIComponent(productJson))); 
 
             if(product.id <= 16){
                 const modelOfProduct =
@@ -119,7 +119,7 @@ fetch("../products.json")
                         <span class="nome">${product.nome}</span>
                         <span class="preço">R$${product.valor}</span>
                         <span class="juros">${product.juros}</span>
-                        <a href="projeto.html?product=${productTransformadoJsonCodificado}" class="btn">Ver produto</a>
+                        <a href="projeto.html?product=${productCodified }" class="btn">Ver produto</a>
                         <a class="btn-cart" id="btn-cart${index + 1}" style="cursor: pointer"><i class="fas fa-cart-plus"></i></button>
                     </div>`
 
@@ -137,7 +137,7 @@ fetch("../products.json")
                             <img id="image-example-product" src="${"./img/allstar.jpg"}" alt="">
                         </div>
                         <div class="button-product">
-                            <a class="main" href="projeto.html?product=${productTransformadoJsonCodificado}">Ver produto</a>
+                            <a class="main" href="projeto.html?product=${productCodified }">Ver produto</a>
                         </div>
                     </div>`
                 
@@ -155,7 +155,7 @@ fetch("../products.json")
                             <img id="image-example-product" src="${"./img/airshadow.png"}" alt="">
                         </div>
                         <div class="button-product">
-                            <a class="main" href="projeto.html?product=${productTransformadoJsonCodificado}">Ver produto</a>
+                            <a class="main" href="projeto.html?product=${productCodified }">Ver produto</a>
                         </div>
                     </div>`
                 
@@ -175,7 +175,7 @@ fetch("../products.json")
                             <img id="image-example-product" src="${"./img/simpsonSK8.png"}" alt="">
                         </div>
                         <div class="button-product">
-                            <a class="main" href="projeto.html?product=${productTransformadoJsonCodificado}">Ver produto</a>
+                            <a class="main" href="projeto.html?product=${productCodified }">Ver produto</a>
                         </div>
                     </div>`
             
@@ -193,7 +193,7 @@ fetch("../products.json")
                             <img id="image-example-product" src="${"./img/simpsons.png"}" alt="">
                         </div>
                         <div class="button-product">
-                            <a class="main" href="projeto.html?product=${productTransformadoJsonCodificado}">Ver produto</a>
+                            <a class="main" href="projeto.html?product=${productCodified }">Ver produto</a>
                         </div>
                     </div>`
                 
@@ -212,7 +212,7 @@ fetch("../products.json")
                             <img id="image-example-product" src="${"./img/lowtrd.png"}" alt="">
                         </div>
                         <div class="button-product">
-                            <a class="main" href="projeto.html?product=${productTransformadoJsonCodificado}">Ver produto</a>
+                            <a class="main" href="projeto.html?product=${productCodified }">Ver produto</a>
                         </div>
                     </div>`
                 
@@ -229,7 +229,7 @@ fetch("../products.json")
                             <img id="image-example-product" src="${"./img/airForce.png"}" alt="">
                         </div>
                         <div class="button-product">
-                            <a class="main" href="projeto.html?product=${productTransformadoJsonCodificado}">Ver produto</a>
+                            <a class="main" href="projeto.html?product=${productCodified }">Ver produto</a>
                         </div>
                     </div>`
 
@@ -243,10 +243,9 @@ fetch("../products.json")
                 
                 const product = products[indexProd]
                 var button = document.getElementById('btn-cart' + (indexProd + 1))
-                var  contador  =  1
+                var contador  =  1
 
                 button.addEventListener("click", function() {
-                    console.log(contador) ;
                     addProd();  
                 })            
                     
@@ -255,8 +254,32 @@ fetch("../products.json")
                     let position = JSON.parse(localStorage.getItem('infoLog'))
                     
                     if(position === null){
-                        alert('Você necessita estar logado para adicionar first product ao carrinho')
-                        window.open('loginECadastro(ModoE).html', '_self')
+                        const swalWithBootstrapButtons = Swal.mixin({
+                            customClass: {
+                              confirmButton: 'btn btn-success',
+                              cancelButton: 'btn btn-danger'
+                            },
+                            buttonsStyling: true
+                          })
+                          
+                          swalWithBootstrapButtons.fire({
+                            background: "#181818",
+                            color: "#FFF",
+                            title: "Deseja efetuar seu login agora?",
+                            text: "Você necessita estar logado para adicionar um produto no carrinho",
+                            iconColor: "#8A48FA",
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonColor: '#8A48FA',
+                            cancelButtonColor: '#414141',
+                            confirmButtonText: 'Sim',
+                            cancelButtonText: 'Não',
+                            reverseButtons: true
+                          }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.open('loginECadastro(ModoE).html', '_self')
+                            }
+                          })
                     }
 
                     else{
@@ -289,9 +312,11 @@ fetch("../products.json")
 
                         Swal.fire({
                             position: 'top-end',
+                            color: "#FFF",
+                            iconColor: '#8A48FA',
                             icon: 'success',
                             background: '#181818',
-                            title: 'Produto adicionado ao carrinho com suceso',
+                            title: 'Produto adicionado ao carrinho com sucesso!',
                             showConfirmButton: false,
                             timer: 1500
                         })

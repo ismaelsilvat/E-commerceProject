@@ -9,16 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./fontawesome-free-5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sweetalert.css">
     <link rel="icon" href="./img/logos/Logo Oficial Miniatura.png"/>
     <title>Moska Shoes</title>
 </head>
 <body>
+    
     <header>
         <div class="container-header">
             <div class="items">
                 <div class="container-items">
                     <div class="contact">
-                        <a href="contato.html"><i class="fas fa-phone-alt"></i>Contato</a>
+                        <a href="contact.html"><i class="fas fa-phone-alt"></i>Contato</a>
                         <a href="https://www.instagram.com/loja.moskashoes/"><i class="fab fa-instagram"></i>Instagram</a>
                     </div>
                     <div class="login">
@@ -43,11 +45,11 @@
                     </div> 
                     <div class="cart">
                         <div class="cart-items">
-                            <a href="#anchor">
+                            <a class="buttonAnchor" href="index.html#destaques">
                                 <i class="far fa-star"></i>
                                 <span>Destaques</span>
                             </a>
-                            <a href="carrinho.html"
+                            <a href="cart.html"
                             id="test-cart">
                                 <i class="fas fa-shopping-cart">
                                     <input class="cart-num" type="text" id="cart-num" value="0">
@@ -64,11 +66,11 @@
                         </div> 
                         <div class="cart second">
                             <div class="cart-items">
-                                <a href="#anchor">
+                                <a href="index.html#destaques">
                                     <i class="far fa-star"></i>
                                     <span>Destaques</span>
                                 </a>
-                                <a href="carrinho.html"
+                                <a href="cart.html"
                                 id="test-cart">
                                     <i class="fas fa-shopping-cart">
                                         <input class="cart-num" type="text" id="cart-num" value="0">
@@ -84,24 +86,24 @@
                 <nav class="nav">
                     <ul class="ul">
                         <div class="li">
-                            <li class="li-dropdown"><a class="a dropdrop" href="todos.html">Catálogo<i class="arrow fas fa-chevron-down"></i></a>
+                            <li class="li-dropdown"><a class="a dropdrop" href="allProducts.html">Catálogo<i class="arrow fas fa-chevron-down"></i></a>
                                 <ul class="ul-border">
-                                    <li class="li-ul-border"><a class="a-ul-border" href="todos.html">Todos</a></li>
-                                    <li class="li-ul-border"><a class="a-ul-border" href="masculino.html">Masculino</a></li>
-                                    <li class="li-ul-border"><a class="a-ul-border" href="feminino.html">Feminino</a></li>
-                                    <li class="infantil li-ul-border"><a class="a-ul-border" href="infantil.html">Infantil<i class="fas fa-plus"></i></a>
+                                    <li class="li-ul-border"><a class="a-ul-border" href="allProducts.html">Todos</a></li>
+                                    <li class="li-ul-border"><a class="a-ul-border" href="men.html">Masculino</a></li>
+                                    <li class="li-ul-border"><a class="a-ul-border" href="women.html">Feminino</a></li>
+                                    <li class="infantil li-ul-border"><a class="a-ul-border" href="kids.html">Infantil<i class="fas fa-plus"></i></a>
                                         <ul class="infantil-c">
-                                            <li class="li-infantil-c"><a class="a-infantil-c" href="infantil-masc.html">Masculino</a></li>
-                                            <li class="li-infantil-c"><a class="a-infantil-c" href="infantil-fem.html">Feminino</a></li>
+                                            <li class="li-infantil-c"><a class="a-infantil-c" href="guys.html">Masculino</a></li>
+                                            <li class="li-infantil-c"><a class="a-infantil-c" href="girls.html">Feminino</a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
                         </div>
-                        <li class="li"><a class="a" href="especiais.html">Especiais</a></li>
+                        <li class="li"><a class="a" href="specials.html">Especiais</a></li>
                         <li class="li"><a href="index.html" class="a active">Principal</a></li>
-                        <li class="li"><a class="a" href="sobre.html">Sobre</a></li>
-                        <li class="li"><a class="a" href="contato.html">Contato</a></li>
+                        <li class="li"><a class="a" href="about.html">Sobre</a></li>
+                        <li class="li"><a class="a" href="contact.html">Contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -116,26 +118,26 @@
                     <ul>
                         <li class="icons">
                             <a class="log" href="loginECadastro(ModoE).html"><i class="fas fa-user"></i></a>
-                            <a class="car-res" href="carrinho.html"
+                            <a class="car-res" href="cart.html"
                             id="test-cart"><i class="fas fa-shopping-cart"></i>
                             </a>
                         </li>
                         <li class="li2"><a class="a2 active" href="index.html">Principal</a></li>
-                        <li class="li2 li-dropdown2"><a class="a2 dropdrop2" href="todos.html">Produtos</a><i class="arrow second fas fa-chevron-down"></i>
+                        <li class="li2 li-dropdown2"><a class="a2 dropdrop2" href="allProducts.html">Produtos</a><i class="arrow second fas fa-chevron-down"></i>
                             <ul class="ul-border2">
-                                <li class="li-ul-border2"><a class="a-ul-border2 first" href="masculino.html">Masculino</a></li>
-                                <li  class="li-ul-border2"><a class="a-ul-border2 second" href="feminino.html">Feminino</a></li>
-                                <li class="li-ul-border2 kidsecond"><a class="a-ul-border2 third dropdrop2" href="infantil.html">Infantil</a><i class="arrow third fas fa-chevron-down"></i>
+                                <li class="li-ul-border2"><a class="a-ul-border2 first" href="men.html">Masculino</a></li>
+                                <li  class="li-ul-border2"><a class="a-ul-border2 second" href="women.html">Feminino</a></li>
+                                <li class="li-ul-border2 kidsecond"><a class="a-ul-border2 third dropdrop2" href="kids.html">Infantil</a><i class="arrow third fas fa-chevron-down"></i>
                                     <ul class="infantil-c2">
-                                        <li class="li-infantil-c2"><a class="a-infantil-c2" href="infantil-masc.html">Masculino</a></li>
-                                        <li class="li-infantil-c2"><a class="a-infantil-c2" href="infantil-fem.html">Feminino</a></li>
+                                        <li class="li-infantil-c2"><a class="a-infantil-c2" href="guys.html">Masculino</a></li>
+                                        <li class="li-infantil-c2"><a class="a-infantil-c2" href="girls.html">Feminino</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li class="li2"><a class="a2" href="especiais.html">Especiais</a></li>
-                        <li class="li2"><a class="a2" href="sobre.html">Sobre</a></li>
-                        <li class="li2"><a class="a2" href="contato.html">Contato</a></li>
+                        <li class="li2"><a class="a2" href="specials.html">Especiais</a></li>
+                        <li class="li2"><a class="a2" href="about.html">Sobre</a></li>
+                        <li class="li2"><a class="a2" href="contact.html">Contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -218,7 +220,7 @@
                     <img src="./img/ModelMen.jpg" loading="lazy" alt="">
                 </div>
                 <div class="content-categories">
-                    <a href="masculino.html">
+                    <a href="men.html">
                         <div class="description-categorie">
                             <p class="main">Masculino</p>
                             <p class="sub">Já pensou usar o mesmo tênis que seu ídolo? Aqui você pode! Clique e ache o modelo certo para você.</p>
@@ -231,7 +233,7 @@
                     <img src="./img/modelWomen.jpg" alt="">
                 </div>
                 <div class="content-categories">
-                    <a href="feminino.html">
+                    <a href="women.html">
                         <div class="description-categorie">
                             <p class="main">Feminino</span>
                             <p class="sub">Em busca de um tênis estiloso que você vai gostar mais do que sua melhor amiga? Clique e ache o modelo certo para você.</p>
@@ -244,7 +246,7 @@
                     <img src="./img/modelKid.jpg"  alt="">
                 </div>
                 <div class="content-categories">
-                    <a href="infantil.html">
+                    <a href="kids.html">
                         <div class="description-categorie">
                             <p class="main">Infantil</p>
                             <p class="sub">Precisa calçar seu pequeno? Aqui você encontrará os melhores modelos kids para seu filho! Clique e navegue agora.</p>
@@ -279,7 +281,7 @@
         </div>
     </section>
 
-    <section class="container-highlights" id="anchor">
+    <section class="container-highlights" id="destaques">
         <div class="description">
             <h1 class="main">Destaques</h1>
         </div>
@@ -337,7 +339,7 @@
     </section>
 
     <section class="allProducts">
-        <h1 class="allh1">Deseja ver mais produtos? <a class="all" href="todos.html">Clique aqui.</a></h1>
+        <h1 class="allh1">Deseja ver mais produtos? <a class="all" href="allProducts.html">Clique aqui.</a></h1>
     </section>
 
 
@@ -348,19 +350,19 @@
                     <h4>Loja</h4>
                     <ul class="ul-text">
                         <li><a href="index.html">Principal</a></li>
-                        <li><a href="loginECadastro(ModoE).html">Logar</a></li>
-                        <li><a href="carrinho.html">Carrinho</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="masculino.html">Masculino</a></li>
-                        <li><a href="feminino.html">Feminino</a></li>
-                        <li><a href="infantil.html">Infantil</a></li>
+                        <li><a href="sign.html">Logar</a></li>
+                        <li><a href="cart.html">Carrinho</a></li>
+                        <li><a href="about.html">Sobre</a></li>
+                        <li><a href="men.html">Masculino</a></li>
+                        <li><a href="women.html">Feminino</a></li>
+                        <li><a href="kids.html">Infantil</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Fale Conosco</h4>
                     <ul class="ul-text">
                         <li><a href="tel: 048991891499">Entre em contato</a></li>
-                        <li><a href="contato.html">Suporte</a></li>
+                        <li><a href="contact.html">Suporte</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -390,9 +392,8 @@
     </footer>
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./js/sweetalert2.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script charset="UTF-8" src="./js/script.js"></script>
-    <script src="./js/scrollParaLinkInterno.js"></script>
-
+    
 </body>
 </html>
