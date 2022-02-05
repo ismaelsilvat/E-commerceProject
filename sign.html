@@ -4,47 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/loginECadastro(ModoE).css">
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/sign.css">
     <link rel="icon" href="./img/logos/Logo Oficial Miniatura.png"/>
-    <script src="https://kit.fontawesome.com/5d160a706f.js" crossorigin="anonymous"></script>
     <title>Página de login/cadastro</title>
 </head>
-<body>
+    <body style="height: 100vh!important;">
+
     <img src="./img/manos-gkikas-L0tsGE7634E-unsplash.jpg" class="imgbg">
-    
+
     <div class="container">
-        <div class="conteudo conteudo-1">
-
+        <div class="container-newPassword" id="containerNewPassword">
+            <h2 class="title">Nova senha</h2>
+            <label class="label-informacao">
+                <div>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="newPassword1" class="input-conta" placeholder="Senha">
+                </div>
+                <li></li>
+            </label>
+            <label class="label-informacao">
+                <div>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="newPassword2" class="input-conta" placeholder="Senha">
+                </div>
+                <li></li>
+            </label>
+            <button type="button" class="btn" onclick="newPassword()">Alterar senha</button>
+        </div>
+        <div class="content">
             <div class="col-1">
-                <h2 class="titulo titulo-bem-vindo">Seja bem-vindo</h2>
-                <div class="descricao-geral">
-                    <p class="descricao descricao-1">Se você já tem uma conta</p>
-                    <p class="descricao descricao-1">clique no botão a baixo</p>
-                </div>
-                <button class="btn btn-primario" id="Logar">Logar</button>
+                <h2 class="title">Seja bem-vindo</h2>
+                <p class="description">Se você já possui uma conta clique no botão a baixo</p>
+                <button type="button" class="btn" id="login">Login</button>
             </div>
-
             <div class="col-2">
-                <h2 class="titulo titulo-volta">Cadastrar-se</h2>
-                <div class="social-media">
-                    <ul class="list-social-media">
-                        <a href="#" class="link-social-media">
-                            <li class="item-social-media"><i class="fab fa-facebook"></i></li>
-                        </a>
-                        <a href="#" class="link-social-media">
-                            <li class="item-social-media"><i class="fab fa-google"></i></li>
-                        </a>
-                        <a href="#" class="link-social-media">
-                            <li class="item-social-media"><i class="fab fa-linkedin"></i></li>
-                        </a>
-                    </ul>
+                <div class="container-title">
+                    <img src="./img/logos/Logo oficial.png" alt="">
+                    <h2 class="title">Cadastro</h2>
                 </div>
-                <p class="descricao descricao-2">ou utilize o login abaixo</p>
+                <div class="icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-google"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
                 <form class="form">
-
                     <label class="label-informacao">
                         <i class="fas fa-user"></i>
                         <input type="text" id="usuarioCad" class="input-conta" placeholder="Usuário">
@@ -57,62 +64,40 @@
                         <i class="fas fa-lock"></i>
                         <input type="password" id="senhaCad" class="input-conta" placeholder="Senha">
                     </label>
-
-                    <button class="btn btn-secundario" id="cadastrar">Cadastrar</button>
+                    <button type="button" class="btn" id="cadastrar">Cadastrar</button>
                 </form>
+            </div>
+            <div class="col-3">
+                <div class="container-title">
+                    <h2 class="title">Login</h2>
+                    <img src="./img/logos/Logo oficial.png" alt="">
+                </div>
+                <div class="icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-google"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <form class="form">
+                    <label>    
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="emailLog" class="input-conta" placeholder="E-mail">
+                    </label>
+                    <label>
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="senhaLog" class="input-conta" placeholder="Senha">
+                    </label>
+                    <button type="button" class="btn" id="logar">Logar</button>
+                </form>
+            </div>
+            <div class="col-4">
+                <h2 class="title">Bem-vindo, de volta!</h2>
+                <p class="description">Ainda não possui uma conta? Clique no botão e cadastre-se.</p>
+                <button type="button" class="btn" id="cadastro">Cadastro</button>
             </div>
         </div>  
-
-<!-- segundo conteudo -->
-        
-        <div class="conteudo conteudo-2">
-            <div class="col-1">
-                <h2 class="titulo titulo-bem-vindo">Bem-Vindo de volta</h2>
-                <p class="descricao descricao-1">Entre com seus dados pessoais</p>
-                <p class="descricao descricao-1">e venha comprar conosco</p>
-                <button class="btn btn-primario" id="Cadastrar">Cadastrar</button>
-            </div>
-
-            <div class="col-2">
-                <h2 class="titulo titulo-volta">Logar</h2>
-                <div class="social-media">
-                    <ul class="list-social-media">
-                        <a href="#" class="link-social-media">
-                            <li class="item-social-media"><i class="fab fa-facebook"></i></li>
-                        </a>
-                        <a href="#" class="link-social-media">
-                            <li class="item-social-media"><i class="fab fa-google"></i></li>
-                        </a>
-                        <a href="#" class="link-social-media">
-                            <li class="item-social-media"><i class="fab fa-linkedin"></i></li>
-                        </a>
-                    </ul>
-                </div>
-                <p class="descricao descricao-2">ou utilize os campos abaixo</p>
-                <form class="form">
-
-                    <label class="label-informacao">    
-                        <i class="fas fa-envelope"></i>
-                        <input type="text"  id="CredencialLogin" class="input-conta" placeholder="Nome ou E-mail">
-                    </label>
-                    <label class="label-informacao">
-                        <i class="fas fa-lock"></i>
-                        <input type="password"  id="senhaLog" class="input-conta" placeholder="Senha">
-                    </label>
-
-                    <a href="#" class="password">Esqueceu sua senha?</a>
-                    <a class="btn btn-secundario" id="login">Logar</a>
-                </form>
-            </div>
-<!-- segundo conteudo -->
-        </div>
     </div>
 
-
-
-
-
-    <script src="./js/sweetalert2.js"></script>
-    <script src="./js/loginECadastro(ModoE).js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/signPage.js"></script>
 </body>
 </html>

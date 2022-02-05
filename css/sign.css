@@ -1,0 +1,508 @@
+body.swal2-height-auto {
+    height: 100vh!important;
+}
+
+.swal2-footer{
+    border-color: #8a48fa !important;
+}
+
+.swal2-styled.swal2-confirm{
+    background-color: #8a48fa !important;
+}
+
+.swal2-footer a{
+    color: #505050 !important; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none !important;
+    text-decoration: none !important;
+    --main-bg-color: #181818;
+    --main-bg-color-page-sign: #090909;
+    --main-color: #8a48fa;
+    --text-color: #fff;
+}
+
+body{
+    height: 100vh !important;
+    font: 100%;
+    background-color: black;
+}
+
+.imgbg{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    object-fit: fill;
+    opacity: 0.7;
+    filter: hue-rotate(10deg)
+}
+
+.container{
+    height: 100%;
+    display: flex;
+}
+
+.content{
+    background-color: var(--main-bg-color-page-sign);
+    border-radius: 15px;
+    width: 80%;
+    height: 75%;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+
+.content::before{
+    position: absolute;
+    content: "";
+    width: 45%;
+    height: 100%;
+    margin: auto;
+    background-color: var(--main-color);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    animation: slideout 1.5s ease forwards;
+    z-index: 12;
+}
+
+.col-1{
+    animation: slideout 1.5s ease forwards;
+}
+
+.col-1, .col-4{
+    position: relative;
+    width: 45%;
+    height: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--main-bg-color-page-sign);
+    z-index: 15;
+}
+
+.col-4{
+    animation: slide-col4 1.5s ease forwards;
+}
+
+.title{
+    font-size: 3.7rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.description{
+    width: 50%;
+    font-size: 1.4rem;
+    font-family:'Roboto', sans-serif; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn{
+    width: 30%;
+    cursor: pointer;
+    padding: 15px;
+    border: 0;
+    border-radius: 30px;
+    background-color: var(--main-bg-color-page-sign);
+    font-size: 1.6rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    color: var(--main-color);
+}
+
+.col-2, .col-3{
+    width: 55%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-content: space-between;
+}
+
+.container-title{
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-title .title, .container-newPassword .title{
+    color: var(--main-color);
+}
+
+.container-title img{
+    max-height: 65%;
+}
+
+.icons{
+    height: 10%;
+    color: #999;
+    font-size: 3rem;
+}
+
+.icons i{
+    margin: 5px;
+    transition: all 300ms ease;
+}
+
+.icons i:hover{
+    color: var(--main-color);
+}
+
+.form{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+label{
+    position: relative;
+    width: 67.5%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+label li{
+    width: 100%;
+    color: #505050;
+    padding-left: 5%;
+}
+
+label i{
+    position: absolute;
+    top: 50%;
+    transform: translate(-75%, -50%);
+    left: 7.5%;
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+label input{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 20pxz;
+    padding-left: 12%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    font-size: 1.4rem;
+    color: var(--text-color);
+    background-color: var(--main-bg-color);
+}
+
+input:focus{
+    outline: 0;
+    border: 2px solid var(--main-color) !important; 
+}
+
+.col-2 .btn, .col-3 .btn, .container-newPassword .btn{
+    border: 2px solid var(--main-color) !important;
+}
+
+.col-3, .col-4{
+    display: none;
+}
+
+.content.logar .col-1, .content.logar .col-2{
+    display: none;
+}
+
+.content.logar .col-3, .content.logar .col-4{
+    display: flex;
+}
+
+.content.logar::before{
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    animation: slidein 1.5s ease forwards;
+}
+
+.container-newPassword{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 65%;
+    padding: 15px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--main-bg-color-page-sign);
+    border-radius: 30px;
+    z-index: 999;
+}
+
+@keyframes slidein{
+    from{
+        left: 0;
+    }
+    to{
+        left: 55%;
+    }
+}
+
+@keyframes slide-col4 {
+    from{
+        left: -55%;
+    }
+    to{
+        left: 0;
+    }
+}
+
+@keyframes slideout{
+    from{
+        left: 55%;
+    }
+    to{
+        left: 0%;
+    }
+}
+
+@keyframes slidedown{
+    from{
+        top: 0;
+    }
+    to{
+        top: 75%;
+    }
+}
+
+@keyframes slide-col4 {
+    from{
+        left: -55%;
+    }
+    to{
+        left: 0;
+    }
+}
+
+@keyframes slideup{
+    from{
+        top: 75%;
+    }
+    to{
+        top: 0;
+    }
+}
+
+@keyframes slideupcol{
+    from{
+        top: 25%;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+
+/* RESPONSIVITY */
+
+@media screen and (min-width: 2000px){
+
+    .title{
+        font-size: 4.5rem;
+    }
+
+    .description{
+        width: 75%;
+        font-size: 2.8rem;
+    }
+
+    .icons{
+        font-size: 3.5rem;
+    }
+
+    .form label i{
+        font-size: 3rem;
+    }
+
+    .form label input{
+        font-size: 2.4rem;
+    }
+
+    .btn{
+        font-size: 3rem;
+    }
+
+}
+  
+@media screen and (max-width: 1200px) {
+
+    .title{
+        font-size: 3rem;
+    }
+
+    .description{
+        width: 90%;
+        font-size: 1.2rem;
+    }
+
+    .icons{
+        font-size: 2.5rem;
+    }
+
+    .form label{
+        width: 90%;
+        height: 15%;
+    }
+
+    .form label i{
+        font-size: 1.6rem;
+    }
+
+    .form label input{
+        font-size: 1rem;
+    }
+
+    .btn{
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .content{
+        flex-direction: column;
+    }
+
+    .content::before{
+        width: 100%;
+        height: 25%;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 0;
+        animation: slideup 1.5s ease forwards;
+    }
+
+    .content.logar::before{
+        width: 100%;
+        height: 25%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 12px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 12px;
+        animation: slidedown 1.5s ease forwards;
+    }
+
+    .col-1, .col-4{
+        opacity: 0;
+        width: 100%;
+        height: 25%;
+        justify-content: space-around;
+        animation: slideupcol 1s ease forwards;
+        animation-delay: 1.3s;
+    }
+
+    .col-2, .col-3{
+        width: 100%;
+        height: 75%;
+    }    
+
+    .title{
+        font-size: 2.5rem;
+    }
+
+    .description{
+        width: 100%;
+    }
+
+    .btn{
+        width: 35%;
+        padding: 10px;
+    }
+
+    .form label{
+        width: 65%;
+        height: 17%;
+    }
+}
+
+@media screen and (max-width: 656px){
+
+    .content{
+        width: 95%;
+        height: 85%;
+    }
+}
+
+@media screen and (max-width: 425px) {  
+
+    .btn{
+        width: 50%;
+    }
+
+    .form label{
+        width: 85%;
+        height: 17%;
+    }
+
+}
+
+@media screen and (max-width:320px){
+
+    .title{
+        font-size: 2rem;
+    }
+
+    .description{
+        font-size: 1rem;
+    }
+
+    .icons{
+        font-size: 2rem;
+    }
+
+    
+    .btn{
+        width: 55%;
+        padding: 4px;
+        font-size: 1.4rem;
+    }
+    
+    .form label{
+        width: 95%;
+        height: 17%;
+    }
+
+    .form label i, .form label input{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-height: 768px){
+    
+    .content{
+        height: 95%;
+    }
+
+}
+/* END-RESPONSIVITY */
