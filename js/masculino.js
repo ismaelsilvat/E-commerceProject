@@ -7,7 +7,7 @@ fetch("../products.json")
 
             const product = products[index];
             let productJson = JSON.stringify(product);
-            const productCodified = btoa(escape(encodeURIComponent(productJson))); 
+            const productCodified = btoa(encodeURIComponent(productJson)); 
     
             if (product.tipo == 'masculino') {
                 
@@ -39,7 +39,7 @@ fetch("../products.json")
                     <span class="nome">${product.nome}</span>
                     <span class="preço">R$${product.valor}</span>
                     <span class="juros">${product.juros}</span>
-                    <a href="projeto.html?product=${productCodified}" class="btn">Ver produto</a>
+                    <a href="product.html?product=${productCodified}" class="btn">Ver produto</a>
                     <a class="btn-cart" id="btn-cart${index + 1}" style="cursor: pointer"><i class="fas fa-cart-plus"></i></button>
                 </div>`
     

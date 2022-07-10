@@ -7,12 +7,12 @@ fetch("../products.json")
 
             const product = products[index];
             let productJson = JSON.stringify(product);
-            const productCodified = btoa(escape(encodeURIComponent(productJson))); 
-    
+            const productCodified = btoa(encodeURIComponent(productJson));
+
             if (product.tipo == 'feminino') {
-                
+
                 const modeloDeProduto2 =
-                `<div class="card">
+                    `<div class="card">
                     <div class="card-img">
                         <div class="slider-card sc${product.id}">
                             <div class="slideC active">
@@ -39,40 +39,40 @@ fetch("../products.json")
                     <span class="nome">${product.nome}</span>
                     <span class="preço">R$${product.valor}</span>
                     <span class="juros">${product.juros}</span>
-                    <a href="projeto.html?product=${productCodified}" class="btn">Ver produto</a>
+                    <a href="product.html?product=${productCodified}" class="btn">Ver produto</a>
                     <a class="btn-cart" id="btn-cart${index + 1}" style="cursor: pointer"><i class="fas fa-cart-plus"></i></button>
                 </div>`
-    
+
                 containerWomen.innerHTML = containerWomen.innerHTML + modeloDeProduto2;
             }
-        }   
-        for(let index = 0; index < products.length; index++){
+        }
+        for (let index = 0; index < products.length; index++) {
 
             if (products[index].tipo == 'feminino') {
-                
-                const product = products[index]                
-                let button = document.getElementById('btn-cart' + (index + 1))
-                var  contador = 1
 
-                button.addEventListener("click", function() {
-                    console.log(contador) ;
-                    prod();  
-                })            
-                    
-                function prod(){
-                    
+                const product = products[index]
+                let button = document.getElementById('btn-cart' + (index + 1))
+                var contador = 1
+
+                button.addEventListener("click", function () {
+                    console.log(contador);
+                    prod();
+                })
+
+                function prod() {
+
                     let position = JSON.parse(localStorage.getItem('infoLog'))
-                    
-                    if(position === null){
+
+                    if (position === null) {
                         const swalWithBootstrapButtons = Swal.mixin({
                             customClass: {
-                              confirmButton: 'btn btn-success',
-                              cancelButton: 'btn btn-danger'
+                                confirmButton: 'btn btn-success',
+                                cancelButton: 'btn btn-danger'
                             },
                             buttonsStyling: true
-                          })
-                          
-                          swalWithBootstrapButtons.fire({
+                        })
+
+                        swalWithBootstrapButtons.fire({
                             background: "#181818",
                             color: "#FFF",
                             title: "Deseja efetuar seu login agora?",
@@ -85,16 +85,16 @@ fetch("../products.json")
                             confirmButtonText: 'Sim',
                             cancelButtonText: 'Não',
                             reverseButtons: true
-                          }).then((result) => {
+                        }).then((result) => {
                             if (result.isConfirmed) {
                                 window.open('loginECadastro(ModoE).html', '_self')
                             }
-                          })
-                    } else{
-                        
+                        })
+                    } else {
+
                         let dados = JSON.parse(localStorage.getItem("Users"))
                         let num = position.position
-                        
+
                         let linhaProd = {
                             estrutura: `<div class="row align-items-center" style="height: 200px; background-color: rgba(255, 255, 255, 0.048);">
                             <img class="w-25 h-75" src="${product.imagens[0]}" alt="">
@@ -112,10 +112,10 @@ fetch("../products.json")
                             id: contador,
                             valor: product.valor,
                         }
-                        
+
                         contador += 1
-                    
-                        dados[num].carrinho.push(linhaProd) 
+
+                        dados[num].carrinho.push(linhaProd)
                         console.log(dados);
                         localStorage.setItem("Users", JSON.stringify(dados))
                         Swal.fire({
@@ -125,114 +125,94 @@ fetch("../products.json")
                             title: 'Produto adicionado ao carrinho com suceso',
                             showConfirmButton: false,
                             timer: 1500
-                            })
-                        // window.location.reload()
+                        })
                     }
-                
+
                 }
             }
-            
-        }    
+
+        }
 
         let indexteste = 0
-            for(let indexxx = 0; indexxx < products.length; indexxx++){
+        for (let indexxx = 0; indexxx < products.length; indexxx++) {
 
-                if (products[indexxx].tipo == 'feminino') {
-                    
-                    const slidescard = document.querySelector(".sc" + (indexxx + 1));
-                    
-                    const indicatorcard = document.querySelector(".ic" + (indexxx + 1));
-                    
-                    const prevcard = document.querySelector(".pc" + (indexxx + 1));
-                    
-                    const nextcard = document.querySelector(".nc" + (indexxx + 1));
-                    
-                    
-                    prevcard.addEventListener("click", function() {
-                    
-                        prevSlidecard();
-                        updateCircleIndicatorcard();
-                    
-                    })
-                    
-                    
-                    nextcard.addEventListener("click", function() {
-                    
-                        nextSlidecard();
-                        updateCircleIndicatorcard();
-                    
-                    })
-                    
-                    
-                    function circleIndicatorcard() {
-                        for (let i = 0; i < slidescard.children.length; i++) {
-                            const div = document.createElement("div");
-                            div.innerHTML = i + 1
-                            div.addEventListener("click", function(){ 
-                                indexteste = div.id;
-                                changeSlidecard();
-                                updateCircleIndicatorcard();
-                            })
-                            div.id = i
-                            if (i == 0) {
-                                div.className = "active"
-                            }
-                            indicatorcard.appendChild(div)
+            if (products[indexxx].tipo == 'feminino') {
+
+                const slidescard = document.querySelector(".sc" + (indexxx + 1));
+                const indicatorcard = document.querySelector(".ic" + (indexxx + 1));
+                const prevcard = document.querySelector(".pc" + (indexxx + 1));
+                const nextcard = document.querySelector(".nc" + (indexxx + 1));
+
+                prevcard.addEventListener("click", function () {
+
+                    prevSlidecard();
+                    updateCircleIndicatorcard();
+
+                })
+
+                nextcard.addEventListener("click", function () {
+
+                    nextSlidecard();
+                    updateCircleIndicatorcard();
+
+                })
+
+                function circleIndicatorcard() {
+                    for (let i = 0; i < slidescard.children.length; i++) {
+                        const div = document.createElement("div");
+                        div.innerHTML = i + 1
+                        div.addEventListener("click", function () {
+                            indexteste = div.id;
+                            changeSlidecard();
+                            updateCircleIndicatorcard();
+                        })
+                        div.id = i
+                        if (i == 0) {
+                            div.className = "active"
                         }
-                    }
-                    
-                    circleIndicatorcard()
-                    
-                    function indicateSlideCcard(element) {
-                        indexteste = element.id;
-                        changeSlidecard();
-                        updateCircleIndicatorcard();
-                    }
-                    
-                    function updateCircleIndicatorcard() {
-                        for (let i = 0; i < indicatorcard.children.length; i++) {
-                            indicatorcard.children[i].classList.remove("active")
-                        }
-                        indicatorcard.children[indexteste].classList.add("active")
-                    }
-                    
-                    function prevSlidecard() {
-                        if (indexteste == 0) {
-                            indexteste = 2
-                        } else {
-                            indexteste--
-                        }
-                        changeSlidecard()
-                    }
-                    function nextSlidecard() {
-                        // alert(slidescard.className == "slider-card sc" + indexxx)
-                        // alert(slidescard.className + "         slider-card sc" + indexxx)
-                        let isLast = false;
-                        for (let i = 0; i < slidescard.children.length; i++) {
-                            // alert(slidescard.children[i].className)
-                        }
-                        
-                            if(indexteste == 2){
-                                indexteste = indexteste - 2
-                            }
-                            else{
-                                indexteste = indexteste + 1
-                            }
-                        
-                        // alert("index teste: "+indexteste)
-                        changeSlidecard();
-                    }
-                    function changeSlidecard() {
-                        // alert("Next index/2: " + indexxx)
-                        
-                        for (let i = 0; i < slidescard.children.length; i++) {
-                    
-                            slidescard.children[i].classList.remove("active")
-                        }
-                        // alert(slidescard.children[indexxx].nodeName + "index: " + indexxx)
-                        
-                        slidescard.children[indexteste].classList.add("active")
+                        indicatorcard.appendChild(div)
                     }
                 }
-            }          
+
+                circleIndicatorcard()
+
+                function indicateSlideCcard(element) {
+                    indexteste = element.id;
+                    changeSlidecard();
+                    updateCircleIndicatorcard();
+                }
+
+                function updateCircleIndicatorcard() {
+                    for (let i = 0; i < indicatorcard.children.length; i++) {
+                        indicatorcard.children[i].classList.remove("active")
+                    }
+                    indicatorcard.children[indexteste].classList.add("active")
+                }
+
+                function prevSlidecard() {
+                    if (indexteste == 0) {
+                        indexteste = 2
+                    } else {
+                        indexteste--
+                    }
+                    changeSlidecard()
+                }
+                function nextSlidecard() {
+                    let isLast = false;
+                    if (indexteste == 2) {
+                        indexteste = indexteste - 2
+                    }
+                    else {
+                        indexteste = indexteste + 1
+                    }
+                    changeSlidecard();
+                }
+                function changeSlidecard() {
+                    for (let i = 0; i < slidescard.children.length; i++) {
+                        slidescard.children[i].classList.remove("active")
+                    }
+                    slidescard.children[indexteste].classList.add("active")
+                }
+            }
+        }
     });

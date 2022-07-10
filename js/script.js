@@ -1,84 +1,8 @@
-$('.arrow.second').click(function() {
-
-    if($('.ul-border2').hasClass('displayzin')){
-        $('.ul-border2').removeClass('displayzin')
-        $(".arrow.second").css({"top":"50%", "transform":"rotate(0deg)"});
-        $(".a-ul-border2.first").removeClass('displayzin2')
-        $(".a-ul-border2.second").removeClass('displayzin2')
-        $(".a-ul-border2.third").removeClass('displayzin2')
-        $(".a-ul-border2.first").css({"transition":"none !important", 
-        "transition-delay":"0ms"})
-        $(".a-ul-border2.second").css({"transition":"none !important", 
-        "transition-delay":"0ms"})
-        $(".a-ul-border2.third").css({"transition":"none !important", 
-        "transition-delay":"0ms"})
-        $('.infantil-c2').removeClass('displayzin3')
-        $('.ul-border2').removeClass('displayzin2')
-    }
-    
-    else if($('.ul-border2').hasClass('displayzin2')){
-        $('.ul-border2').removeClass('displayzin2')
-        $(".a-ul-border2.first").removeClass('displayzin2')
-        $(".a-ul-border2.second").removeClass('displayzin2')
-        $(".a-ul-border2.third").removeClass('displayzin2')
-        $('.infantil-c2').removeClass('displayzin3')
-        $(".a-ul-border2.first").css({"transition":"none !important", 
-        "transition-delay":"0ms"})
-        $(".a-ul-border2.second").css({"transition":"none !important", 
-        "transition-delay":"0ms"})
-        $(".a-ul-border2.third").css({"transition":"none !important", 
-        "transition-delay":"0ms"})
-        $(".arrow.second").css({"top":"35%", "transform":"rotate(0deg)"});
-    }
-
-    else{
-        $('.ul-border2').addClass('displayzin')
-        $(".arrow.second").css({"top":"9%", "transform":"rotate(-180deg)"});
-        $(".a-ul-border2.first").addClass('displayzin2')
-        $(".a-ul-border2.second").addClass('displayzin2')
-        $(".a-ul-border2.third").addClass('displayzin2')
-        $(".a-ul-border2.first").css({"transition": "visibility 300ms ease;"})
-        $(".a-ul-border2.second").css({"transition": "visibility 300ms ease;"})
-        $(".a-ul-border2.third").css({"transition": "visibility 300ms ease;"})
-    }
-
-}); 
-
-$('.arrow.third').click(function(){
-
-    if($('.infantil-c2').hasClass('displayzin3')){
-        $('.infantil-c2').removeClass('displayzin3')
-        $('.infantil-c2').css({"transition":"all 0ms ease !important", 
-        "transition":"0ms"})
-        $('.infantil-c2').css({"height":"0 !important"})
-        $('.infantil-c2').css({"visibility":"hidden !important"})
-        $('.ul-border2').addClass('displayzin2')
-        $(".arrow.third").css({"top":"auto", "transform":"rotate(0deg)"});
-        $(".arrow.second").css({"top":"9%", "transform":"rotate(-180deg)"});
-    }
-    
-    else if($('.infantil-c2').hasClass('displayzin2')){
-        $('.ul-border2').css({"height":"auto !important"})
-        $('.infantil-c2').removeClass('displayzin2')
-    }
-    
-    else{
-        $(".arrow.second").css({"top":"5.5%", "transform":"rotate(-180deg)"});
-        $('.arrow.third').css({"top":"78%","transform":"rotate(-180deg)"})
-        $('.infantil-c2').addClass('displayzin3')
-        $('.ul-border2').removeClass('displayzin')
-        $('.ul-border2').addClass('displayzin2')
-        $('.ul-border2').css({"height":"auto !important"})
-        $('.ul-border2').css({"visibility":"visible !important"})
-        $('.a-ul-border2.third').addClass('displayzin4')
-    }
-
-});
-
 fetch("../products.json")
     .then(response => response.json()).then(products => {
 
         const containerProductsIndex = document.getElementById('container-products');
+        const containerHighLights = document.getElementById('container-highlights')
         const containerAllProducts = document.getElementById('container-prodsss');
         const exampleProductSimple = document.getElementById('example-products-1');
         const exampleProductColors = document.getElementById('example-products-2');
@@ -88,9 +12,9 @@ fetch("../products.json")
 
             const product = products[index];
             var productJson = JSON.stringify(product);
-            const productCodified  = btoa(escape(encodeURIComponent(productJson))); 
+            const productCodified = btoa(encodeURIComponent(productJson));
 
-            if(product.id <= 16){
+            if (product.id <= 16) {
                 const modelOfProduct =
                     `<div class="card">
                         <div class="card-img">
@@ -119,14 +43,74 @@ fetch("../products.json")
                         <span class="nome">${product.nome}</span>
                         <span class="preço">R$${product.valor}</span>
                         <span class="juros">${product.juros}</span>
-                        <a href="projeto.html?product=${productCodified }" class="btn">Ver produto</a>
+                        <a href="product.html?product=${productCodified}" class="btn">Ver produto</a>
                         <a class="btn-cart" id="btn-cart${index + 1}" style="cursor: pointer"><i class="fas fa-cart-plus"></i></button>
                     </div>`
 
                 containerProductsIndex.innerHTML = containerProductsIndex.innerHTML + modelOfProduct;
             }
 
-            if(product.nome == "All Star Tie Dye"){ 
+            if (product.id == 1) {
+                const modelOfProduct =
+                    `<div class="card-highlight">
+                    <div class="box-img">
+                        <img src="./img/destaques/destaque1.png" alt="">
+                    </div>
+                    <div class="effect"></div>
+                    <div class="content-highlight">
+                        <div class="description-highlight">
+                            <p class="main">${product.nome}</p>
+                            <p class="sub">${product.descricao}</p>
+                            <a href="product.html?product=${productCodified}"
+                                class="button-highlight" onclick="destaque1()">Ver produto</a>
+                        </div>
+                    </div>
+                </div>`
+
+                containerHighLights.innerHTML = containerHighLights.innerHTML + modelOfProduct;
+            }
+
+            if (product.id == 8) {
+                const modelOfProduct =
+                    `<div class="card-highlight">
+                    <div class="box-img">
+                        <img src="./img/destaques/destaque2.png" alt="">
+                    </div>
+                    <div class="effect"></div>
+                    <div class="content-highlight">
+                        <div class="description-highlight">
+                            <p class="main">${product.nome}</p>
+                            <p class="sub">${product.descricao}</p>
+                            <a href="product.html?product=${productCodified}"
+                                class="button-highlight" onclick="destaque1()">Ver produto</a>
+                        </div>
+                    </div>
+                </div>`
+
+                containerHighLights.innerHTML = containerHighLights.innerHTML + modelOfProduct;
+            }
+
+            if (product.id == 12) {
+                const modelOfProduct =
+                    `<div class="card-highlight">
+                    <div class="box-img">
+                        <img src="./img/destaques/destaque3.png" alt="">
+                    </div>
+                    <div class="effect"></div>
+                    <div class="content-highlight">
+                        <div class="description-highlight">
+                            <p class="main">${product.nome}</p>
+                            <p class="sub">${product.descricao}</p>
+                            <a href="product.html?product=${productCodified}"
+                                class="button-highlight" onclick="destaque1()">Ver produto</a>
+                        </div>
+                    </div>
+                </div>`
+
+                containerHighLights.innerHTML = containerHighLights.innerHTML + modelOfProduct;
+            }
+
+            if (product.nome == "All Star Tie Dye") {
                 const exampleProductInfos = `
                 <div class="product${+1}">
                         <div class="name-product">
@@ -137,14 +121,14 @@ fetch("../products.json")
                             <img id="image-example-product" src="${"./img/allstar.jpg"}" alt="">
                         </div>
                         <div class="button-product">
-                            <a class="main" href="projeto.html?product=${productCodified }">Ver produto</a>
+                            <a class="main" href="product.html?product=${productCodified}">Ver produto</a>
                         </div>
                     </div>`
-                
-                exampleProductColors.innerHTML = exampleProductColors.innerHTML + exampleProductInfos;    
+
+                exampleProductColors.innerHTML = exampleProductColors.innerHTML + exampleProductInfos;
             }
 
-            if(product.nome == "Nike AF1 Shadow Feminino"){
+            if (product.nome == "Nike AF1 Shadow Feminino") {
                 const exampleProductInfos = `
                 <div class="product${+2}">
                         <div class="name-product">
@@ -155,16 +139,14 @@ fetch("../products.json")
                             <img id="image-example-product" src="${"./img/airshadow.png"}" alt="">
                         </div>
                         <div class="button-product">
-                            <a class="main" href="projeto.html?product=${productCodified }">Ver produto</a>
+                            <a class="main" href="product.html?product=${productCodified}">Ver produto</a>
                         </div>
                     </div>`
-                
-                exampleProductColors.innerHTML = exampleProductColors.innerHTML + exampleProductInfos;   
-            }
-    
-            
 
-            if(product.nome == "Vans X Os Simpsons SK8-Low"){ 
+                exampleProductColors.innerHTML = exampleProductColors.innerHTML + exampleProductInfos;
+            }
+
+            if (product.nome == "Vans X Os Simpsons SK8-Low") {
                 const exampleProductInfos = `
                 <div class="product${+1}">
                         <div class="name-product">
@@ -175,14 +157,14 @@ fetch("../products.json")
                             <img id="image-example-product" src="${"./img/simpsonSK8.png"}" alt="">
                         </div>
                         <div class="button-product">
-                            <a class="main" href="projeto.html?product=${productCodified }">Ver produto</a>
+                            <a class="main" href="product.html?product=${productCodified}">Ver produto</a>
                         </div>
                     </div>`
-            
-                exampleProductsThematics.innerHTML = exampleProductsThematics.innerHTML + exampleProductInfos;       
+
+                exampleProductsThematics.innerHTML = exampleProductsThematics.innerHTML + exampleProductInfos;
             }
 
-            if(product.nome == "Vans Era X Os Simpsons"){
+            if (product.nome == "Vans Era X Os Simpsons") {
                 const exampleProductInfos = `
                 <div class="product${+2}">
                         <div class="name-product">
@@ -193,15 +175,14 @@ fetch("../products.json")
                             <img id="image-example-product" src="${"./img/simpsons.png"}" alt="">
                         </div>
                         <div class="button-product">
-                            <a class="main" href="projeto.html?product=${productCodified }">Ver produto</a>
+                            <a class="main" href="product.html?product=${productCodified}">Ver produto</a>
                         </div>
                     </div>`
-                
-                exampleProductsThematics.innerHTML = exampleProductsThematics.innerHTML + exampleProductInfos;   
+                exampleProductsThematics.innerHTML = exampleProductsThematics.innerHTML + exampleProductInfos;
             }
 
-            
-            if(product.nome == "Nike SB Dunk Low TRD"){ 
+
+            if (product.nome == "Nike SB Dunk Low TRD") {
                 const exampleProductInfos = `
                 <div class="product${+1}">
                         <div class="name-product">
@@ -212,13 +193,13 @@ fetch("../products.json")
                             <img id="image-example-product" src="${"./img/lowtrd.png"}" alt="">
                         </div>
                         <div class="button-product">
-                            <a class="main" href="projeto.html?product=${productCodified }">Ver produto</a>
+                            <a class="main" href="product.html?product=${productCodified}">Ver produto</a>
                         </div>
                     </div>`
-                
-                exampleProductSimple.innerHTML = exampleProductSimple.innerHTML + exampleProductInfos;   
+
+                exampleProductSimple.innerHTML = exampleProductSimple.innerHTML + exampleProductInfos;
             }
-            if(product.nome == "Tênis Nike Air Force 1 Infantil"){
+            if (product.nome == "Tênis Nike Air Force 1 Infantil") {
                 const exampleProductInfos = `
                 <div class="product${+2}">
                         <div class="name-product">
@@ -229,40 +210,37 @@ fetch("../products.json")
                             <img id="image-example-product" src="${"./img/airForce.png"}" alt="">
                         </div>
                         <div class="button-product">
-                            <a class="main" href="projeto.html?product=${productCodified }">Ver produto</a>
+                            <a class="main" href="product.html?product=${productCodified}">Ver produto</a>
                         </div>
                     </div>`
 
-                exampleProductSimple.innerHTML = exampleProductSimple.innerHTML + exampleProductInfos;   
+                exampleProductSimple.innerHTML = exampleProductSimple.innerHTML + exampleProductInfos;
             }
         }
 
-        for(let indexProd = 0; indexProd < products.length; indexProd++){
+        for (let indexProd = 0; indexProd < products.length; indexProd++) {
 
             if (products[indexProd].id <= 15) {
-                
+
                 const product = products[indexProd]
                 var button = document.getElementById('btn-cart' + (indexProd + 1))
-                var contador  =  1
+                var contador = 1
 
-                button.addEventListener("click", function() {
-                    addProd();  
-                })            
-                    
-                function addProd(){
-                    
+                button.addEventListener("click", function () {
+                    addProd();
+                })
+
+                function addProd() {
                     let position = JSON.parse(localStorage.getItem('infoLog'))
-                    
-                    if(position === null){
+                    if (position === null) {
                         const swalWithBootstrapButtons = Swal.mixin({
                             customClass: {
-                              confirmButton: 'btn btn-success',
-                              cancelButton: 'btn btn-danger'
+                                confirmButton: 'btn btn-success',
+                                cancelButton: 'btn btn-danger'
                             },
                             buttonsStyling: true
-                          })
-                          
-                          swalWithBootstrapButtons.fire({
+                        })
+                        swalWithBootstrapButtons.fire({
                             background: "#181818",
                             color: "#FFF",
                             title: "Deseja efetuar seu login agora?",
@@ -275,18 +253,16 @@ fetch("../products.json")
                             confirmButtonText: 'Sim',
                             cancelButtonText: 'Não',
                             reverseButtons: true
-                          }).then((result) => {
+                        }).then((result) => {
                             if (result.isConfirmed) {
                                 window.open('loginECadastro(ModoE).html', '_self')
                             }
-                          })
+                        })
                     }
 
-                    else{
+                    else {
                         let dados = JSON.parse(localStorage.getItem("Users"))
-
                         let nfirst = position.position
-
                         let linhaProd = {
                             estrutura: `<div class="row align-items-center" style="height: 200px; background-color: rgba(255, 255, 255, 0.048);">
                             <img class="w-25 h-75" src="${product.imagens[0]}" alt="">
@@ -305,11 +281,8 @@ fetch("../products.json")
                             valor: product.valor,
                         }
                         contador += 1
-
-                        dados[nfirst].carrinho.push(linhaProd) 
-
+                        dados[nfirst].carrinho.push(linhaProd)
                         localStorage.setItem("Users", JSON.stringify(dados))
-
                         Swal.fire({
                             position: 'top-end',
                             color: "#FFF",
@@ -322,32 +295,32 @@ fetch("../products.json")
                         })
                     }
                 }
-            } 
+            }
         }
-    
+
         let indexValue = 1
-        for(let indexCarousel = 1; indexCarousel <= 16; indexCarousel++){
-            
+        for (let indexCarousel = 1; indexCarousel <= 16; indexCarousel++) {
+
             const slidescard = document.querySelector(".sc" + (indexCarousel));
             const indicatorcard = document.querySelector(".ic" + (indexCarousel));
             const prevcard = document.querySelector(".pc" + (indexCarousel));
             const nextcard = document.querySelector(".nc" + (indexCarousel));
-            
-            prevcard.addEventListener("click", function() {
+
+            prevcard.addEventListener("click", function () {
                 prevSlidecard();
                 updateCircleIndicatorcard();
             })
-            
-            nextcard.addEventListener("click", function() {
+
+            nextcard.addEventListener("click", function () {
                 nextSlidecard();
                 updateCircleIndicatorcard();
             })
-            
+
             function circleIndicatorcard() {
                 for (let i = 1; i <= slidescard.children.length; i++) {
                     const div = document.createElement("div");
                     div.innerHTML = i
-                    div.addEventListener("click", function(){ 
+                    div.addEventListener("click", function () {
                         indexValue = div.id;
                         changeSlidecard();
                         updateCircleIndicatorcard();
@@ -360,20 +333,20 @@ fetch("../products.json")
                 }
             }
             circleIndicatorcard()
-            
+
             function indicateSlideCcard(element) {
                 indexValue = element.id;
                 changeSlidecard();
                 updateCircleIndicatorcard();
             }
-            
+
             function updateCircleIndicatorcard() {
                 for (let i = 0; i < indicatorcard.children.length; i++) {
                     indicatorcard.children[i].classList.remove("active")
                 }
                 indicatorcard.children[indexValue - 1].classList.add("active")
             }
-            
+
             function prevSlidecard() {
                 if (indexValue == 1) {
                     indexValue = 3
@@ -383,9 +356,9 @@ fetch("../products.json")
                 changeSlidecard()
             }
             function nextSlidecard() {
-                if(indexValue == 3){
+                if (indexValue == 3) {
                     indexValue = 1
-                } else{
+                } else {
                     indexValue++
                 }
                 changeSlidecard();
@@ -406,20 +379,19 @@ const indicatorMaster = document.querySelector(".indicatorMaster");
 const prevMaster = document.querySelector(".prevMaster");
 const nextMaster = document.querySelector(".nextMaster");
 
-prevMaster.addEventListener("click", function() {
+prevMaster.addEventListener("click", function () {
     prevSlideMaster();
     updateCircleIndicatorMaster();
     resetTimerMaster();
 })
 
-nextMaster.addEventListener("click", function() {
+nextMaster.addEventListener("click", function () {
     nextSlideMaster();
     updateCircleIndicatorMaster();
     resetTimerMaster();
 })
 
 function circleIndicatorMaster() {
-
     for (let i = 0; i < slidesMaster.length; i++) {
         const div = document.createElement("div");
         div.innerHTML = i + 1
@@ -434,7 +406,6 @@ function circleIndicatorMaster() {
 circleIndicatorMaster()
 
 function indicateSlideMaster(element) {
-
     indexMaster = element.id;
     changeSlideMaster();
     updateCircleIndicatorMaster();
@@ -442,7 +413,6 @@ function indicateSlideMaster(element) {
 }
 
 function updateCircleIndicatorMaster() {
-
     for (let i = 0; i < indicatorMaster.children.length; i++) {
         indicatorMaster.children[i].classList.remove("active")
     }
@@ -450,7 +420,6 @@ function updateCircleIndicatorMaster() {
 }
 
 function prevSlideMaster() {
-
     if (indexMaster == 0) {
         indexMaster = slidesMaster.length - 1;
     } else {
@@ -460,7 +429,6 @@ function prevSlideMaster() {
 }
 
 function nextSlideMaster() {
-
     if (indexMaster == slidesMaster.length - 1) {
         indexMaster = 0;
     } else {
@@ -470,7 +438,6 @@ function nextSlideMaster() {
 }
 
 function changeSlideMaster() {
-
     for (let i = 0; i < slidesMaster.length; i++) {
         slidesMaster[i].classList.remove("active")
     }
@@ -478,13 +445,11 @@ function changeSlideMaster() {
 }
 
 function resetTimerMaster() {
-
     clearInterval(timerMaster);
     timerMaster = setInterval(autoPlayMaster, 7000)
 }
 
 function autoPlayMaster() {
-
     nextSlideMaster();
     updateCircleIndicatorMaster();
 }
